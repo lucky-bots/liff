@@ -13,6 +13,8 @@
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
+  <button id="btnLogOut" onclick="https://liff.line.me/1656633739-29ex3geA">ออกระบบ</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     function runApp() {
@@ -28,7 +30,9 @@
       if (liff.isLoggedIn()) {
         runApp()
       } else {
-        liff.login({redirectUri:"https://liff.line.me/1656633739-29ex3geA"
+      
+
+
           });
       }
     }, err => console.error(err.code, error.message));
