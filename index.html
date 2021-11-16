@@ -2,7 +2,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <META HTTP-EQUIV="Refresh" CONTENT="0;URL="https://liff.line.me/1656633739-29ex3geA">
      <title>Flex Message</title>
   <style>
     #pictureUrl { display: block; margin: 0 auto }
@@ -29,7 +28,8 @@
       if (liff.isLoggedIn()) {
         runApp()
       } else {
-        liff.login();
+        liff.login({redirectUri:"https://liff.line.me/1656633739-29ex3geA"
+          });
       }
     }, err => console.error(err.code, error.message));
   </script>
