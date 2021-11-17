@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>My LIFF App</title>
   <style>
-    button { display: none;
+    #btnShare, 
+    #btnLogin, 
+    #btnLogOut  { 
+             display: none;
              width: 50%; 
              padding: 16px 0; 
              margin: 16px auto
             }
- .button-63 { 
+ #btnShare { 
               align-items: center;
               background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);  
               border: 0;
@@ -49,7 +52,7 @@
  </style>
 </head>
 <body>
-  <button class=button-63  id="btnShare" onclick="sendShare()">Share Target Picker</button>
+  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
