@@ -1,245 +1,113 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App</title>
-  <style>
-    #btnShare, 
-    #btnLogin, 
-    #btnLogOut  { 
-             display: none;
-             width: 50%; 
-             padding: 16px 0; 
-             margin: 16px auto
-            }
-/* #btnShare { 
-              align-items: center;
-              background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);  
-              border: 0;
-              border-radius: 8px; 
-              box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-              box-sizing: 
-              border-box;
-              color: #FFFFFF;
-              display: flex;
-              font-family: Phantomsans, sans-serif;
-              font-size: 20px;
-              justify-content:  center;
-              line-height: 1em;
-              max-width: 100%;
-              min-width: 140px;
-              padding: 19px 24px;
-              text-decoration: none;
-              user-select: none;
-              -webkit-user-select: none;
-              touch-action: manipulation;
-              white-space: nowrap;
-              cursor: pointer;
+#buttonLogin {
+  display: none;
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.button-63:active,
-.button-63:hover {
-                   outline: 0;
+#buttonLogin:active,
+#buttonLogin:hover {
+  outline: 0;
 }
-*/
+
 @media (min-width: 768px) {
-  .button-63 {
+  #buttonLogin {
     font-size: 24px;
     min-width: 196px;
   }
 }
- </style>
-</head>
-<body>
-  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-    async function sendShare() {
-      const result = await liff.shareTargetPicker([
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://f.ptcdn.info/976/056/000/p6sqakk6v4UDkiQgUKI-o.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213",
-        "margin": "xxl",
-        "align": "center",
-        "animated": true,
-        "gravity": "center",
-        "action": {
-          "type": "message",
-          "label": "action",
-          "text": "เบน"
-        }
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "กลับ",
-            "weight": "bold",
-            "size": "xxl",
-            "wrap": true,
-            "color": "#ff00ff",
-            "position": "relative",
-            "align": "center"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://2.bp.blogspot.com/-IWpz_p-s2j8/WrnNVTzohVI/AAAAAAALQKY/dWIKQ7J8efYmRoWJsMExBftV3zKXYzutwCLcBGAs/s1600/AF005859_00.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "แล้ว",
-            "weight": "bold",
-            "size": "xxl",
-            "wrap": true,
-            "margin": "none",
-            "color": "#ff0000",
-            "align": "center"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://4.bp.blogspot.com/-kTpP4gzIXQo/WrnNVvCpmgI/AAAAAAALQKc/pCud1BDUM9I0PhCaSUjYWwdZ0r2iMpYqwCLcBGAs/s1600/AF005859_01.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "มา",
-            "weight": "bold",
-            "size": "xxl",
-            "margin": "xxl",
-            "color": "#00ff00",
-            "align": "center"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
-    }
-  ]
+
+#buttonLogin {
+  display: none;
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-      ])
-      if (result) {
-        alert(`[${result.status}] Message sent!`)
-      } else {
-        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+#buttonLogin:active,
+#buttonLogin:hover {
+  outline: 0;
+}
 
-        if (minorVer === undefined) {
-          alert('ShareTargetPicker was canceled in external browser')
-          return
-        }
- 
-        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
-        }
-      }
-    }
-    function logOut() {
-      liff.logout()
-      window.location.reload()
-    }
-    async function main() {
-      await liff.init({ liffId: "1656633739-NjWEVAWZ" })
-      if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block"
-        if (!liff.isInClient()) {
-          document.getElementById("btnLogOut").style.display = "block"
-        }
-      } else {
-        document.getElementById("btnLogin").style.display = "block"
-      }
-    }
-    main()
-  </script>
-</body>
-</html>
+@media (min-width: 768px) {
+  #buttonLogin {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+#buttonLogOut, #buttonShare 
+{
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 10px 10px 10px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+ /* display: flex; */
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#buttonLogOut, #buttonShare:active,
+#buttonLogOut, #buttonShare:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  #buttonLogin {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+button{
+display: none;
+}
