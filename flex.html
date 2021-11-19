@@ -5,10 +5,8 @@
      <title>Flex Message</title>
   <style>
     #pictureUrl { display: block; margin: 0 auto }
-    <style>
-    body { padding: }
     button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }*/
-    .button-63 {
+  .button-63 {
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
@@ -42,8 +40,7 @@
     font-size: 24px;
     min-width: 196px;
   }
-}
-</style> 
+} 
 
   </style>
 </head>
@@ -70,12 +67,10 @@
       if (liff.isLoggedIn()) {
         runApp()
       } else {
-      
-
-
+             err => console.error(err.code, error.message));
           });
       }
-    }, err => console.error(err.code, error.message));
+    }
   </script>
 </body>
 </html>
