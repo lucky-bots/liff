@@ -17,94 +17,106 @@
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
-        {
+       {
   "type": "bubble",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "CREATOR BOT",
-        "color": "#FF0000",
-        "weight": "bold",
-        "size": "xxl",
-        "align": "center"
-      }
-    ]
-  },
-  "hero": {
-    "type": "image",
-    "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg",
-    "size": "xl"
-  },
   "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
       {
-        "type": "text",
-        "text": "Sakon Khlaolamom",
-        "size": "xl",
-        "weight": "bold",
-        "align": "center",
-        "color": "#6B8E23"
-      },
-      {
-        "type": "text",
-        "text": "B E N S I N",
-        "align": "center",
-        "color": "#0000FF",
-        "weight": "bold"
-      },
-      {
-        "type": "separator",
-        "margin": "md"
+        "type": "image",
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "1:1",
+        "gravity": "center",
+        "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg"
       },
       {
         "type": "box",
         "layout": "vertical",
+        "contents": [],
+        "position": "absolute",
+        "background": {
+          "type": "linearGradient",
+          "angle": "0deg",
+          "endColor": "#00000000",
+          "startColor": "#00000099"
+        },
+        "width": "100%",
+        "height": "40%",
+        "offsetBottom": "0px",
+        "offsetStart": "0px",
+        "offsetEnd": "0px"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
         "contents": [
           {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "Website",
-              "uri": "http://luckyslot.epuzy.com"
-            },
-            "style": "link"
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "LINE",
-              "uri": "https://line.me/ti/p/HIbs72W0qn"
-            },
-            "style": "link"
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "postback",
-              "label": "สนับสนุน ผ่านบันชี",
-              "data": "สกล เคล้าละม่อม0423786817 กสิกร"
-            },
-            "style": "secondary",
-            "color": "#ccff00"
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "วันนี้คุณมี พรุ่งนี้อาจหมด ก็ได้",
+                    "size": "xl",
+                    "color": "#ff00ff"
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "วันนี้ ผมหมด  แต่ก้อคงไม่ตลอดไปหรอก",
+                    "size": "xl",
+                    "color": "#ffddff"
+                  }
+                ],
+                "spacing": "xs"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "  ฝากไว้ให้คิดครับ",
+                        "size": "xxl",
+                        "color": "#00ff00",
+                        "align": "center",
+                        "weight": "bold"
+                      }
+                    ],
+                    "flex": 0,
+                    "spacing": "lg"
+                  }
+                ]
+              }
+            ],
+            "spacing": "xs"
           }
         ],
-        "paddingTop": "10px"
+        "position": "absolute",
+        "offsetBottom": "0px",
+        "offsetStart": "0px",
+        "offsetEnd": "0px",
+        "paddingAll": "20px"
       }
-    ]
-  },
-  "styles": {
-    "header": {
-      "backgroundColor": "#00B900"
-    }
+    ],
+    "paddingAll": "0px"
   }
 }
-
       ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
