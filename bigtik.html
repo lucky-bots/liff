@@ -23,91 +23,64 @@
  "altText": "Flex Message",
  "contents":{
   "type": "bubble",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "CREATOR BOT",
-        "color": "#FF0000",
-        "weight": "bold",
-        "size": "xxl",
-        "align": "center"
-      }
-    ]
-  },
-  "hero": {
-    "type": "image",
-    "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg",
-    "size": "xl"
-  },
   "body": {
     "type": "box",
     "layout": "vertical",
+    "spacing": "md",
     "contents": [
       {
         "type": "text",
-        "text": "Sakon Khlaolamom",
-        "size": "xl",
-        "weight": "bold",
-        "align": "center",
-        "color": "#6B8E23"
-      },
-      {
-        "type": "text",
         "text": "B E N S I N",
+        "size": "xl",
+        "gravity": "center",
+        "weight": "bold",
+        "wrap": true,
         "align": "center",
-        "color": "#0000FF",
-        "weight": "bold"
-      },
-      {
-        "type": "separator",
-        "margin": "md"
+        "color": "#fcffdd"
       },
       {
         "type": "box",
         "layout": "vertical",
+        "spacing": "sm",
+        "margin": "lg",
         "contents": [
           {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "Website",
-              "uri": "http://luckyslot.epuzy.com"
-            },
-            "style": "link"
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "LINE",
-              "uri": "https://line.me/ti/p/HIbs72W0qn"
-            },
-            "style": "link"
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "postback",
-              "label": "สนับสนุน ผ่านบันชี",
-              "data": "สกล เคล้าละม่อม0423786817 กสิกร"
-            },
-            "style": "secondary",
-            "color": "#ccff00"
+            "type": "box",
+            "layout": "vertical",
+            "margin": "xxl",
+            "contents": [
+              {
+                "type": "spacer"
+              },
+              {
+                "type": "image",
+                "size": "xl",
+                "aspectMode": "cover",
+                "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg"
+              },
+              {
+                "type": "text",
+                "text": "ต้องมีสักวัน",
+                "margin": "xxl",
+                "size": "xs",
+                "color": "#AAAAAA",
+                "wrap": true,
+                "weight": "bold",
+                "style": "normal",
+                "decoration": "none",
+                "position": "relative",
+                "align": "center",
+                "adjustMode": "shrink-to-fit"
+              }
+            ]
           }
-        ],
-        "paddingTop": "10px"
+        ]
       }
-    ]
-  },
-  "styles": {
-    "header": {
-      "backgroundColor": "#00B900"
-       }
-     }
-   }
+    ],
+    "backgroundColor": "#000000",
+    "borderWidth": "medium"
+  }
+}
  }
              ])
       if (result) {
