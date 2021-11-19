@@ -148,7 +148,11 @@ body {
     async function sendShare() {
       const result = await 
         liff.shareTargetPicker([ 
-                {
+  
+ {  
+ "type": "flex",
+ "altText": "Flex Message",
+ "contents": {
   "type": "bubble",
   "header": {
     "type": "box",
@@ -235,6 +239,7 @@ body {
     }
   }
 } 
+}
       ])    
        if (result) {
  alert(`[${result.status}] ส่ง Flex Message เรียบร้อย!`)
