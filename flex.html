@@ -1,76 +1,79 @@
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Flex Message</title>
-  <style>
-    #pictureUrl { display: block; margin: 0 auto }
-    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }*/
-  .button-63 {
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.button-63:active,
-.button-63:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-63 {
-    font-size: 24px;
-    min-width: 196px;
-  }
-} 
-
-  </style>
-</head>
-<body>
-  <img id="pictureUrl" width="25%">
-  <p id="userId"></p>
-  <p id="displayName"></p>
-  <p id="statusMessage"></p>
-  <p id="getDecodedIDToken"></p>
-  <button class="button-63" onclick="open.windows('https://liff.line.me/1656633739-29ex3geA')">เข้าใช้ Flex </button>
-  <button class="button-63" id="btnLogOut" onclick="logOut()">ออกระบบ</button>
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
-  <script>
-    function runApp() {
-      liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>ไอดี:</b> ' + profile.userId;
-        document.getElementById("displayName").innerHTML = '<b>ชื่อ:</b> ' + profile.displayName;
-        document.getElementById("statusMessage").innerHTML = '<b>สเตตัส:</b> ' + profile.statusMessage;
-        document.getElementById("getDecodedIDToken").innerHTML = '<b>อีเมล์:</b> ' + liff.getDecodedIDToken().email;
-      }).catch(err => console.error(err));
-    }
-    liff.init({ liffId: "1656633739-29ex3geA" }, () => {
-      if (liff.isLoggedIn()) {
-        runApp()
-      } else {
-             err => console.error(err.code, error.message));
-          });
-      }
-    }
-  </script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFs" "ไม่ระบุชื่อ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>メッセージ送信アプรี</title>
+    </head>
+    <body>
+        <h1 id="displaynamefield"></h1>
+        <button type="button" class="btn btn-danger" id="logout" onclick="LogoutAction();">ログアウト</button>
+        
+        <form id="send-message">
+            <p>送信したいメッセージを入れてね</p>
+            <input type="text" id="message" name="message" size="30" placeholder="メッセージを入力">
+            <button id="send" class="btn btn-primary">送信</button>
+        </form>
+                  <!-- load jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- load LIFF SDK -->
+        <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+        <script>
+            var userId = "";
+            document.getElementById("logout").style.display ="none";
+            window.onload = function() {
+                initializeLiff("1656633739-29ex3geA");
+            };
+         function initializeLiff(myLiffId) {
+                liff
+                    .init({
+                        liffId: myLiffId
+                    })
+                    .then(() => {
+                        //LINEアプリで起動しているかどうかとログインをしているのかを判断している
+                        if (!liff.isInClient() && !liff.isLoggedIn()){
+                            window.alert("LINEアカウントにログインしてください。");
+                            liff.login();
+                        }else{
+                            // start to use LIFF's api
+                            liff.getProfile().then(function(profile) {
+                                document.getElementById('displaynamefield').textContent = 'ようこそ' + profile.displayName + 'さん';
+                                userId = profile.userId;
+                                if (!liff.isInClient()){
+                                    document.getElementById("logout").style.display = "block"
+                                }
+                            }).catch(function(error) {
+                                window.alert('Error getting profile: ' + error);
+                            })
+                        }
+                        })
+                    .catch((err) => {
+                        document.getElementById('displaynamefield').textContent = err;
+                    });
+            }
+            // メッセージの送信
+            $(function() {
+                $('#send').click(function(e) {
+                    e.preventDefault();
+                    var val = $('#message').val();
+                    liff.shareTargetPicker([
+                        {
+                            type: "text",
+                            text: val
+                        }
+                        ])
+                        .then(
+                            alert("メッセージを送信しました")
+                        ).catch(function(res) {
+                            alert("送信に失敗しました")
+                        })
+                });
+            });
+            // ログアウトの処理
+            function LogoutAction(){
+                liff.logout();
+                window.location.reload();
+            }
+        </script>
+    </body>
 </html>
