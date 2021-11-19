@@ -305,13 +305,12 @@ body {
 }  
       ])    
        if (result) {
- alert(`[${result.status}] Message sent!`)
- } 
-     else  {
+ alert(`[${result.status}] ส่ง Flex Message เรียบร้อย!`)
+     } else  {
              const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
   
-       if (minorVer === undefined) {
- alert('ShareTargetPicker was canceled in external browser')
+             if (minorVer === undefined) {
+  alert('ไม่สามารถส่งนอกแอพได้จ้า')
         return
       }        
   
