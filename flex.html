@@ -57,14 +57,10 @@
                     e.preventDefault();
                     var val = $('#message').val();
                     liff.shareTargetPicker([
-                       {  
-                         "type": "flex",
-                         "altText": "Flex Message",
-                          "contents":{
+                       {
                             type: "flex",
                             text: val
-                           }        
-                          }
+                       }
                         ])
                         .then(
                             alert("ยืนยัน")
