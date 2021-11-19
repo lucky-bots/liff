@@ -7,11 +7,11 @@
     </head>
     <body>
         <h1 id="displaynamefield"></h1>
-        <button type="button" class="btn btn-danger" id="logout" onclick="LogoutAction();">ログアウト</button>
+        <button type="button" class="btn btn-danger" id="logout" onclick="LogoutAction();">ออกระบบ</button>
         
         <form id="send-message">
             <p>กรอกข้อความที่ต้องการส่ง</p>
-            <input type="text" id="message" name="message" size="30" placeholder="ป้อนข้อมูลที่ต้องการส่ง">
+            <input type="flex" id="message" name="message" size="30" placeholder="วางข้อความในนี้">
             <button id="send" class="btn btn-primary">ส่ง</button>
         </form>
                   <!-- load jquery -->
@@ -37,7 +37,7 @@
                         }else{
                             // start to use LIFF's api
                             liff.getProfile().then(function(profile) {
-                                document.getElementById('displaynamefield').textContent = 'ยินดีต้อนรับ' + profile.displayName + 'คุณ';
+                                document.getElementById('displaynamefield').textContent = 'ยินดีต้อนรับ' + profile.displayName + 'เข้าสู่ระบบ';
                                 userId = profile.userId;
                                 if (!liff.isInClient()){
                                     document.getElementById("logout").style.display = "block"
@@ -57,13 +57,17 @@
                     e.preventDefault();
                     var val = $('#message').val();
                     liff.shareTargetPicker([
-                        {
-                            type: "text",
+                       {  
+                         "type": "flex",
+                         "altText": "Flex Message",
+                          "contents":{
+                            type: "flex",
                             text: val
-                        }
+                           }        
+                          }
                         ])
                         .then(
-                            alert("ส่งข้อความ")
+                            alert("ยืนยัน")
                         ).catch(function(res) {
                             alert("ไม่สำเร็จ")
                         })
