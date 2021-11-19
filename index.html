@@ -148,8 +148,8 @@ body {
   <script>
     async function sendShare() {
       const result = await 
-        liff.shareTargetPicker([
- {
+        liff.shareTargetPicker([ 
+                       {
   "type": "carousel",
   "contents": [
     {
@@ -177,7 +177,7 @@ body {
         "contents": [
           {
             "type": "text",
-            "text": "กลับ",
+            "text": "ทำใม",
             "weight": "bold",
             "size": "xxl",
             "wrap": true,
@@ -223,7 +223,7 @@ body {
         "contents": [
           {
             "type": "text",
-            "text": "แล้ว",
+            "text": "ใจร้าย",
             "weight": "bold",
             "size": "xxl",
             "wrap": true,
@@ -269,12 +269,16 @@ body {
         "contents": [
           {
             "type": "text",
-            "text": "มา",
+            "text": "จัง",
             "weight": "bold",
             "size": "xxl",
             "margin": "xxl",
             "color": "#00ff00",
-            "align": "center"
+            "align": "center",
+            "position": "relative",
+            "decoration": "none",
+            "gravity": "top",
+            "wrap": true
           },
           {
             "type": "box",
@@ -299,9 +303,7 @@ body {
       }
     }
   ]
-}
- 
-          
+}  
       ])    
        if (result) {
  alert(`[${result.status}] Message sent!`)
