@@ -148,161 +148,93 @@ body {
     async function sendShare() {
       const result = await 
         liff.shareTargetPicker([ 
-                       {
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://f.ptcdn.info/976/056/000/p6sqakk6v4UDkiQgUKI-o.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213",
-        "margin": "xxl",
+                {
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "CREATOR BOT",
+        "color": "#FF0000",
+        "weight": "bold",
+        "size": "xxl",
+        "align": "center"
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg",
+    "size": "xl"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Sakon Khlaolamom",
+        "size": "xl",
+        "weight": "bold",
         "align": "center",
-        "animated": true,
-        "gravity": "center",
-        "action": {
-          "type": "message",
-          "label": "action",
-          "text": "เบน"
-        }
+        "color": "#6B8E23"
       },
-      "body": {
+      {
+        "type": "text",
+        "text": "B E N S I N",
+        "align": "center",
+        "color": "#0000FF",
+        "weight": "bold"
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
         "type": "box",
         "layout": "vertical",
         "contents": [
           {
-            "type": "text",
-            "text": "ทำใม",
-            "weight": "bold",
-            "size": "xxl",
-            "wrap": true,
-            "color": "#ff00ff",
-            "position": "relative",
-            "align": "center"
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Website",
+              "uri": "http://luckyslot.epuzy.com"
+            },
+            "style": "link"
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "LINE",
+              "uri": "https://line.me/ti/p/HIbs72W0qn"
+            },
+            "style": "link"
           },
           {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "สนับสนุน ผ่านบันชี",
+              "data": "สกล เคล้าละม่อม0423786817 กสิกร"
+            },
+            "style": "secondary",
+            "color": "#ccff00"
           }
         ],
-        "spacing": "sm",
-        "paddingAll": "13px"
+        "paddingTop": "10px"
       }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://2.bp.blogspot.com/-IWpz_p-s2j8/WrnNVTzohVI/AAAAAAALQKY/dWIKQ7J8efYmRoWJsMExBftV3zKXYzutwCLcBGAs/s1600/AF005859_00.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "ใจร้าย",
-            "weight": "bold",
-            "size": "xxl",
-            "wrap": true,
-            "margin": "none",
-            "color": "#ff0000",
-            "align": "center"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
-    },
-    {
-      "type": "bubble",
-      "size": "micro",
-      "hero": {
-        "type": "image",
-        "url": "https://4.bp.blogspot.com/-kTpP4gzIXQo/WrnNVvCpmgI/AAAAAAALQKc/pCud1BDUM9I0PhCaSUjYWwdZ0r2iMpYqwCLcBGAs/s1600/AF005859_01.gif",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "320:213"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "จัง",
-            "weight": "bold",
-            "size": "xxl",
-            "margin": "xxl",
-            "color": "#00ff00",
-            "align": "center",
-            "position": "relative",
-            "decoration": "none",
-            "gravity": "top",
-            "wrap": true
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": []
-              }
-            ]
-          }
-        ],
-        "spacing": "sm",
-        "paddingAll": "13px"
-      }
+    ]
+  },
+  "styles": {
+    "header": {
+      "backgroundColor": "#00B900"
     }
-  ]
-}  
+  }
+} 
       ])    
        if (result) {
  alert(`[${result.status}] ส่ง Flex Message เรียบร้อย!`)
