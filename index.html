@@ -2,166 +2,34 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name วจ="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>My LIFF App</title>
-  
   <style>
-      
-     #buttonLogin {
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-#buttonLogin:active,
-#buttonLogin:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  #buttonLogin {
-    font-size: 24px;
-    min-width: 196px;
-  }
-}
-
-#buttonLogin {
-  width: 300px;
-  height: 80px;
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-#buttonLogin:active,
-#buttonLogin:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  #buttonLogin {
-    font-size: 24px;
-    min-width: 196px;
-  }
-}
-
-#buttonLogOut, #buttonShare 
-{
-  width: 300px;
-  height: 80px;
-  align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 10px 10px 10px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
- /* display: flex; */
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-#buttonLogOut:active, #buttonShare:active,
-#buttonLogOut:hover, #buttonShare:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  #buttonLogin {
-    font-size: 24px;
-    min-width: 196px;
-  }
-}
-button{
-display: none;
-} 
-
-body {
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkxWytzuUVixI9pGxTF2H0UbBhKkY7pDGAA&usqp=CAU);
-    margin: 0 0 0 ;
-    text-align: center;
-    
-}
-      
+    body { padding: 256px }
+    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
   </style>
-  </head>
-  <body>
-  <center>
-   <h1> Flex Message </h1>  
-  <button  id="buttonShare" onclick="sendShare()">แชร์</button>
-  <button id="buttonLogin" onclick="liff.login()">เข้าระบบ</button>
-  <button id="buttonLogOut" onclick="logOut()">ออกระบบ</button>
-  
-  
-  </center>
-  
+</head>
+<body>
+  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  
-  
   <script>
     async function sendShare() {
-      const result = await 
-        liff.shareTargetPicker([
- 
-          
-      ])    
-       if (result) {
- alert(`[${result.status}] Message sent!`)
- } 
-     else  {
-             const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
-  
-       if (minorVer === undefined) {
- alert('ShareTargetPicker was canceled in external browser')
-        return
-      }        
-  
-           
+      const result = await liff.shareTargetPicker([
+
+
+      ])
+      if (result) {
+        alert(`[${result.status}] Message sent!`)
+      } else {
+        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
+          return
+        }
+
         if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
           alert('ShareTargetPicker was canceled in LINE app')
         }
@@ -172,17 +40,16 @@ body {
       window.location.reload()
     }
     async function main() {
-      await liff.init({ liffId: "1656633739-NjWEVAWZ" })
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
       if (liff.isLoggedIn()) {
-          if (!liff.isInClient()) {
-        document.getElementById("buttonShare").style.display = "block"
-          document.getElementById("buttonLogOut").style.display = "block" 
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
         }
-    } else {
-        document.getElementById("buttonLogin").style.display = "block"
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
       }
     }
     main()
-  </script>  
+  </script>
 </body>
-</html>
