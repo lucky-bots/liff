@@ -8,7 +8,6 @@
   <style>
       
      #buttonLogin {
-  display: none;
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
@@ -16,7 +15,6 @@
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
-  display: flex;
   font-family: Phantomsans, sans-serif;
   font-size: 20px;
   justify-content: center;
@@ -176,8 +174,8 @@ body {
     async function main() {
       await liff.init({ liffId: "1656633739-NjWEVAWZ" })
       if (liff.isLoggedIn()) {
+          if (!liff.isInClient()) {
         document.getElementById("buttonShare").style.display = "block"
-        if (!liff.isInClient()) {
           document.getElementById("buttonLogOut").style.display = "block" 
         }
     } else {
