@@ -17,104 +17,98 @@
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
-                       {
-          "type": "flex",
-          "altText": "Flex Message",
-          "contents": {
-            "type": "bubble",
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "md",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "BROWN'S ADVENTURE",
-                  "size": "xl",
-                  "gravity": "center",
-                  "weight": "bold",
-                  "wrap": true
-                },
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "spacing": "sm",
-                  "margin": "lg",
-                  "contents": [
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Date",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "Monday 25, 9:00PM",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Place",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "LINE Thailand",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "layout": "vertical",
-                      "margin": "xxl",
-                      "contents": [
-                        {
-                          "type": "spacer"
-                        },
-                        {
-                          "type": "image",
-                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
-                          "size": "xl",
-                          "aspectMode": "cover"
-                        },
-                        {
-                          "type": "text",
-                          "text": "You can enter the theater by using this code instead of a ticket",
-                          "margin": "xxl",
-                          "size": "xs",
-                          "color": "#AAAAAA",
-                          "wrap": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
+                       
+ {  
+ "type": "flex",
+ "altText": "Flex Message",
+ "contents":{
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "CREATOR BOT",
+        "color": "#FF0000",
+        "weight": "bold",
+        "size": "xxl",
+        "align": "center"
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg",
+    "size": "xl"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Sakon Khlaolamom",
+        "size": "xl",
+        "weight": "bold",
+        "align": "center",
+        "color": "#6B8E23"
+      },
+      {
+        "type": "text",
+        "text": "B E N S I N",
+        "align": "center",
+        "color": "#0000FF",
+        "weight": "bold"
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Website",
+              "uri": "http://luckyslot.epuzy.com"
+            },
+            "style": "link"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "LINE",
+              "uri": "https://line.me/ti/p/HIbs72W0qn"
+            },
+            "style": "link"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "postback",
+              "label": "สนับสนุน ผ่านบันชี",
+              "data": "สกล เคล้าละม่อม0423786817 กสิกร"
+            },
+            "style": "secondary",
+            "color": "#ccff00"
           }
-        }
+        ],
+        "paddingTop": "10px"
+      }
+    ]
+  },
+  "styles": {
+    "header": {
+      "backgroundColor": "#00B900"
+       }
+     }
+   }
+ }
              ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
