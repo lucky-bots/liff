@@ -17,107 +17,105 @@
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
-       {
-  "type": "bubble",
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "image",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "1:1",
-        "gravity": "center",
-        "url": "https://www.img.in.th/images/fd9224193cad3d3fd57129fe185aecca.md.jpg"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [],
-        "position": "absolute",
-        "background": {
-          "type": "linearGradient",
-          "angle": "0deg",
-          "endColor": "#00000000",
-          "startColor": "#00000099"
-        },
-        "width": "100%",
-        "height": "40%",
-        "offsetBottom": "0px",
-        "offsetStart": "0px",
-        "offsetEnd": "0px"
-      },
-      {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "วันนี้คุณมี พรุ่งนี้อาจหมด ก็ได้",
-                    "size": "xl",
-                    "color": "#ff00ff"
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "วันนี้ ผมหมด  แต่ก้อคงไม่ตลอดไปหรอก",
-                    "size": "xl",
-                    "color": "#ffddff"
-                  }
-                ],
-                "spacing": "xs"
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "box",
-                    "layout": "baseline",
-                    "contents": [
-                      {
-                        "type": "text",
-                        "text": "  ฝากไว้ให้คิดครับ",
-                        "size": "xxl",
-                        "color": "#00ff00",
-                        "align": "center",
-                        "weight": "bold"
-                      }
-                    ],
-                    "flex": 0,
-                    "spacing": "lg"
-                  }
-                ]
-              }
-            ],
-            "spacing": "xs"
+                       {
+          "type": "flex",
+          "altText": "Flex Message",
+          "contents": {
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "md",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "BROWN'S ADVENTURE",
+                  "size": "xl",
+                  "gravity": "center",
+                  "weight": "bold",
+                  "wrap": true
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "margin": "lg",
+                  "contents": [
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Date",
+                          "flex": 1,
+                          "size": "sm",
+                          "color": "#AAAAAA"
+                        },
+                        {
+                          "type": "text",
+                          "text": "Monday 25, 9:00PM",
+                          "flex": 4,
+                          "size": "sm",
+                          "color": "#666666",
+                          "wrap": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Place",
+                          "flex": 1,
+                          "size": "sm",
+                          "color": "#AAAAAA"
+                        },
+                        {
+                          "type": "text",
+                          "text": "LINE Thailand",
+                          "flex": 4,
+                          "size": "sm",
+                          "color": "#666666",
+                          "wrap": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "xxl",
+                      "contents": [
+                        {
+                          "type": "spacer"
+                        },
+                        {
+                          "type": "image",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
+                          "size": "xl",
+                          "aspectMode": "cover"
+                        },
+                        {
+                          "type": "text",
+                          "text": "You can enter the theater by using this code instead of a ticket",
+                          "margin": "xxl",
+                          "size": "xs",
+                          "color": "#AAAAAA",
+                          "wrap": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           }
-        ],
-        "position": "absolute",
-        "offsetBottom": "0px",
-        "offsetStart": "0px",
-        "offsetEnd": "0px",
-        "paddingAll": "20px"
-      }
-    ],
-    "paddingAll": "0px"
-  }
-}
-      ])
+        }
+             ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
       } else {
