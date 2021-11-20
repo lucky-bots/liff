@@ -28,7 +28,8 @@
     async function sendShare() {
       const val = document.getElementById('myTextarea').val();
       const result = await liff.shareTargetPicker([{
-          text: val
+         type: "text"
+         text: val
       }
           ])
       if (result) {
