@@ -25,9 +25,9 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-    var x = document.getElementById("myTextarea").valu;
-    consoel.log (x)
     async function sendShare() {
+      const x = document.getElementById("myTextarea").valu;
+      consoel.log (x)
       const result = await liff.shareTargetPicker(["x"])
       if (result) {
         alert(`[${result.status}] Message sent!`)
