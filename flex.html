@@ -11,7 +11,7 @@
         
         <form id="send-message">
             <p>กรอกข้อความที่ต้องการส่ง</p>
-            <input type="flex" id="message" name="message" size="30" placeholder="วางข้อความในนี้">
+            <input type="text" id="message" name="message" size="30" placeholder="วางข้อความในนี้">
             <button id="send" class="btn btn-primary">ส่ง</button>
         </form>
                   <!-- load jquery -->
@@ -58,7 +58,7 @@
                     var val = $('#message').val();
                     liff.shareTargetPicker([
                        {
-                            type: "flex",
+                            type: "text",
                             text: val
                        }
                         ])
