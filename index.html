@@ -26,9 +26,11 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
-      const x = document.getElementById("myTextarea").valu;
-      consoel.log (x)
-      const result = await liff.shareTargetPicker(["x"])
+      const val = document.getElementById('myTextarea').val();
+      const result = await liff.shareTargetPicker([{
+          text: val
+      }
+          ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
       } else {
