@@ -19,16 +19,16 @@
     </style>
 </head>
 <body>
-  <textare id="myTextarea"></textare>
+  <textarea id="myTextarea"></textarea>
   <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
+    var x = document.getElementById("myTextarea").valu;
+    consoel.log (x)
     async function sendShare() {
-      const result = await liff.shareTargetPicker([
-                       
-             ])
+      const result = await liff.shareTargetPicker(["x"])
       if (result) {
         alert(`[${result.status}] Message sent!`)
       } else {
