@@ -32,11 +32,7 @@
   <script>
     async function sendShare() {
       const val = document.getElementById('myTextarea').val();
-      const result = await liff.shareTargetPicker([{
-         type: "text"
-         text: val
-      }
-          ])
+      const result = await liff.shareTargetPicker([{'val'}])
       if (result) {
         alert(`[${result.status}] Message sent!`)
       } else {
