@@ -30,72 +30,96 @@
  {  
  "type": "flex",
  "altText": "Flex Message",
- "contents": {
+ "contents": 
+  
+
+
+             {
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://www.i-pic.info/i/wvWY88257.jpg",
+    "url": "https://www.img.in.th/images/b0fe2612f2b4ef5aa4760c6a812ca289.jpg",
+    "margin": "none",
     "size": "full",
-    "aspectRatio": "20:20",
+    "aspectRatio": "20:19",
+    "position": "relative",
     "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "http://linecorp.com/"
-    },
-    "margin": "xxl",
-    "gravity": "top",
-    "align": "center"
+    "align": "center",
+    "backgroundColor": "#ff00cc",
+    "animated": false
   },
   "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
       {
-        "type": "text",
-        "text": "โปรเด็ด ต้องบอกต่อ",
-        "weight": "bold",
-        "size": "xxl",
-        "color": "#cc00cc",
-        "align": "center"
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "ทีหลังมาใหม่นะแบบเนี้ย !!",
+                    "size": "xl",
+                    "color": "#ff0000",
+                    "weight": "bold",
+                    "decoration": "none"
+                  }
+                ],
+                "size": "sm",
+                "wrap": true
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "ค...ว...ย",
+                    "size": "lg",
+                    "weight": "bold",
+                    "color": "#ff00ff"
+                  },
+                  {
+                    "type": "text",
+                    "text": "เถอะ...ครับ",
+                    "size": "md",
+                    "weight": "bold",
+                    "color": "#0000cc",
+                    "align": "end"
+                  }
+                ],
+                "spacing": "sm",
+                "margin": "md"
+              }
+            ]
+          }
+        ],
+        "spacing": "xl",
+        "paddingAll": "20px"
       }
     ],
-    "backgroundColor": "#fcff00"
+    "paddingAll": "0px",
+    "backgroundColor": "#ffcc00"
   },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "secondary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "แชร์ให้เพื่อน",
-          "uri": "https://liff.line.me/1656633739-vekx9ekl"
-        },
-        "color": "#cdcdff"
-      },
-      {
-        "type": "button",
-        "style": "primary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "สมัครคลิ๊ก ที่นี่",
-          "uri": "https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6199884e390fe80018d92382.html"
-        },
-        "margin": "xs"
-      },
-      {
-        "type": "spacer",
-        "size": "sm"
-      }
-    ],
-    "flex": 0
+  "styles": {
+    "hero": {
+      "separator": true
+    }
   }
-} 
+}
+
+
+
+
+
+
    }
              ])
       if (result) {
