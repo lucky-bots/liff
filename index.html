@@ -1,70 +1,2559 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App</title>
-  <style>
-    body { padding: 26px }
-    button, textarea { display: none;
-    width: 80%; 
-    height: 10%;
-    border-radius: 80px 80px 80px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU);
-    font-family: 'Mali', cursive;
-    font-size: 20px;
-    color: #FF1700;
-    padding: 10px ; 
-    margin: 16px auto }
-  </style>
-    <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr" style="height: 100%; color-scheme: light; --liff-base-background-color:#FFFFFF; --liff-base-text-color:#000000; --liff-base-background-rgb-color:255, 255, 255; --liff-base-text-rgb-color:0, 0, 0; --liff-light-button-border-color:rgba(0, 0, 0, 0.15); --liff-title-text-color:#111111; --liff-title-background-color:#FFFFFF; --liff-title-button-color:#111111; --liff-icon-color:#111111; --liff-status-bar-color:black; --liff-title-subtext-color:#B7B7B7; --liff-progress-bar-color:#07B53B; --liff-progress-background-color:#EFEFEF; --liff-title-button-area-background-color:rgba(255, 255, 255, 0.12); --liff-title-button-area-border-color:rgba(0, 0, 0, 0.15);">
+ <head> 
+  <link href="https://www.blogger.com/static/v1/widgets/1324390690-widget_css_bundle.css" rel="stylesheet" type="text/css"> 
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> 
+  <!--<link crossorigin='anonymous' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' rel='stylesheet'/>--> 
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" rel="stylesheet"> 
+  <!-- [ Meta Tag SEO ] --> 
+  <meta content="width=device-width, initial-scale=1" name="viewport"> 
+  <meta content="blogger" name="generator"> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <!-- [Start] Home Screen Android --> 
+  <meta content="yes" name="mobile-web-app-capable"> 
+  <link href="https://photoofdays.blogspot.com/favicon.ico" rel="icon"> 
+  <link href="https://1.bp.blogspot.com/-ty9xJEMPw5o/YUv3t70jTYI/AAAAAAACX_w/SHak7XxH2MsG7ju9MpHOVGwmXb2dUGZdgCNcBGAsYHQ/LOGO_150x150.png" rel="apple-touch-icon" sizes="152×152"> 
+  <link href="https://1.bp.blogspot.com/-ty9xJEMPw5o/YUv3t70jTYI/AAAAAAACX_w/SHak7XxH2MsG7ju9MpHOVGwmXb2dUGZdgCNcBGAsYHQ/LOGO_150x150.png" rel="shortcut icon" sizes="152x152"> 
+  <!-- [End] Home Screen Android --> 
+  <link href="https://www.blogger.com/openid-server.g" rel="openid.server"> 
+  <link href="https://photoofdays.blogspot.com/" rel="openid.delegate"> 
+  <link href="https://photoofdays.blogspot.com/p/flex-message-json-share.html" rel="canonical"> 
+  <title>Dashboard Flex Message by 1 Image 1 Text</title> 
+  <meta content="พัฒนาโดย ทีมศูนย์ภาพนิ่ง ภาพดีๆ 072" name="description"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all"> 
+  <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
 <script>
   // VConsole will be exported to `window.VConsole` by default.
   var vConsole = new window.VConsole();
 </script>
-</head>
-<body>
-  <textarea id="myTextarea"></textarea>
-  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-    async function sendShare() {
-      const val = document.getElementById('myTextarea').val();
-      const result = await liff.shareTargetPicker([{'val'}])
-      if (result) {
-        alert(`[${result.status}] Message sent!`)
-      } else {
-        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+  <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebSite", "url": "https://photoofdays.blogspot.com/", "potentialAction": { "@type": "SearchAction", "target": "https://photoofdays.blogspot.com/?q={search_term}", "query-input": "required name=search_term" } }
+ 	</script> 
+  <meta content="Dashboard Flex Message by 1 Image 1 Text, ภาพดี ๆ ๐๗๒: Dashboard Flex Message by 1 Image 1 Text, ภาพดี ๆ ๐๗๒" name="keywords"> 
+  <link href="https://photoofdays.blogspot.com/feeds/posts/default" rel="alternate" title="ภาพดี ๆ ๐๗๒ - Atom" type="application/atom+xml"> 
+  <link href="https://photoofdays.blogspot.com/feeds/posts/default?alt=rss" rel="alternate" title="ภาพดี ๆ ๐๗๒ - RSS" type="application/rss+xml"> 
+  <link href="https://www.blogger.com/feeds/5936826712684851582/posts/default" rel="alternate" title="ภาพดี ๆ ๐๗๒ - Atom" type="application/atom+xml"> 
+  <link href="https://photoofdays.blogspot.com/p/flex-message-json-share.html" hreflang="x-default" rel="alternate"> 
+  <meta content="68C07418919C32E4BEE90C9BD8A83569" name="msvalidate.01"> 
+  <meta content="SDr44Xg3H-j_ADT54Ok9wcWx9IpAkQNneWpD6VrJ5J4" name="google-site-verification"> 
+  <meta content="Thailand" name="geo.placename"> 
+  <meta content="TheHero" name="Author"> 
+  <meta content="general" name="rating"> 
+  <meta content="th" name="geo.country"> 
+  <!-- [ End Meta Tag SEO ] --> 
+  <!-- [ Social Media Meta Tag ] --> 
+  <meta content="ภาพดี ๆ ๐๗๒" property="og:site_name"> 
+  <!-- <b:if cond='data:blog.postImageThumbnailUrl'> <meta expr:content='data:blog.postThumbnailUrl' property='og:image'/> </b:if> <meta expr:content='https://4.bp.blogspot.com/-7VjT34p2Mw0/XR3uljicQ8I/AAAAAAABNZI/lbIQsRk4qzo8ok_g4MKNVa3OZsS9SyhFgCLcBGAs/s1600/Logo_Rectang_200x200.png' property='og:image'/> --> 
+  <meta content="" property="og:image"> 
+  <meta content="https://photoofdays.blogspot.com" property="article:author"> 
+  <meta content="https://photoofdays.blogspot.com" property="article:publisher"> 
+  <meta content="851449968302053" property="fb:app_id"> 
+  <meta content="https://photoofdays.blogspot.com" property="og:url"> 
+  <meta content="th_TH" property="og:locale"> 
+  <meta content="en_US" property="og:locale:alternate"> 
+  <meta content="summary" name="twitter:card"> 
+  <meta content="ภาพดี ๆ ๐๗๒: Dashboard Flex Message by 1 Image 1 Text" name="twitter:title"> 
+  <meta content="@photoofdays" name="twitter:site"> 
+  <meta content="@photoofdays" name="twitter:creator"> 
+  <!-- [ End Social Media Meta Tag ] --> 
+  <style id="page-skin-1" type="text/css"><!--
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;display:block;}*{margin:0;padding:0;}html{display:block;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{background:transparent;}table{border-collapse:collapse;border-spacing:0;}
+body{background:#FAECDE;font-family:'Sarabun','sans-serif';font-size:16px;font-weight:400;text-align:left;color:#000;line-height:normal;margin:0;padding:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}#Attribution1{height:0;visibility:hidden;display:none}.quickedit{display:none;}.clear{clear:both;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}.status-msg-body,.status-msg-border{display:none;}.navbar,.post-feeds,.feed-links{display:none;}
+strong,b{font-weight:bold;padding:0 0.25em;-webkit-transition:color 0.2s;transition:color 0.2s;}
+strong,b:hover{color:#d04c3f;left:-0.1em;content:'[';-webkit-transform:translateX(-100%);transform:translateX(-100%);}
+a:link{color:#e79c5a;text-decoration:none;transition:all.3s}
+a:link:hover{color:#8eb0f9;}
+a:visited{color:#999;text-decoration:none;transition:all.3s}
+a:visited:hover{color:#8eb0f9;}
+a img{border-width:0;}
+img{max-width:100%;vertical-align:middle;border:0px;}
+abbr,acronym{border-bottom:1px dotted;cursor:help;}
+sup,sub{vertical-align:baseline;position:relative;top:-.4em;font-size:86%;}
+sub{top:.4em;}small{font-size:86%;}
+kbd{font-size:80%;border:1px solid#b4babe;padding:2px 5px;border-bottom-width:2px;}
+mark{background-color:#ffce00;color:#182025;}
+p,blockquote,pre,table,figure,hr,form,ol,ul,dl{margin:1.5em 0;}
+hr{height:1px;border:none;background-color:#46515e;}
+cite,em,i{font-style:italic;}
+code{font-family:'Sarabun';color:#46515e;}#wrapper{overflow:hidden;width:100%;max-width:100%;margin:auto}#side-kanan{width:99%;float:right;overflow:hidden;margin-top:0;margin:0 auto;}#artikel{overflow:hidden;}#left-aside{float:left;width:100%;overflow:hidden;margin-top:0;margin:0 auto;}.blogtop-wrapper{overflow:hidden;position:relative;width:100%;}.cl-wrapper{overflow:hidden;padding:0 20px;position:inherit;max-width:1100px;margin:0 auto;}.header-wrapper{position:relative;}#header{float:left;margin:0;overflow:hidden;text-align:center;color:#025aff;}#header h1{padding:5px 10px;}#header img{border:0;background:none;width:auto;height:auto;margin:0 auto;}.sidebar.widget-content{display:inline-block;padding:10px;width:100%;background:#fff}.sidebar.widget{margin-bottom:5px;padding:10px;}#sidebar-kanan{margin-right:5px;}.sidebar li{margin:3px 0;padding:2px 0;list-style:none;}.sidebar a:link,.sidebar a:visited{color:#8f8f8f;text-decoration:none}.sidebar li a:hover{color:#79bbdd}#navbar-iframe{height:0;visibility:hidden;display:none;}.sidebar h2{background:#fff;color:#025aff;font-size:16px;font-weight:400;padding:5px;position:relative;border-bottom:1px solid rgba(0,0,0,0.1)}.lyco-search{position:relative;padding:0;height:0;margin:0 auto;}.hero,.content{text-align:center;position:relative;width:100%;}.inner1{min-height:350px;position:relative;}
+h1.title{text-transform:none;}
+h1.title a{font-family:'Sarabun';font-weight:400;color:#fff;}
+h1.title a:hover{background:none;}.post-more-link{text-align:right;margin-top:5px;}.post-more-link a{background:#1abc9c;color:#fff;overflow:hidden;display:inline;padding:5px;}.post{overflow:hidden;}.post-outer{overflow:hidden;}.post blockquote{padding:1em 1em;font-size:100%;background:#fff9e7;color:#560000;border:2px solid#f0ebda;margin:0}.post blockquote:before{content:"\f10d";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:inherit;padding-right:10px;color:#560000;}.awal{float:left;color:#e79c5a;background:#fff;line-height:30px;padding-top:1px;padding-right:5px;font-size:50px;}#blog-pager{text-align:center;margin:10px 0;clear:both;overflow:hidden;padding:0 5px;}.post-body h1{font-size:150%}.post-body h2{font-size:140%}.post-body h3{font-size:130%}.post-body h4{font-size:120%}.post-body h5{font-size:110%}.post-body h6{font-size:100%}.post-body h1 b,.post-body h2 b,.post-body h3 b,.post-body h4 b,.post-body h5 b,.post-body h6 b{font-weight:700;}
+input,button,select,textarea{font-size:100%;line-height:normal;vertical-align:baseline;}
+textarea{display:block;box-sizing:border-box;}
+input.placeholder_text,textarea.placeholder_text{color:#888}
+ol{counter-reset:li;list-style:none;padding:0;margin:0;}
+ol ol{margin:0 0 0 2em;}.post ol li{position:relative;display:block;padding:0;margin:.5em 0.5em 2em;background:#fff;text-decoration:none;}.post ol li:before{content:counter(li);counter-increment:li;position:absolute;left:-2.5em;height:2em;width:2em;text-align:center;}.post-body ul{position:relative;padding:0;margin:.5em 0.5em 1.5em;text-decoration:none;}.post-body table{width:100%;}.post-body table td,.post-body table caption{background:#fff;border:0;padding:10px;text-align:left;vertical-align:top}.post-body table th{background:#ddd;border:0;padding:10px;text-align:left;vertical-align:top}.post-body table.tr-caption-container{border:0;margin:0;}.post-body th{font-weight:700;}.post-body table caption{border:none;font-style:italic;}.post-body td,.post-body th{vertical-align:top;text-align:left;font-size:13px;padding:3px 5px;border:1px solid#97b28e;}.post-body th{}.post-body th:hover{background:#d2d2d2;}.post-body table tr:nth-child(even)>td{background-color:#f9f9f9;}.post-body table tr:nth-child(even)>td:hover{background-color:#fbfbfb;}.post-body td a{color:#560000;}.post-body td a:hover{color:#cf4d35;}.post-body table.tr-caption-container td{border:0;padding:0;background:#fff;line-height:17px;overflow:hidden;text-align:center;text-overflow:ellipsis;white-space:nowrap;font-weight:700;color:#000;}.post-body table.tr-caption-container,.post-body table.tr-caption-container img,.post-body img{max-width:100%;height:auto; border:1px solid #ddd;border-radius: 4px;padding: 5px;}.post-body li{list-style-type:square;}.post-body td.tr-caption{font-size:85%;padding:10px!important}.sr{visibility:hidden;width:0;height:0;}
 
-        if (minorVer === undefined) {
-          alert('ShareTargetPicker was canceled in external browser')
-          return
-        }
+--></style> 
+  <style type="text/css">
+	.CSS_LIGHTBOX {z-index:999999!important;}
+	.CSS_LIGHTBOX_BG_MASK_TRANSPARENT {opacity:.95!important;}
+	.CSS_LIGHTBOX_SCALED_IMAGE_IMG {width:auto!important;max-width:100%;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+	.CSS_LIGHTBOX_BTN_CLOSE {background: url('https://4.bp.blogspot.com/-cmZSAe4hgWI/V0K-3C5xiHI/AAAAAAAAG90/2btatUgRsM4qf8HIc7QweuToTkRqRNeuACLcB/s1600/delete.png') no-repeat!important;width:32px!important;height:32px!important;top:30px!important;opacity:0.7;transition:all .3s;}
+	.CSS_LIGHTBOX_BTN_CLOSE:hover{opacity:1;}
+	.CSS_LIGHTBOX_BTN_CLOSE_POS {right:10px!important;}
+	.CSS_LIGHTBOX_BG_MASK{background-color:rgba(0,0,0,0.8)!important}
+	.CSS_LIGHTBOX_FILMSTRIP{background-color:rgba(0,0,0,0.5)!important}
+	/* CSS Header Wrapper */
+	.blogtop-wrapper{background:#fff;overflow:hidden;box-shadow:0 2px 2px 0 rgba(0,0,0,.05),0 1px 5px 0 rgba(0,0,0,.05),0 2px 1px -2px rgba(0,0,0,.2);}
+	.cl-wrapper {top:0;padding:0 10px;position:static;max-width:1100px;margin:0 auto;} /*max-width:1100px;*/
+	.header-wrapper {margin:0 auto;padding:0}
+	#header{float:left;margin:0;overflow:hidden;text-align:center;}
+	#header h1{padding:7px 0;color:#0015ff;font-size:30px;margin:0;font-weight:400;text-transform:uppercase;line-height:45px}
+	#header h1 a {background:transparent;color:#4488ff;font-size:30px;margin:0;line-height:45px;}
+	#header h1 a:hover {color:#e79c5a;}
+	#header p.description{display:none;}
+	#header img{border:0;background:none;width:auto;height:auto;margin:0 auto;}
+	/* CSS Top Menu */
+	.main-navx {display:inline-block;margin:0 auto;float:right;}
+	.main-navx ul {width:100%;padding:0;margin:0;text-align:right;}
+	.main-navx li {list-style-type:none;float:left;padding:0;}
+	.main-navx li a {color:#025aff;display:inline-block;margin:0;padding:7px 18px;line-height:45px;}
+	.main-navx ul li a:active, .main-navx ul li.highlight a {color:#025aff;}
+	.main-navx ul li a:hover:active, .main-navx ul li.highlight a:hover {color:#e79c5a;}
+	.main-navx ul li a:hover {color:#e79c5a;}
+	.main-navx a#pull {display:none;}
+	/* CSS Side Menu */
+	.main-navx ul li.menu {color:#025aff;display:inline-block;margin:0;padding:7px 0 7px 18px;text-transform:Capitalize;cursor:pointer;z-index:93;}
+	.main-navx ul li.menu:after {content:"\f0c9";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:none;font-size:30px;color:#025aff;display:inline-block;position:relative;line-height:45px;transition:all .4s ease-in-out;}
+	.main-navx ul li.menu:hover:after {color:#e79c5a;}
+	#css-menus{position:fixed;top:0;right:-350px;z-index:9999;background:#017384;height:100%;transition:all .4s ease-in-out}
+	#cssmenux,#cssmenux ul,#cssmenux li,#cssmenux a {margin:0;padding:0;border:0;list-style: none;font-weight:normal;text-decoration:none;line-height:1;font-size:15px;position:relative;}
+	#cssmenux a {line-height:1.3;padding:12px 15px;}
+	#cssmenux {width:260px;}
+	#cssmenux > ul > li {cursor:pointer;background:transparent;color:#e79c5a;}
+	#cssmenux > ul > li:first-child {border-top:none;}
+	#cssmenux > ul > li > a {font-size:15px;display:block;color:#ccc;padding:12px 15px;}
+	#cssmenux > ul > li > a:hover {text-decoration:none;color:#fff}
+	#cssmenux > ul > li.active {font-weight:700;}
+	#cssmenux > ul > li.home .close-menu{background:rgba(0,0,0,0.04);color:#f39c12;font-size:18px;font-weight:700;padding:17px;display:block}
+	#cssmenux > ul > li.has-sub > a:after {content:'';position: absolute;top:15px;right:10px;border:5px solid transparent;border-left:5px solid #16528e;}
+	#cssmenux > ul > li.has-sub.active > a:after {right:14px;top:17px;border:5px solid transparent;border-top:5px solid #818d99;}
+	#cssmenux ul ul {background:#800000;padding:0;display:none;}
+	#cssmenux ul ul a {background:#800000;display:block;color:#ccc;font-size:13px;}
+	#cssmenux ul ul a:hover {color:#fff;}
+	#cssmenux ul ul.expand {height:auto;max-height:220px;overflow:auto;}
+	/* CSS Fixed Search Button */
+	.lyco-search {position:relative;padding:0;height:0;margin:0 auto;}
+	.main-navx ul li.searchbutton {margin:0;padding:7px 18px;display:inline-block;text-transform:Capitalize;line-height:44px;cursor:pointer;z-index:93;}
+	.main-navx ul li.searchbutton.active {color:#025aff;}
+	.main-navx ul li.searchbutton:after {content:"\f002";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:none;font-size:18px;color:#025aff;position:relative;}
+	.main-navx ul li.searchbutton.active:after {color:#e79c5a;}
+	.search-form{display:none;top:0;background:#fff;padding:5px 0;width:100%;border-bottom:1px solid rgba(0,0,0,0.1);margin:0 auto}
+	.searchform {margin:0 auto;text-align:center;line-height:45px;}
+	.searchbar {background:transparent;width:50%;padding:0 10px;font-weight:400;font-size:20px;color:#025aff;margin:0 auto;border:none;outline:none;line-height:45px;}
+	.searchbar:focus {color:#025aff;}
+	.searchsubmit{background:transparent;border:none;outline:none;cursor:pointer;color:#e79c5a;padding:0 20px;font-weight:400;font-size:16px;border:1px solid #e79c5a;border-radius:99em;line-height:35px;transition:all .3s}
+	.searchsubmit:hover {background:#e79c5a;color:#fff;}
+	.searchsubmit:active {background:#e79c5a;color:#fff;border:0;outline:none;}
+	/* CSS Image Lightbox */
+	#jquery-overlay{position:absolute;top:0;left:0;z-index:95;width:100%;height:500px;}
+	#jquery-lightbox{position:absolute;top:0;left:0;width:100%;z-index:100;text-align:center;line-height:0}
+	#jquery-lightbox a,#jquery-lightbox a:hover{border:none;}
+	#jquery-lightbox a img{border:none;}
+	#lightbox-container-image-box{position:relative;background-color:#fff;width:250px;height:250px;margin:0 auto;max-width:100%!important;}
+	#lightbox-container-image{padding:10px;}
+	#lightbox-loading{display:none!important;}
+	#lightbox-nav{position:absolute;top:25%;left:0;height:100%;width:100%;z-index:10}
+	#lightbox-container-image-box > #lightbox-nav{left:0;transition:All 0.2s ease;}
+	#lightbox-nav a{outline:none}
+	#lightbox-nav-btnPrev,#lightbox-nav-btnNext{width:49%;height:100%;display:block;transition:All 0.2s ease;}
+	#lightbox-nav-btnPrev{left:10%;float:left;transition:All 0.2s ease;}
+	#lightbox-nav-btnNext{right:10%;float:right;transition:All 0.2s ease;}
+	#lightbox-container-image-data-box{font-size:10px;background-color:#fff;margin:0 auto;line-height:1.4em;overflow:hidden;max-width:100%!important;padding:0 10px;}
+	#lightbox-container-image-data{padding:0 10px;color:#818d99}
+	#lightbox-container-image-data #lightbox-image-details{width:70%;float:left;text-align:left}
+	#lightbox-image-details-caption{font-weight:normal}
+	#lightbox-image-details-currentNumber{display:block;clear:left;padding-bottom:1.0em}
+	#lightbox-secNav-btnClose{width:66px;float:right;padding-bottom:0.7em}
+	/* CSS Default */
+	#siderside {overflow:hidden;width:100%;}
+	.info-artikel {overflow:hidden;font-size:10px;color:#e5bd77;margin-bottom:5px;display:none;}
+	.post-info-icon{display:inline-block;}
+	.post-info a{color:#e5bd77;}
+	.post-info a:hover{color:#e79c5a;}
+	.jam{background-position:0 -98px;height:16px;padding:0 0 0 17px}
+	.komentar{background-position:0 -132px;height:16px;padding:0 0 0 17px;}
+	.label{background-position:0 -166px;height:16px;padding:0 0 0 17px;}
+	.admin{background-position:0 1px;height:16px;padding:0 0 0 17px;}
+	.tanggal{background-position:0 -32px;height:16px;padding:0 0 0 17px;}
+	.post-info-icon,.home{background-repeat:no-repeat;}
+	#blog-pager {text-align:center;}
+	.home-link, #blog-pager-newer-link, #blog-pager-older-link {color:#b2b2b2;display:block;}
+	.permalink{line-height:1.7em;font-size:13px;margin:6px 0 0;padding:0 5px;
+	background:#eec689;color:#fff;overflow:hidden;}
+	.home-link {margin:0 auto;}
+	.breadcrumbs{margin:10px 0 0 0;font-size:100%;overflow:hidden;padding:20px}
+	.breadcrumbs > span:last-child {display:none}
+	.breadcrumbs a {background:rgba(0,0,0,.05);color:rgba(0,0,0,.6);font-weight:normal;}
+	.breadcrumbs span a {color:rgba(0,0,0,.6);padding:5px 10px;margin:0 5px 0 0}
+	.breadcrumbs span a:hover {background:rgba(0,0,0,.08);color:rgba(0,0,0,.8);}
+	.breadcrumbs a:hover {background:rgba(0,0,0,.08);color:rgba(0,0,0,.8);}
+	.vcard2{float:left;}
+	.post-footer{float:right;}
+	/* CSS Custom Error Page */
+	#error-text {display:block;top:30%;text-align:center;margin-bottom:50px;font-size:45px;position:fixed;width:100%;height:100%;line-height:1.5em;color:#003999}
+	/* Recent Post */
+	#recent-wrapper{display:block;position:relative;overflow:hidden;font-size:15px}
+	#recent-wrapper ul{margin:0;padding:0;list-style-type:none}
+	#recent-wrapper ul li{position:relative;padding:15px 35px 15px 10px;margin:0;border-bottom:1px solid rgba(0,0,0,0.08);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+	#recent-wrapper ul li:first-child:after{content:"01"}
+	#recent-wrapper ul li:first-child + li:after{content:"02"}
+	#recent-wrapper ul li:first-child + li + li:after{content:"03"}
+	#recent-wrapper ul li:first-child + li + li + li:after{content:"04"}
+	#recent-wrapper ul li:first-child + li + li + li + li:after{content:"05"}
+	#recent-wrapper ul li:first-child + li + li + li + li +li:after{content:"06"}
+	#recent-wrapper ul li:first-child + li + li + li + li +li +li:after{content:"07"}
+	#recent-wrapper ul li:first-child + li + li + li + li +li + li +li:after{content:"08"}
+	#recent-wrapper ul li:first-child + li + li + li + li + li + li + li +li:after{content:"09"}
+	#recent-wrapper ul li:first-child + li + li + li + li + li + li + li +li +li:after{content:"10"}
+	#recent-wrapper ul li:first-child:after,#recent-wrapper ul li:first-child + li:after,#recent-wrapper ul li:first-child + li + li:after,#recent-wrapper ul li:first-child + li + li + li:after,#recent-wrapper ul li:first-child + li + li + li + li:after,#recent-wrapper ul li:first-child + li + li + li + li + li:after,#recent-wrapper ul li:first-child + li + li + li + li + li + li:after,#recent-wrapper ul li:first-child + li + li + li + li +li + li +li:after,#recent-wrapper ul li:first-child + li + li + li + li +li + li + li +li:after,#recent-wrapper ul li:first-child + li + li + li + li +li + li + li +li +li:after{position:absolute;top:10px;right:5px;line-height:1em;text-align:center;color:rgba(0,0,0,0.2);font-size:23px;font-weight:700}
+	#recent-wrapper ul li a{color:#025aff;text-decoration:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+	/* CSS Package */
+	@media all {
+	.BLOG_mobile_video_class {display:none;}}
+	@media handheld {
+	.BLOG_mobile_video_class {display:inline;}
+	.BLOG_video_class {display:none;}}
+	.profile-img {float:left;margin:0 5px 5px;}
+	.profile-data {margin:0;}
+	.profile-datablock {margin:.5em 0;}
+	.profile-name-link {background:no-repeat left top;display:inline-block;
+	min-height:20px;padding-left:20px;}
+	.profile-textblock {margin:.5em 0;}
+	.author-profile {margin:5px 5px 0 0;overflow:hidden;}
+	.author-profile img {border:1px solid #efefef;float:left;margin-right:5px;}
+	.reactions-label {margin:3px 0 0 0;}
+	.reactions-label-cell {line-height:2.3em;}
+	.reactions-iframe {background:transparent;height:2.3em;width:100%;border:0;}
+	iframe.avatar-hovercard-iframe {border:0 none;padding:0;width:25em;height:9.4em;margin: .5em;}
+	.Translate a.goog-te-menu-value {text-decoration: none;}
+	.Translate .goog-te-menu-value span {color:#000456;}
+	.Translate .goog-te-gadget a:link.goog-logo-link {font-size:12px;font-weight:bold;
+	color:#560000;text-decoration:none;}
+	div.floatingPlayer_gsvb div.playerInnerBox_gsvb .player_gsvb {width:320px;
+	height:260px;}
+	.videoBar-status {color:#676767;font-size:11px;margin:10px;padding:4px;}
+	.videoBar-container {margin:auto;text-transform:none;letter-spacing:normal;word-spacing:normal;clear:both;}
+	/* CSS Comment */
+	#comments{background:#fff;position:relative;margin:0 auto;padding:20px;border-top:1px solid rgba(0,0,0,0.05);}
+	.post-comment-link{visibility:hidden}
+	#comments h4{display:block;margin:0 0 10px 0;font-size:32px;line-height:36px;color:#ec2028;letter-spacing:-1px}
+	.comment_avatar_wrap{width:42px;height:42px;background:#fcfcfc;border-radius:6px;text-align:center;margin:0 0 20px 0;padding:0}
+	#comments .avatar-image-container{float:left;margin:0 10px 0 0;width:42px;height:42px;max-width:42px;max-height:42px;padding:0;margin-bottom:10px}
+	#comments .avatar-image-container img{width:42px;height:42px;max-width:42px;max-height:42px;background:url(https://2.bp.blogspot.com/-fjaZBtfvzac/UN1mw2tUamI/AAAAAAAADkc/XdKqt8hWZ6w/s1600/anon.jpg) no-repeat}
+	#comments .comment_name,#comments .comment_admin .comment_name{padding:0 0 10px 0;font-size:13px;position:relative}
+	#comments .comment_name a{color:#000456;font-weight:700;padding:0;font-size:18px;text-decoration:none}
+	#comments .comment_admin .comment_date{font-weight:normal;font-size:11px}
+	#comments .comment_admin .comment_author_flag{display:inline-block;font-size:16px;color:rgb(17,143,249);text-align:center;margin:0 0 0 3px;}
+	#comments .comment_service{margin-top:5px}
+	#comments .comment_date{color:#a9a9a9;float:right;font-size:11px;font-weight:normal;margin-top:-3px}
+	#comments .comment_date a{color:#a9a9a9;float:right;font-size:11px;font-weight:normal;margin:0;padding:0}
+	#comments .comment_date a:hover{color:#a9a9a9;text-decoration:underline}
+	#comments .comment_body{margin-left:62px;margin-top:-64px;background:#f6f6f6;padding:18px 20px;line-height:26px;border-radius:7px;margin-bottom:20px;position:relative;}
+	#comments .comment_body p{margin:5px 0 0 0;font-size:14px;word-wrap:break-word;padding:0 0 5px 0}
+	#comments .comment_body:before{content:'';right:100%;border:solid transparent;height:0;width:0;position:absolute;pointer-events:none;border-right-color:rgba(0,0,0,0.0);border-width:10px}
+	#comments .comment_body:after{content:'';top:19px;right:99.9%;border:solid transparent;height:0;width:0;position:absolute;pointer-events:none;border-right-color:#f6f6f6;border-width:9px}
+	#comments .comment_inner{margin:12px 0}
+	#comments .comment_child .comment_wrap{padding-left:3%}
+	#comments .comment_reply{display:inline-block;margin-top:10px;padding:4px 7px;color:#fff;text-align:center;text-decoration:none;background:#e74c3c;border-radius:3px;font-size:11px}
+	#comments .comment_reply:hover{background:#c0392b;text-decoration:none}
+	#comments .unneeded-paging-control{display:none}
+	#comments .comment-form{max-width:100%;}
+/* width *****************************************************************/
+	#comment-editor{width:100%;background:transparent url(https://4.bp.blogspot.com/-kcg-NkQ_XFM/XH51-HMUlFI/AAAAAAAB_6c/RVXBnnQEYHU1uapoMX6eONBjFLxFbX04ACLcBGAs/s1600/loading.gif) no-repeat 50% 30%;border:1px solid #eee}
+/* width *****************************************************************/
+	#comments .comment_form a{text-decoration:none;}
+	#comments .comment-form p{background:#f4f4f4;padding:30px;margin:5px 0 15px;color:#999;font-size:15px;line-height:normal;position:relative;max-width:100%;border-radius:4px}
+	#comments .comment_reply_form{padding:0 0 0 70px}
+	#comments .comment_reply_form .comment-form{width:99%}
+	.comment_emo_list .item{float:left;display:block;text-align:center;margin:1px 1px 0 0;height:40px;width:41px}
+	.comment_emo_list span{display:block;font-weight:700;font-size:11px;margin:3px 0 0 0;letter-spacing:1px}
+	img.comment_emo {width:16px;height:16px;}
+	.comment_youtube{max-width:100%;width:400px;height:225px;display:block;margin:auto}
+	.comment_img{max-width:100%}
 
-        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
+	#comments .deleted-comment{display:block;color:#999;}
+	#comments .comment_header{width:50px}
+	#respond{overflow:hidden;padding-left:10px;clear:both}
+	#comments .comment_avatar img{width:42px;height:auto;background:url(https://3.bp.blogspot.com/-fr42e67HG4I/Vky8HLexiEI/AAAAAAAAM0I/MLMd2qwIH1E/s1600/avatar.png) no-repeat;border-radius:6px}
+	#comments .comment-delete img{float:right;margin-left:15px;margin-top:3px;}
+	iframe{border:none;overflow:hidden}
+	#emo-box,#hide-emo{display:none}
+	.paging-control-container{text-align:center;margin:0 0 0 25%}
+	.paging-control-container a{text-align:center;margin:0 auto;background:#ccc;border:1px solid #e1e1e1;padding:3px 10px}
+	.button-group{float:right;text-align:left;margin:0 auto}
+	button,button[disabled]:active{border:none;font-size:12px;font-weight:normal;border-radius:1px;padding:4px 10px;text-decoration:none;background:#b6c472;color:#fff;display:inline-block;transition:all 0.5s linear;cursor:pointer}
+	button:hover{background:#a0ad64;color:#fff;transition:all 0.2s linear}
+	button:active{background:#a0ad64;color:#fff}
+	button[disabled],button[disabled]:active{background:#a0ad64;border-bottom:2px solid #8b9656;color:#fff;cursor:default}
+	.small-button a,.small-button1 a{background:rgba(255,255,255,.6);color:#202020;font-size:14px;cursor:pointer;margin:15px 5px 5px 0;text-decoration:none;text-transform:none;text-shadow:none;border-radius:3px;display:inline-block;padding:8px 12px;box-shadow:0 1px 2px rgba(0,0,0,0.2)}
+	.small-button:hover a,.small-button1:hover a{background:rgba(0,0,0,0.05);}
+	/* CSS Credit Wrapper */
+	#copyrightx{margin:0 auto;background:#849EBF;position:relative;}
+	#copy{color:#ffffff;text-align:center;padding:1.2rem}
+	#copyrightx a{color:#ffffff;}
+	#copyrightx a:hover{color:#ff0000;}
+	#copyrightx{display:block;}
+	/* CSS Syntax Highlighter */
+	pre {background:#fff;color:#888;display:block;font:12px/19px Consolas,'Andale Mono',Courier,'Courier New',monospace;margin:10px 0;overflow:auto;padding:19px 19px 17px;border:1px solid #d8dde1;border-left:2px solid #b8c676;}
+	pre .comment {color:#A57A4C;}
+	pre .variable.global, pre .variable.class, pre .variable.instance {color:#DC3958;}
+	pre .constant.numeric, pre .constant.language, pre .constant.hex-color, pre .keyword.unit {color:#F79A32;}
+	pre .constant, pre .entity, pre .entity.class, pre .support {color:#F06431;}
+	pre .constant.symbol, pre .string {color:#889B4A;}
+	pre .entity.function, pre .support.css-property, pre .selector {color:#8AB1B0;}
+	pre .keyword, pre .storage {color:#98676A;}
+	/* CSS Button */
+	.button{float:left;list-style:none;text-align:center;width:95%;margin:10px;
+	padding:2px;font-size:14px;clear:both;}
+	.button ul {margin:0;padding:0}
+	.button li{display:inline;margin:5px;padding:0;list-style:none;}
+	.demo{opacity:1;padding:14px;background:#abbace;color:#fff!important;font-weight:700;text-align:center;text-transform:uppercase;letter-spacing:0.5px;border-radius:3px}
+	.download{opacity:1;padding:14px;background:#ed7a69;color:#fff!important;font-weight:700;text-align:center;text-transform:uppercase;letter-spacing:0.5px;border-radius:3px}
+	.demo:hover {background:#9dadc1;}
+	.download:hover {background:#d97060;}
+	.demo:active {cursor:pointer;background:#9dadc1;}
+	.download:active {cursor:pointer;background:#d97060;}
+	.demo:before {content:'\f135';display:inline-block;vertical-align:top;margin-right:10px;
+width:16px;height:16px;line-height:24px;color:#fff;font-family:fontawesome;transition:all 0.5s ease-in-out;}
+	.download:before {content:'\f019';display:inline-block;vertical-align:top;margin-right:10px;width:16px;height:16px;line-height:24px;color:#fff;font-family:fontawesome;transition:all 0.5s ease-in-out;}
+	/* CSS Sitemap */
+	#table-outer table {width:100%;margin:0;padding:0;}
+	#table-outer input, #table-outer select {padding:4px;font:inherit;border:2px solid #ecf0f1;width:170px;box-sizing:border-box;}
+	#table-outer select {cursor:pointer;outline:none}
+	#table-outer input:focus{outline:none}
+	#resultDesc {margin-bottom:10px;}
+	#feedContainer {overflow:hidden;margin-top:20px;}
+	#feedContainer strong {font-size:10px;}
+	#feedContainer, #feedContainer li {padding:0;margin:0;list-style:none;}
+	#feedContainer li {float:left;width:50%;margin-bottom:10px;position:relative;z-index:0;}
+	#feedContainer .inner {padding:8px;margin: 0 5px;position:relative;background-color:#fff;border:1px solid #f9f9f9;height:133px;}
+	#feedContainer img {float:left;margin: 0 8px 0 0;max-width:100%;border:1px solid #f9f9f9;padding:2px;}
+	#feedContainer .toc-title {max-height:33px;overflow:hidden;}
+	#feedContainer .toc-title:hover {text-decoration:underline;}
+	#feedContainer .news-text {font-size:11px;}
+	#feedNav a, #feedNav span {display:block;text-align:center;color:#fff;
+	text-decoration:none;background-color:#e5bd77;padding:5px;width:95%;margin: 0 auto;transition:all 0.3s linear;}
+	#feedNav a, #feedNav span:hover {background-color:#95a8b5;transition:all 0.3s linear;}
+	#feedContainer .date {display:none;position:absolute;bottom:0;right:0;background-color:transparent;color:#fff;font-size:9px;padding:3px 2px;width:35px;}
+	#feedContainer .date .dd {font-size:9px;line-height:5px;font-weight:bold;}
+	#feedContainer .date span {display:inline-block;line-height:5px;text-align:center;margin-left:5px;}
+	/* CSS Popular Posts */
+	#PopularPosts1 ul,.PopularPosts li,.PopularPosts li img,.PopularPosts li a,.PopularPosts li a img{color:#202020;margin:0;padding:0;list-style:none;border:none}
+	#PopularPosts1 ul{margin:0;list-style:none;}
+	#PopularPosts1 ul li{margin:0;padding:10px 0 0 0;position:relative;}
+	#PopularPosts1 ul li:last-child{border:0}
+	#PopularPosts1 ul li img{display:block;width:100%;height:auto}
+	#PopularPosts1 ul li .item-title a,.PopularPosts ul li a{color:#202020;font-size:16px;line-height:1.6;}
+	#PopularPosts1 ul li .item-title a:hover,.PopularPosts ul li a:hover{color:#ec2028;}
+	#PopularPosts1 .item-thumbnail{margin:0 10px 0 0;overflow:hidden;z-index:2;display:block;position:relative;border-radius:0;width:120px;height:auto;float:left}
+	#PopularPosts1 .item-title{padding:0 5px}
+	#PopularPosts1 ul li:nth-child(1){border-top:none}
+	#PopularPosts1 ul li .item-snippet{color:#999;font-size:13px}
+	/* CSS Label */
+	.sidebar .label-size {opacity:1;position:relative;text-transform:none;text-decoration:none;font-size:100%;}
+	.sidebar .label-size a{background:#abbace;color:#fff;padding:8px 12px;margin:0 2px 2px 0;float:left;border-radius:3px;display:block}
+	.sidebar .label-size a:hover{background:#9dadc1;color:#fff}
+	.cloud-label-widget-content{text-align:left}
+	.label-size{display:block;float:left;margin:0 2px 2px 0;color:#fff;}
+	/* CSS Bounce To Top */
+	#BounceToTop{background:#e79c5a;display:none;color:#fff;padding:7px 15px;font-size:28px;border-radius:5px;transition:all .3s}
+	#BounceToTop:hover{background:#8eb0f9;color:#fff}
+	.BounceToTop {-webkit-transform:translateZ(0);transform:translateZ(0);cursor:pointer;position:fixed;bottom:30px;right:30px;z-index:90;}
+	/* CSS Bounce To Bottom */
+	#BounceToBottom{background:#e79c5a;display:none;color:#fff;padding:7px 15px;font-size:28px;border-radius:5px;transition:all .3s}
+	#BounceToBottom:hover{background:#8eb0f9;color:#fff}
+	.BounceToBottom {-webkit-transform:translateZ(0);transform:translateZ(0);cursor:pointer;position:fixed;bottom:30px;left:30px;z-index:90;}
+	/* CSS Contact */
+	#ContactForm1{display:none;}
+	/* CSS Ads */
+	.banner {margin:0 auto;text-align:center;overflow:hidden;margin-top:20px;}
+	.banner .widget {width:100%;max-width:100%;margin:0 auto;background:transparent;text-align:center;overflow:hidden;padding-top:15px;padding-bottom:15px;}
+	.banner img, .banner iframe{display:block;margin:0 auto;text-align:center;}
+	.banner2 {margin:0 auto;text-align:center;overflow:hidden;margin-bottom:20px;}
+	.banner2 .widget {width:100%;max-width:100%;margin:0 auto;background:transparent;text-align:center;overflow:hidden;padding-top:15px;padding-bottom:15px;}
+	.banner2 img, .banner2 iframe{display:block;margin:0 auto;text-align:center;}
+	.kotak_iklan {text-align:center;margin:0 auto;transition:all 1s ease-out;}
+	.kotak_iklan .sidebar .widget-content{padding:0;background:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.1);border:0;}
+	.kotak_iklan .sidebar .widget {margin-bottom:0;padding:0;}
+	.kotak_iklan  img {margin-bottom:2px;margin-top:2px;text-align:center;transition:all 1s ease-out;}
+	.kotak_iklan  img:hover {transition:all .5s ease-out;}
+	.kotak_iklan2 {text-align:center;margin:0 auto;transition:all 1s ease-out;}
+	.kotak_iklan2 .sidebar .widget-content{padding:0;background:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.1);border:0;}
+	.kotak_iklan2 .sidebar .widget {margin-bottom:0;padding:0;}
+	.kotak_iklan2  img {text-align:center;transition:all 1s ease-out;}
+	.kotak_iklan2  img:hover {transition:all .5s ease-out;}
+	/* CSS Custom Stats */
+	.Stats .digit {background:#f35d5c!important;border:1px solid #c04b4a;
+	display:inline-block;height:28px;line-height:28px;margin-left:-1px;position:relative;
+	text-align:center;width:22px;}
+	.counter-wrapper .graph-counter-wrapper {color:#fff!important;}
+	.Stats .counter-wrapper {font-size:14px;font-weight:bold;line-height:30px;}
+	.Stats .blind-plate {border-bottom:none;border-top:none;height:0;left:0;opacity:0;
+	position:absolute;top:13px;width:22px;}
+	.Stats strong {color:#fff;left:-0.1em;content:'[';-webkit-transform: translateX(-100%);transform: translateX(-100%);}
+	/* Global Responsive */
+	@media screen and (max-width:1024px){
+	.cl-wrapper{padding:0 35px}
+	.searchbar{width:80%}}
+	@media screen and (max-width:980px){
+	#siderside, #wrapper {position:inherit;float:none;width:100%;margin:0;}
+	#header {float:none;}
+	#header h1, #header h1 a {text-align:center;}
+	.cl-wrapper{padding:10px 0 0 0}
+	.header-wrapper {padding:0}
+	.main-navx {display:block;width:100%;padding:0}
+	.main-navx ul {text-align:center;}
+	.main-navx ul {display:none;height:auto;}
+	.main-navx a#pull{background-color:#fff;color:#025aff;display:inline-block;font-size:16px;font-weight:400;position:relative;text-align:left;text-transform:uppercase;width:100%;padding:7px 20px;border-top:1px solid rgba(0,0,0,0.1);line-height:40px}
+	.main-navx a#pull:after {content:"\f0c9";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:none;font-size:30px;color:#025aff;display:inline-block;position:absolute;right:20px;line-height:40px;}
+	.main-navx a#pull:after:hover{color:#e79c5a}
+	.main-navx li {display:block;width:100%;text-align:left}
+	.main-navx li a {background:#fff;color:#666;padding:5px 10px;display:block;border-radius:0;margin-left:0;}
+	.main-navx li a:hover, nav a:active {box-shadow:none;border:none;color:#e79c5a!important;}
+	main-navx ul li a:active, .main-navx ul li.highlight a {box-shadow:none;color:#e79c5a;text-decoration:none;}
+	.main-navx ul li a:hover:active, .main-navx ul li.highlight a:hover {box-shadow:none;color:#e79c5a;text-decoration:none;}
+	.menu {background:#fff;color:#a9b3bd;display:inline-block;margin:0;padding:5px 10px;text-transform:Capitalize;width:95%;cursor:pointer;z-index:93;}
+	.menu:after {content:"\f0c9";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:none;font-size:30px;color:#a9b3bd;
+display:inline-block;position:relative;line-height:40px;transition:all .4s ease-in-out;}
+	.menu:hover:after {content:"\f0c9";font-family:FontAwesome;font-style:normal;font-weight:normal;text-decoration:none;font-size:30px;color:#818d99;display:inline-block;position:relative;line-height:40px;}
+	#artikel {padding:10px;}
+	.sidebar .widget {padding:10px 5px 5px 5px;}
+	#footer-widgetfix {width:100%;overflow:hidden;}
+	#footer-widgetfix .footer-widget {width:46%;float:left;margin-left:20px;}}
+	@media screen and (max-width:800px){
+	.inner1 {margin-top:0;min-height:250px;position:relative;}
+	#siderside, #wrapper {position:inherit;float:none;width:100%;margin:0;margin-top:10px;}
+	#menu, #siderside {width:100%;}
+	#left-aside, #side-kanan {float:none;width:100%;}
+	#header .description {width:40%;}
+	.blogtop-wrapper {position:relative;}
+	#feedContainer li {float:left;width:100%;}
+	.copyv {top:30%;}}
+	@media screen and (max-width:600px){
+	#siderside {width:100%;}
+	#copy{float:none;}
+	#copyrightx{text-align:center;}
+	.comment_body{margin:0px;}
+	.comment_avatar_wrap {display:none;}
+	#header .description {width:60%;}
+	#header,#header .description,#header h1,#header p,#header a {text-align:center;margin:0 auto;}
+	#header-wrapper{margin:0 auto;}
+	#wrapper,#siderside{width:100%;margin:0 auto;}
+	/*#PopularPosts1{display:none;visibility:hidden;}*/
+	.copyv h1 {margin:0px;font-size:52px;line-height:52px;padding:0px 20px;margin-top:10px;margin-bottom:10px;}
+	.copyv p {font-size:22px;line-height:32px;padding:0px 20px;text-shadow:2px 1px 0 rgba(0,0,0,0.2);margin-top:10px;margin-bottom:10px;clear:both;}
+	.pagenav .pages {display:none;}
+	.banner .widget {width:100%;max-width:90%;margin:0 auto;text-align:center;overflow:hidden;padding-top:10px;padding-bottom:10px;}
+	.banner2 .widget {width:100%;max-width:90%;margin:0 auto;text-align:center;overflow:hidden;padding-top:10px;padding-bottom:10px;}}
+	@media screen and (max-width:480px){
+	#header .description {width:80%;}
+	#header,#header .description,#header h1,#header p,#header a {text-align:center;margin:0 auto;}
+	#header-wrapper{margin:0 auto;}
+	#wrapper,#siderside{width:100%;margin:0 auto;}
+	.copyv p {font-size:14px;}
+	#mariber-social {display:none;}}
+/*Add Start*/
+	#HTML1 {display:none;}
+	/*Google Btn Start*/
+	
+		#GoogleSrchBtn{display:inline;}
+	
+	
+	
+		#GoogleSrchBtn{display:inline;}
+	
+	
+    /*
+	.gsc-input ,.gsc-input-box ,.gsc-input {
+ 	 height:30px;
+     vertical-align: middle;
+	}
+    */
+    .gsc-search-button,.gsc-search-button-v2 {
+     height:75px;
+    }
+	/*Google Btn End*/
+/*End Add*/
+</style> 
+  <style type="text/css">
+	.post-body{font-size:16px;line-height:1.7}
+	.post{background:#fff;position:relative;padding:0;margin:10px;}
+	#main {padding:15px;background:#fff;line-height:1.6em;color:#560000;font-size:14px;box-shadow:0 1px 5px rgba(0,0,0,0.03);border:1px solid #dddee1;border-bottom:1px solid #d9dadc;border-radius: 0px 0px 3px 3px;}
+	#artikel{padding:10px;}
+	#left-aside {width:100%;max-width:100%;margin:0 auto;float:none;}
+	/*max-width:70%*/
+	.post-info {overflow:hidden;margin-top:20px;padding:10px 0;}
+	h1.post-title a {font-size:23px;text-align:center;display:block;}
+	.vcard2{float:left;}.post-footer{float:right;}
+	.post img{height:auto;}
+	.home-link {margin:0 auto;}
+	.post-info, #copyrightx, #side-kanan {display:none;visibility:hidden;}
+	#comments{display:block}
+	/* Responsive Static Page */
+	@media screen and (max-width:980px){
+	#left-aside {width:100%;max-width:100%;margin:0 auto;float:none;}}/*max-width:80%*/
+	@media screen and (max-width:600px){
+	#left-aside {width:100%;max-width:100%;margin:0 auto;float:none;}}/*max-width:90%*/
+	@media print {
+	body{padding:0}
+	#left-aside{width:100%;margin:0 auto;}
+	#main {box-shadow:none;border:none;border-bottom:none;border-radius:0;}
+	h1.post-title {border:none;}
+	.post blockquote{background:transparent;color:#666;border:none;box-shadow:none;}
+	.BounceToTop,.BounceToBottom,.blogtop-wrapper,.search-form,.luna-search,#side-kanan,#copyrightx,#comments,#related_posts,#BounceToTop,#BounceToBottom,#button-count-share,#css-menus,.breadcrumbs,#blog-pager,.banner,.banner2{display:none;visibility:hidden;width:0;height:0;}}
+	</style> 
+  <!-- Load Javascript --> 
+  <!-- --> 
+  <!-- --> 
+  <!-- 
+  <script type="text/javascript">
+//<![CDATA[
+function bp_thumbnail_resize1(image_url, post_title) {
+    function bp_thumbnail_resize1(image_url, post_title) {
+        image_tag = '<img src="' + image_url == '<img src="' + image_url +
+            '" class="postthumb" width="100%" height="100%" alt="' + post_title + '" title="' + post_title + '"/>';
+        '" class="postthumb" width="100%" height="100%" alt="' + post_title + '" title="' + post_title + '"/>';
+        if (image_url != "")
+            return image_tag;
+       }else if (image_url != "")
+            return image_tag;
+        else{
+            return "";
+    }
+}
+//]]>
+</script> -->
+  <script type="text/javascript">
+//<![CDATA[
+function createPostSummary(s,r,m,k){var u,t=document,n=configSummary,i=t.getElementById(s).value,c=t.getElementById(r),g=m,p=k;c.innerHTML=i;var j=c.getElementsByTagName("img");var h=c.getElementsByTagName("iframe");if(j.length===0&&h.length===0){var q=n.BackupImage}else{if(j.length===0&&h.length>0){var l=h[0].src;var o=l.match(/(\?v=|\&v=|\/\d\/|\/embed\/|\/v\/|\.be\/)([a-zA-Z0-9\-\_]+)/);var q="https://img.youtube.com/vi/"+o[2]+"/0.jpg"}else{var q=j[0].src.replace(/\/s[0-9]+(\-c)?\//,"/s"+n.thumbnailSize+"-c/")}}u=i.replace(/<(.*?)>/g,"").replace(/[\n\r]+/g," ");c.innerHTML='<a class="thumbimgx" title="'+g+'" href="'+p+'"><img class="post-thumbnail" src="'+q+'" alt="thumbnail" width="'+n.thumbnailSize+'" height="'+n.thumbnailSize+'"></a><strong><a class="titlex" href="'+p+'">'+g+"</a></strong><p>"+u.substring(0,n.summaryLength)+"&hellip;</p>"};
+//]]>
+</script> 
+  <script type="text/javascript">
+//<![CDATA[
+//CSS Ready
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" })}
+loadCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+//]]>
+</script> 
+  <link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=5936826712684851582&amp;zx=7acca8f0-1189-4f4c-aabd-0e8fa56346b5" media="all" onload="if(media!='all')media='all'" rel="stylesheet">
+  <noscript>
+   <link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=5936826712684851582&amp;zx=7acca8f0-1189-4f4c-aabd-0e8fa56346b5" rel="stylesheet">
+  </noscript> 
+ 
+  <!-- data-ad-client=ca-pub-5041833909497014 --> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Sarabun">
+  <meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+  <meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  <meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
+  <meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
+  <meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
+ </head> 
+ <body style="position: relative; min-height: 100%; top: 0px;">
+ 
+  <div class="blogtop-wrapper"> 
+   <header class="header-wrapper"> 
+    <div class="cl-wrapper"> 
+     <div class="header section" id="header">
+      <div class="widget Header" data-version="1" id="Header1"> 
+       <div id="header-inner"> 
+        <div class="titlewrapper"> 
+         <h1 class="title" style="font-family:Sarabun;"> 
+          <div id="PicLogoImg"> 
+           <a href="https://photoofdays.blogspot.com/p/list-all.html"> <img src="https://1.bp.blogspot.com/-bRecSnogRjI/X_aKbMzqAtI/AAAAAAAB7_Y/Z5Sf96S5rwokM2BZ-H_KoiQMF--K7OTyACLcBGAsYHQ/LOGO_100x100.png" style="width:100px;"> </a> 
+           <br> 
+           <a href="https://photoofdays.blogspot.com/p/list-all.html"> </a>
+           <a href="https://photoofdays.blogspot.com/p/list-all.html"> ภาพดี ๆ ๐๗๒ </a> 
+          </div> </h1> 
+        </div> 
+        <div class="descriptionwrapper"> 
+         <p class="description"><span>โดย ศูนย์ภาพนิ่ง สำนักสื่อ DMC</span></p> 
+        </div> 
+       </div> 
+      </div>
+     </div> 
+    </div> 
+   </header> 
+  </div> 
+  <div class="clear"></div> 
+  <div id="wrapper"> 
+   <div id="siderside"> 
+    <div id="left-aside"> 
+     <aside id="artikel"> 
+      <div class="main section" id="main">
+       <div class="widget Blog" data-version="1" id="Blog1"> 
+        <div class="breadcrumbs">
+         <span><a href="https://photoofdays.blogspot.com/" rel="nofollow"><i class="fa fa-home fa-lg"></i></a></span> 
+         <span>Dashboard Flex Message by 1 Image 1 Text</span> 
+        </div> 
+        <div class="blog-posts hfeed"> 
+         <!--Can't find substitution for tag [defaultAdStart]--> 
+         <div class="date-outer">
+          <div class="date-posts">
+           <div class="post-outer"> 
+            <article class="post hentry"> 
+             <div itemscope itemtype="https://schema.org/BlogPosting"> 
+              <div class="post-body entry-content" id="post-body-1037995644063554344"> 
+               <style>
+  html {
+    clear: both;
+  }
+  #comments {
+      display: none;
+  }
+  #blog-pager {
+      display: none;
+  }
+  .header-wrapper, .breadcrumbs {
+      display: none;
+  }
+  #side-kanan {
+   display: none;
+  }
+  button ,a {
+   margin : 4px;
+  }
+  head, body {
+   width:100%;
+  }
+  #wrapper {
+   max-width:100%;
+   width:100%;
+  }
+  .cl-wrapper{
+   display: none;
+  }
+  #siderside {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  #left-aside {
+   max-width:100%;
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  #artikel {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  #main {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  #Blog1{
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .blog-posts {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .hfeed {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .date-outer {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .date-posts {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .post-outer {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .post {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .hentry{
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .post-body{
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .entry-content {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  #post-body-2857060831188974456 {
+   width:100%;
+   margin: 0px 0px 0px 0px;
+  }
+  .modal-backdrop {
+   /* bug fix - no overlay for iOS*/
+   display: none;    
+  }
+  #footer_ {
+    color:white;
+    text-align:center;
+    background:#849EBF;
+    padding:1.2rem;
+  }
+  #footer_ a{color:#ffffff;}
+  #footer_ a:hover{color:#ff0000;}
+</style> 
+               <div id="Wait_Text" style="text-align: center; display: none;"> 
+                <h3 style="color:#cc0202;">...รอข้อมูล load สักครู่...</h3> 
+                <img src="https://4.bp.blogspot.com/-kcg-NkQ_XFM/XH51-HMUlFI/AAAAAAAB_6c/RVXBnnQEYHU1uapoMX6eONBjFLxFbX04ACLcBGAs/s1600/loading.gif" style="text-align:center;"> 
+               </div> 
+               <div class="buttongroup" id="sBrowser" style="text-align: center; display: block;"> 
+                <div class="buttonrow"> 
+                 <h4>(Chrome Browser Only) login ด้วย line application</h4> 
+                </div> 
+                <div class="buttonrow"> 
+                 <button class="btn btn-info" id="liffLoginButton">Log in</button> 
+                 <button class="btn btn-danger" id="liffLogoutButton" disabled>Log out</button> 
+                </div> 
+               </div> 
+               <input id="UserID" style="display:none;width:100%;" readonly> 
+               <input id="accesstokenfield" style="display:none;width:100%;" readonly> 
+               <div> 
+                <button id="AddModalFlex" class="btn btn-primary text-white" data-toggle="modal" data-target="#ModalAdd" onclick="genarateMessageID(this)" disabled style="display: none;"> เพิ่ม Flex Message </button> 
+                <div class="modal" id="ModalAdd"> 
+                 <div class="modal-dialog"> 
+                  <div class="modal-content"> 
+                   <div class="modal-header"> 
+                    <label class="modal-title">แบบฟอร์มเพิ่ม Flex Message</label> 
+                    <button type="button" class="close btn-sm" data-dismiss="modal">×</button> 
+                   </div> 
+                   <div class="modal-body"> 
+                    <form id="form_for_entry"> 
+                     <div class="form-group"> 
+                      <label>MessageID:</label> 
+                      <input class="form-control" disabled id="MessageID" type="text" value="MessageID"> 
+                      <input class="form-control" id="CheckMessageID" style="display: none;" type="text" value="NotExist"> 
+                     </div> 
+                     <div class="form-group border border-success p-3"> 
+                      <label class="border-0 text-primary">ส่วน altText : ชื่อการ์ด ถ้าขึ้นบรรทัดใหม่กด Enter</label> 
+                      <textarea class="form-control" id="altText" placeholder="กรุณาใส่ชื่อการ์ด" type="text">ชื่อการ์ด-ต้องมี</textarea> 
+                     </div> 
+                     <div class="form-group border border-success p-3"> 
+                      <label class="border-0 text-primary">ส่วน Header : ขึ้นบรรทัดใหม่กดEnter</label>
+                      <br> 
+                      <label>สีตัวอักษร</label> 
+                      <input id="FlexHeaderTextColor" type="color" value="#1e00ff"> 
+                      <label>สีพื้นหลัง</label> 
+                      <input id="FlexHeaderBackgroundColor" type="color" value="#ffffff">
+                      <br> 
+                      <label>ตำแหน่ง</label> 
+                      <select id="FlexHeaderPosition"> <option selected value="start">ชิดซ้าย</option> <option value="center">จัดกลาง</option> <option value="end">ชิดขวา</option> </select> 
+                      <label>ขนาด</label> 
+                      <select id="FlexHeaderSize"> <option value="xxs">xxs</option> <option value="xs">xs</option> <option value="sm">sm</option> <option value="md">md</option> <option selected value="lg">lg</option> <option value="xl">xl</option> <option value="xxl">xxl</option> <option value="3xl">3xl</option> <option value="4xl">4xl</option> <option value="5xl">5xl</option> </select> 
+                      <textarea class="form-control" id="FlexHeader" placeholder="กรุณาใส่หัวเรื่อง" type="text">Header-ต้องมี</textarea> 
+                     </div> 
+                     <div class="form-group border border-success p-3"> 
+                      <label style="font-size:small;" class="border-0 text-primary">ส่วน Hero : ถ้า Upload File รูปภาพตรงนี้ Link รูปภาพ จะมีอายุ 1 อาทิตย์</label>
+                      <br> 
+                      <input accept="image/*" class="form-control-file" id="image-file" onchange="SavePhoto(this)" type="file"> 
+                      <label>หรือใส่ Link รูปภาพจากที่อื่น : ( .jpg หรือ .png )</label> 
+                      <input class="form-control" id="FlexImage" placeholder="Link รูปภาพ มี .jpg หรือ .png เช่น https://i.imgur.com/kBdX17Q.jpg" style="font-size: 12px;" type="url"> 
+                      <img id="imgFlexMessage" src="https://1.bp.blogspot.com/-ty9xJEMPw5o/YUv3t70jTYI/AAAAAAACX_w/SHak7XxH2MsG7ju9MpHOVGwmXb2dUGZdgCNcBGAsYHQ/LOGO_150x150.png" style="display:none;"> 
+                     </div> 
+                     <div class="form-group border border-success p-3"> 
+                      <label class="border-0 text-primary">ส่วน Body : ข้อความ</label>
+                      <br> 
+                      <label>สีตัวอักษร</label> 
+                      <input id="FlexBodyTextColor" type="color" value="#1e00ff"> 
+                      <label>สีพื้นหลัง</label> 
+                      <input id="FlexBodyBackgroundColor" type="color" value="#ffffff">
+                      <br> 
+                      <label>ตำแหน่ง</label> 
+                      <select id="FlexBodyPosition"> <option selected value="start">ชิดซ้าย</option> <option value="center">จัดกลาง</option> <option value="end">ชิดขวา</option> </select> 
+                      <label>ขนาด</label> 
+                      <select id="FlexBodySize"> <option value="xxs">xxs</option> <option value="xs">xs</option> <option value="sm">sm</option> <option selected value="md">md</option> <option value="lg">lg</option> <option value="xl">xl</option> <option value="xxl">xxl</option> <option value="3xl">3xl</option> <option value="4xl">4xl</option> <option value="5xl">5xl</option> </select> 
+                      <textarea class="form-control" id="FlexText" placeholder="กรุณาใส่ข้อความ" style="height:100px;">Body-ต้องมี</textarea> 
+                     </div> 
+                     <div class="form-group border border-success p-3"> 
+                      <label class="border-0 text-primary">ส่วน Footer : ปุ่มต่างๆ</label> 
+                      <div class="form-group border border-warning p-1"> 
+                       <label>สีตัวอักษร</label> 
+                       <select id="FlexLabel1Color"> <option selected value="primary">สีขาว</option> <option value="secondary">สีดำ</option> </select> 
+                       <label>สีพื้นหลัง</label> 
+                       <input id="FlexLabel1BackgroundColor" type="color" value="#009926"> 
+                       <br> 
+                       <label>ใส่ชื่อปุ่มLink1(Label):</label> 
+                       <input class="form-control" id="FlexLabel1" placeholder="ไม่เกิน 40 ตัวอักษร" type="text" value="Zoom"> 
+                       <label>Link1:</label> 
+                       <input class="form-control" id="FlexLink1" placeholder="Link เช่น https://zoom072.net" value="https://zoom072.net" style="font-size: 12px;" type="url"> 
+                      </div> 
+                      <div class="form-group border border-warning p-1"> 
+                       <label>สีตัวอักษร</label> 
+                       <select id="FlexLabel2Color"> <option selected value="primary">สีขาว</option> <option value="secondary">สีดำ</option> </select> 
+                       <label>สีพื้นหลัง</label> 
+                       <input id="FlexLabel2BackgroundColor" type="color" value="#ffffff"> 
+                       <br> 
+                       <label>ใส่ชื่อปุ่มLink2(Label)-<span style="color:#2200ff">ถ้าไม่มีข้ามได้</span>:</label> 
+                       <input class="form-control" id="FlexLabel2" placeholder="ไม่เกิน 40 ตัวอักษร" type="text"> 
+                       <label>Link2-ถ้าไม่มีข้ามได้:</label> 
+                       <input class="form-control" id="FlexLink2" placeholder="Link เช่น https://photoofdays.blogspot.com" style="font-size: 12px;" type="url"> 
+                      </div> 
+                      <div class="form-group border border-warning p-1"> 
+                       <label>สีตัวอักษร</label> 
+                       <select id="FlexLabel3Color"> <option selected value="primary">สีขาว</option> <option value="secondary">สีดำ</option> </select> 
+                       <label>สีพื้นหลัง</label> 
+                       <input id="FlexLabel3BackgroundColor" type="color" value="#ffffff"> 
+                       <br> 
+                       <label>ใส่ชื่อปุ่มLink3(Label)-<span style="color:#2200ff">ถ้าไม่มีข้ามได้</span>:</label> 
+                       <input class="form-control" id="FlexLabel3" placeholder="ไม่เกิน 40 ตัวอักษร" type="text"> 
+                       <label>Link3-ถ้าไม่มีข้ามได้:</label> 
+                       <input class="form-control" id="FlexLink3" placeholder="Link เช่น https://photoofdays.blogspot.com" style="font-size: 12px;" type="url"> 
+                      </div> 
+                      <div class="form-group border border-warning p-1"> 
+                       <label>สีตัวอักษร</label> 
+                       <select id="FlexShareLabelColor"> <option value="primary">สีขาว</option> <option selected value="secondary">สีดำ</option> </select> 
+                       <label>สีพื้นหลัง</label> 
+                       <input id="FlexShareLabelBackgroundColor" type="color" value="#00EDBE"> 
+                       <br> 
+                       <label>ใส่ชื่อปุ่ม Share(Label)</label> 
+                       <input class="form-control" id="FlexShareLabel" placeholder="ไม่เกิน 40 ตัวอักษร" value="Share" type="text"> 
+                       <label>Link Share:</label> 
+                       <input class="form-control" id="FlexShareLink" value="https://liff.line.me/1656633739-NjWEVAWZ?sMessageID=" style="font-size: 12px;" type="url" readonly> 
+                      </div> 
+                     </div> 
+                     <table class="table"> 
+                      <tbody> 
+                       <tr> 
+                        <td style="text-align:right;">เลือก รูปแบบ Flex Message:</td> 
+                        <td> <select id="FlexStyle"> <option value="style_1">Classic</option> <option value="style_2">Style 2</option> <option selected value="style_4">Button row</option> <option value="style_3">Image Only</option> </select> </td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align:right;">เลือก Size Flex Message:</td> 
+                        <td> <select id="FlexSize"> <option value="giga">Giga</option> <option value="mega" selected>Mega</option> <option value="kilo">Kilo</option> <option value="micro">Micro</option> <option value="nano">Nano</option> </select> </td> 
+                       </tr> 
+                      </tbody> 
+                     </table> 
+                     <input class="form-control" id="FlexCode" style="display:none;"> 
+                    </form> 
+                   </div> 
+                   <div class="modal-footer"> 
+                    <button type="button" class="btn btn-primary" onclick="addflexmessage(this)">บันทึก</button> 
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="container-fluid" id="All_Contents"></div> 
+               <div class="modal" id="Flex_Success" data-backdrop="false"> 
+                <div class="modal-dialog"> 
+                 <div class="modal-content" style="background-color:#cfffd3;"> 
+                  <div class="modal-body" style="color:#000dc7;"> 
+                   <button type="button" class="close btn-sm" data-dismiss="modal">×</button> 
+                   <strong><span style="color:#ff0000;"> Success! </span></strong> ส่ง Flex Message สำเร็จ! 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div id="footer_">
+                copyright © 
+                <a href="https://photoofdays.blogspot.com">ภาพดี ๆ ๐๗๒</a> All Right Reserved.
+               </div> 
+               <link href="https://fashenchan.org/photo072/flex2html/flex2html.css" rel="stylesheet"> 
+               <script type="text/javascript" charset="utf-8">
+ document.title = "Dashboard Flex Message by 1 Image 1 Text";
+ liff.init({
+  liffId: "1656633739-NjWEVAWZ"
+ })
+ .then(function () {
+  initializeApp();
+ });
+
+  function initializeApp() {
+   // check if the user internal browser
+   if (liff.isInClient() && liff.isLoggedIn()) {
+     document.getElementById('sBrowser').style.display = "none";
+   }else{
+     document.getElementById('sBrowser').style.display = "block";
+   }
+   
+   // check if the user is logged in/out, and disable inappropriate button
+   if (liff.isLoggedIn()) {
+     document.getElementById('liffLoginButton').disabled = true;
+     document.getElementById('UserID').value = liff.getContext().userId;
+     document.getElementById('accesstokenfield').value = liff.getAccessToken();
+     document.getElementById('AddModalFlex').disabled = false;
+     document.getElementById('AddModalFlex').style.display = 'block';
+     init2();
+   } else {
+     document.getElementById('liffLogoutButton').disabled = true;
+     document.getElementById('UserID').value = 'Please Login';
+     document.getElementById('accesstokenfield').value = 'Please Login';
+     document.getElementById('AddModalFlex').disabled = true;
+     document.getElementById('AddModalFlex').style.display = 'none';
+     document.getElementById('Wait_Text').style.display='none';
+     setTimeout(function() { alert(decode_text('ก&#3656;อนใช&#3657;งาน กร&#3640;ณา Login ด&#3657;วย Line App')); }, 1000);
+   }
+   
+   // login call, only when external browser is used
+   document.getElementById('liffLoginButton').addEventListener('click', function () {
+    if (!liff.isLoggedIn()) {
+     liff.login();
+    }
+   });
+   // logout call only when external browse
+   document.getElementById('liffLogoutButton').addEventListener('click', function () {
+     if (liff.isLoggedIn()) {
+       liff.logout();
+       window.location.reload();
+     }
+   });
+  }
+
+  //Get Data from Sheet
+  function init2() {
+   var GetJson_URL = 'https://script.google.com/macros/s/AKfycbyJuD3IZTgm3Pk11TzYiVwY8jkgQFB0bYxoSZzABQ6Cu7TjjO8w/exec?spreadsheetId=1qk-OcbSGVwpkix6LymTb-e7AbCKjfENaIR_ytmMLZlY';
+   $.getJSON(GetJson_URL, function(data) {
+    sleep(3000);
+    showInfo2(data);
+   });
+  }
+  
+  function showInfo2(data) {
+    //alert(JSON.stringify(data));
+    //console.log(JSON.stringify(data));
+    var elmt = document.getElementById("All_Contents");
+    var sUserID = document.getElementById('UserID').value;
+    var check_flex = 'Not Exist';
+    
+    var divRow, divFlex, divFlex_1, rowNumber, rNumber=1,
+        buttonEdit, buttonDelete, buttonSend;
+    
+    var divEdit_footer, button_footer1, button_footer2;
+
+    var divEdit_body, formEdit_body;
+    
+    var divEdit_body1, labelEdit_body1, inputEdit_body1;
+    
+    var divEdit_body2, labelEdit_body2, inputEdit_body2;
+    
+    var divEdit_body3, labelEdit_body3, 
+		labelEdit_body3_1, inputEdit_body3_1, labelEdit_body3_2, inputEdit_body3_2,
+        labelEdit_body3_3, selectEdit_body3_3, optionEdit_body3_3_1, optionEdit_body3_3_2, optionEdit_body3_3_3,
+        labelEdit_body3_4, selectEdit_body3_4, optionEdit_body3_4_1, optionEdit_body3_4_2, optionEdit_body3_4_3,
+        optionEdit_body3_4_4, optionEdit_body3_4_5, optionEdit_body3_4_6, optionEdit_body3_4_7, optionEdit_body3_4_8,
+        optionEdit_body3_4_9, optionEdit_body3_4_10,
+        textareaEdit_body3;
+    
+    var Carriage_Return;
+    
+    var divEdit_body4, labelEdit_body4, inputEdit_body4, labelEdit_body4_1, inputEdit_body4_1, imgEdit_body4;
+
+    var divEdit_body5, labelEdit_body5,
+        labelEdit_body5_1, inputEdit_body5_1, labelEdit_body5_2,
+        inputEdit_body5_2, labelEdit_body5_3,
+        selectEdit_body5_3, optionEdit_body5_3_1, optionEdit_body5_3_2, optionEdit_body5_3_3,
+        labelEdit_body5_4, selectEdit_body5_4, optionEdit_body5_4_1, optionEdit_body5_4_2, optionEdit_body5_4_3,
+        optionEdit_body5_4_4, optionEdit_body5_4_5, optionEdit_body5_4_6, optionEdit_body5_4_7, optionEdit_body5_4_8,
+        optionEdit_body5_4_9, optionEdit_body5_4_10,
+        textareaEdit_body5;
+    
+    var divEdit_body6, labelEdit_body6;
+    var divEdit_body6_1, labelEdit_body6_1_1, select_6_1_1, option_select_6_1_1_1, option_select_6_1_1_2,
+    	labelEdit_body6_1_2, inputEdit_body6_1_2, labelEdit_body6_1_3, inputEdit_body6_1_3,
+    	labelEdit_body6_1_4, inputEdit_body6_1_4;
+    var divEdit_body6_2, labelEdit_body6_2_1, select_6_2_1, option_select_6_2_1_1, option_select_6_2_1_2,
+    	labelEdit_body6_2_2, inputEdit_body6_2_2, labelEdit_body6_2_3, inputEdit_body6_2_3,
+    	labelEdit_body6_2_4, inputEdit_body6_2_4;
+    var divEdit_body6_3, labelEdit_body6_3_1, select_6_3_1, option_select_6_3_1_1, option_select_6_3_1_2,
+    	labelEdit_body6_3_2, inputEdit_body6_3_2, labelEdit_body6_3_3, inputEdit_body6_3_3,
+    	labelEdit_body6_3_4, inputEdit_body6_3_4;
+    var divEdit_body6_4, labelEdit_body6_4_1, select_6_4_1, option_select_6_4_1_1, option_select_6_4_1_2,
+    	labelEdit_body6_4_2, inputEdit_body6_4_2, labelEdit_body6_4_3, inputEdit_body6_4_3,
+    	labelEdit_body6_4_4, inputEdit_body6_4_4;
+    
+    var divEdit_body7, inputEdit_body7_1, inputEdit_body7_2;
+    
+    var tableEdit_body8, tbodyEdit_body8, trEdit_body8_1, tdEdit_body8_1_1,
+        tdEdit_body8_1_2, select8_1_2_1, option8_1_2_1_1, option8_1_2_1_2,
+        option8_1_2_1_3, option8_1_2_1_4;
+    var trEdit_body8_2, tdEdit_body8_2_1, tdEdit_body8_2_2, select8_2_2,
+        option8_2_2_1, option8_2_2_2, option8_2_2_3, option8_2_2_4,
+        option8_2_2_5, select8_2_2;
+    var inputEdit_body9;
+   
+    var divEdit_Header, labelEdit_title, buttonEdit_title;
+    var divEdit, divEdit_dialog, divEdit_content; 
+    
+    var divDelete, divDelete_dialog, divDelete_content; 
+    var divDelete_Header, labelDelete_title, buttonDelete_title;
+    var divDelete_body, formDelete_body;
+    var divDelete_body1, buttonDelete_body1, buttonDelete_body2;
+
+    var sDetails = '';
+    for (var i = 0; i < data.length; i++) {
+      if (sUserID==data[i].UserID && (data[i].FlexCode!="")) {
+/*        
+        sDetails = sDetails + '<div class="row">' +
+          '<div id="flex_'+i+'" class="chatbox" style="margin:4px;overflow:visible;"></div>' +
+          '<div class="text-primary">' +
+          decode_text('เลขท&#3637;&#3656; : '+rNumber+' sMessageID='+data[i].MessageID) +
+		  '</div>' +
+          
+          '<button id="edit'+ data[i].MessageID +
+          '" onclick="editflexmessage(this)" class="btn btn-warning btn-sm text-white">แก&#3657;ไข</button>' +
+          
+          '<button id="delete'+ data[i].MessageID +
+          '"onclick="deleteflexmessage(this)" class="btn btn-danger btn-sm text-white">ลบ</button>' +
+          
+          '<button id="send'+ data[i].MessageID +
+          '"onclick="sendflexmessage(this)" class="btn btn-sm" style="background-color:#00edbe;color:blue;">Share</button>'+
+          '</div>';
+*/
+divRow = document.createElement("div");
+divRow.setAttribute("class", "row");
+ divFlex = document.createElement("div");
+ divFlex.setAttribute("id", "flex_"+i);
+ divFlex.setAttribute("class", "chatbox");
+ divFlex.style="overflow:visible;";
+  divFlex_1 = document.createElement("div");
+  divFlex_1.style='color:white;text-align:left;';
+  divFlex_1.innerText=decode_text(' 💬 Preview *อาจจะไม&#3656;ตรงก&#3633;บ Flex Simulator');
+  divFlex.appendChild(divFlex_1);
+   rowNumber = document.createElement("div");
+   rowNumber.setAttribute("class", "text-primary");
+   rowNumber.innerText=decode_text('เลขท&#3637;&#3656; : '+(rNumber)+' sMessageID='+data[i].MessageID);
+    buttonEdit = document.createElement("button");
+    buttonEdit.setAttribute("id", "edit_"+ data[i].MessageID);
+    buttonEdit.setAttribute("class", "btn btn-warning btn-sm text-primary ml-3");
+    buttonEdit.setAttribute("data-toggle", "modal");
+    buttonEdit.setAttribute("data-target", "#Modal_edit_"+i);
+    buttonEdit.innerText=decode_text('แก&#3657;ไข');
+/*-------------------------------------------------------------------------------------*/
+   divEdit_footer = document.createElement("div");
+   divEdit_footer.setAttribute("class", "modal-footer");
+    button_footer1 = document.createElement("button");
+    button_footer1.setAttribute("class", "btn btn-primary");
+    button_footer1.setAttribute("data-dismiss", "modal");
+    button_footer1.setAttribute("onclick", 'editflexmessage('+i+')');
+    button_footer1.innerText = decode_text("บ&#3633;นท&#3638;ก");
+    button_footer2 = document.createElement("button");
+    button_footer2.setAttribute("class", "btn btn-secondary");
+    button_footer2.setAttribute("data-dismiss", "modal");
+    button_footer2.innerText = decode_text("ป&#3636;ด");
+   divEdit_footer.appendChild(button_footer1);
+   divEdit_footer.appendChild(button_footer2);
+/*-------------------------------------------------------------------------------------*/
+   divEdit_body = document.createElement("div");
+   divEdit_body.setAttribute("class", "modal-body");
+    formEdit_body = document.createElement("form");
+    formEdit_body.setAttribute("id", "form_for_entry_edit_"+i);
+     divEdit_body1 = document.createElement("div");
+     divEdit_body1.setAttribute("class", "form-group");
+      labelEdit_body1 = document.createElement("label");
+      labelEdit_body1.innerText="MessageID:";
+      inputEdit_body1 = document.createElement("input");
+      inputEdit_body1.setAttribute("class", "form-control");
+      inputEdit_body1.setAttribute("disabled", "");
+      inputEdit_body1.setAttribute("id", "MessageID_edit_"+i);
+      inputEdit_body1.setAttribute("type", "text");
+      inputEdit_body1.value=data[i].MessageID;
+     divEdit_body1.appendChild(labelEdit_body1);
+     divEdit_body1.appendChild(inputEdit_body1);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body2 = document.createElement("div");
+     divEdit_body2.setAttribute("class", "form-group border border-success p-3");
+      labelEdit_body2 = document.createElement("label");
+      labelEdit_body2.setAttribute("class", "border-0 text-primary");
+      labelEdit_body2.innerText = decode_text("ส&#3656;วน altText : ช&#3639;&#3656;อการ&#3660;ด ถ&#3657;าข&#3638;&#3657;นบรรท&#3633;ดใหม&#3656;กด Enter");
+      inputEdit_body2 = document.createElement("textarea");
+      inputEdit_body2.setAttribute("class", "form-control");
+      inputEdit_body2.setAttribute("id", "altText_edit_"+i);
+      inputEdit_body2.setAttribute("placeholder", decode_text("กร&#3640;ณาใส&#3656;ช&#3639;&#3656;อการ&#3660;ด"));
+      inputEdit_body2.setAttribute("type", "text");
+      inputEdit_body2.value = data[i].altText;
+     divEdit_body2.appendChild(labelEdit_body2);
+     divEdit_body2.appendChild(inputEdit_body2);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body3 = document.createElement("div");
+     divEdit_body3.setAttribute("class", "form-group border border-success p-3");
+      labelEdit_body3 = document.createElement("label");
+      labelEdit_body3.setAttribute("class", "form-control border-0 text-primary");
+      labelEdit_body3.innerText = decode_text("ส&#3656;วน Header : ข&#3638;&#3657;นบรรท&#3633;ดใหม&#3656;กดEnter");
+
+      labelEdit_body3_1 = document.createElement("label");
+      labelEdit_body3_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+      labelEdit_body3_1.setAttribute("style", "font-size:small;");
+      inputEdit_body3_1 = document.createElement("input");
+      inputEdit_body3_1.setAttribute("id", "FlexHeaderTextColor_edit_"+i);
+      inputEdit_body3_1.value=data[i].FlexHeaderTextColor;
+      inputEdit_body3_1.setAttribute("type", "color");
+         
+	  labelEdit_body3_2 = document.createElement("label");
+      labelEdit_body3_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+      labelEdit_body3_2.setAttribute("style", "font-size:small;");
+      inputEdit_body3_2 = document.createElement("input");
+      inputEdit_body3_2.setAttribute("id", "FlexHeaderBackgroundColor_edit_"+i);
+      inputEdit_body3_2.value=data[i].FlexHeaderBackgroundColor;
+      inputEdit_body3_2.setAttribute("type", "color");
+
+      labelEdit_body3_3 = document.createElement("label");
+      labelEdit_body3_3.innerText = decode_text("ตำแหน&#3656;ง");
+      labelEdit_body3_3.setAttribute("style", "font-size:small;");
+      selectEdit_body3_3 = document.createElement("select");
+      selectEdit_body3_3.setAttribute("id", "FlexHeaderPosition_edit_"+i);
+       optionEdit_body3_3_1 = document.createElement("option");
+       optionEdit_body3_3_1.setAttribute("value", "start");
+	   optionEdit_body3_3_1.innerText = decode_text("ช&#3636;ดซ&#3657;าย");
+       optionEdit_body3_3_2 = document.createElement("option");
+       optionEdit_body3_3_2.setAttribute("value", "center");
+	   optionEdit_body3_3_2.innerText = decode_text("จ&#3633;ดกลาง");
+       optionEdit_body3_3_3 = document.createElement("option");
+       optionEdit_body3_3_3.setAttribute("value", "end");
+	   optionEdit_body3_3_3.innerText = decode_text("ช&#3636;ดขวา");
+      selectEdit_body3_3.appendChild(optionEdit_body3_3_1);
+      selectEdit_body3_3.appendChild(optionEdit_body3_3_2);
+      selectEdit_body3_3.appendChild(optionEdit_body3_3_3);
+	  selectEdit_body3_3.value=data[i].FlexHeaderPosition;
+
+      labelEdit_body3_4 = document.createElement("label");
+      labelEdit_body3_4.innerText = decode_text("ขนาด");
+      labelEdit_body3_4.setAttribute("style", "font-size:small;");
+      selectEdit_body3_4 = document.createElement("select");
+      selectEdit_body3_4.setAttribute("id", "FlexHeaderSize_edit_"+i);
+       optionEdit_body3_4_1 = document.createElement("option");
+       optionEdit_body3_4_1.setAttribute("value", "xxs");
+	   optionEdit_body3_4_1.innerText = "xxs";
+       optionEdit_body3_4_2 = document.createElement("option");
+       optionEdit_body3_4_2.setAttribute("value", "xs");
+	   optionEdit_body3_4_2.innerText = "xs";
+       optionEdit_body3_4_3 = document.createElement("option");
+       optionEdit_body3_4_3.setAttribute("value", "sm");
+	   optionEdit_body3_4_3.innerText = "sm";
+       optionEdit_body3_4_4 = document.createElement("option");
+       optionEdit_body3_4_4.setAttribute("value", "md");
+	   optionEdit_body3_4_4.innerText = "md";
+       optionEdit_body3_4_5 = document.createElement("option");
+       optionEdit_body3_4_5.setAttribute("value", "lg");
+	   optionEdit_body3_4_5.innerText = "lg";
+       optionEdit_body3_4_6 = document.createElement("option");
+       optionEdit_body3_4_6.setAttribute("value", "xl");
+	   optionEdit_body3_4_6.innerText = "xl";
+       optionEdit_body3_4_7 = document.createElement("option");
+       optionEdit_body3_4_7.setAttribute("value", "xxl");
+	   optionEdit_body3_4_7.innerText = "xxl";
+       optionEdit_body3_4_8 = document.createElement("option");
+       optionEdit_body3_4_8.setAttribute("value", "3xl");
+	   optionEdit_body3_4_8.innerText = "3xl";
+       optionEdit_body3_4_9 = document.createElement("option");
+       optionEdit_body3_4_9.setAttribute("value", "4xl");
+	   optionEdit_body3_4_9.innerText = "4xl";
+       optionEdit_body3_4_10 = document.createElement("option");
+       optionEdit_body3_4_10.setAttribute("value", "5xl");
+	   optionEdit_body3_4_10.innerText = "5xl";
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_1);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_2);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_3);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_4);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_5);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_6);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_7);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_8);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_9);
+      selectEdit_body3_4.appendChild(optionEdit_body3_4_10);
+	  selectEdit_body3_4.value=data[i].FlexHeaderSize;
+        
+      Carriage_Return = document.createElement("br");
+
+      textareaEdit_body3 = document.createElement("textarea");
+      textareaEdit_body3.setAttribute("class", "form-control");
+      textareaEdit_body3.setAttribute("id", "FlexHeader_edit_"+i);
+      textareaEdit_body3.setAttribute("placeholder", decode_text("กร&#3640;ณาใส&#3656;ห&#3633;วเร&#3639;&#3656;อง"));
+      textareaEdit_body3.setAttribute("type", "text");
+      textareaEdit_body3.value = data[i].FlexHeader;
+        
+     divEdit_body3.appendChild(labelEdit_body3);
+     divEdit_body3.appendChild(labelEdit_body3_1);
+     divEdit_body3.appendChild(inputEdit_body3_1);
+     divEdit_body3.appendChild(labelEdit_body3_2);
+     divEdit_body3.appendChild(inputEdit_body3_2);
+     divEdit_body3.appendChild(labelEdit_body3_3);
+     divEdit_body3.appendChild(selectEdit_body3_3);
+     divEdit_body3.appendChild(labelEdit_body3_4);
+     divEdit_body3.appendChild(selectEdit_body3_4);
+     divEdit_body3.appendChild(textareaEdit_body3);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body4 = document.createElement("div");
+     divEdit_body4.setAttribute("class", "form-group border border-success p-3");
+      labelEdit_body4 = document.createElement("label");
+      labelEdit_body4.setAttribute("class", "border-0 text-primary small");
+      labelEdit_body4.innerText = decode_text("ส&#3656;วน Hero : ถ&#3657;า Upload File ร&#3641;ปภาพตรงน&#3637;&#3657; Link ร&#3641;ปภาพ จะม&#3637;อาย&#3640; 1 อาท&#3636;ตย&#3660;");
+      inputEdit_body4 = document.createElement("input");
+      inputEdit_body4.setAttribute("accept", "image/*");
+      inputEdit_body4.setAttribute("class", "form-control-file");
+      inputEdit_body4.setAttribute("id", "image-file_edit_"+i);
+      inputEdit_body4.setAttribute("onchange", "SavePhoto_edit_(this,"+i+")");
+      inputEdit_body4.setAttribute("type", "file");
+      labelEdit_body4_1 = document.createElement("label");
+      labelEdit_body4_1.innerText = decode_text("หร&#3639;อใส&#3656; Link ร&#3641;ปภาพจากท&#3637;&#3656;อ&#3639;&#3656;น : ( .jpg หร&#3639;อ .png )");
+      inputEdit_body4_1 = document.createElement("input");
+      inputEdit_body4_1.setAttribute("class", "form-control");
+      inputEdit_body4_1.setAttribute("id", "FlexImage_edit_"+i);
+      inputEdit_body4_1.setAttribute("placeholder", decode_text("Link ร&#3641;ปภาพ ม&#3637; .jpg หร&#3639;อ .png เช&#3656;น https://i.imgur.com/kBdX17Q.jpg"));
+      inputEdit_body4_1.style="font-size:12px;";
+      inputEdit_body4_1.setAttribute("type", "url");
+      inputEdit_body4_1.value = data[i].FlexImage;
+      imgEdit_body4 = document.createElement("img");
+      imgEdit_body4.setAttribute("id", "imgFlexMessage_edit_"+i);
+      imgEdit_body4.src = data[i].FlexImage;
+      imgEdit_body4.style = "display:none;";
+     divEdit_body4.appendChild(labelEdit_body4);
+     divEdit_body4.appendChild(inputEdit_body4);
+     divEdit_body4.appendChild(labelEdit_body4_1);
+     divEdit_body4.appendChild(inputEdit_body4_1);
+     divEdit_body4.appendChild(imgEdit_body4);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body5 = document.createElement("div");
+     divEdit_body5.setAttribute("class", "form-group border border-success p-3");
+      labelEdit_body5 = document.createElement("label");
+      labelEdit_body5.setAttribute("class", "form-control border-0 text-primary");
+      labelEdit_body5.innerText = decode_text("ส&#3656;วน Body : ข&#3657;อความ");
+      
+      labelEdit_body5_1 = document.createElement("label");
+      labelEdit_body5_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+      labelEdit_body5_1.setAttribute("style", "font-size:small;");
+      inputEdit_body5_1 = document.createElement("input");
+      inputEdit_body5_1.setAttribute("id", "FlexBodyTextColor_edit_"+i);
+      inputEdit_body5_1.value=data[i].FlexBodyTextColor;
+      inputEdit_body5_1.setAttribute("type", "color");
+          
+	  labelEdit_body5_2 = document.createElement("label");
+      labelEdit_body5_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+      labelEdit_body5_2.setAttribute("style", "font-size:small;");
+      inputEdit_body5_2 = document.createElement("input");
+      inputEdit_body5_2.setAttribute("id", "FlexBodyBackgroundColor_edit_"+i);
+      inputEdit_body5_2.value=data[i].FlexBodyBackgroundColor;
+      inputEdit_body5_2.setAttribute("type", "color");
+
+      labelEdit_body5_3 = document.createElement("label");
+      labelEdit_body5_3.innerText = decode_text("ตำแหน&#3656;ง");
+      labelEdit_body5_3.setAttribute("style", "font-size:small;");
+      selectEdit_body5_3 = document.createElement("select");
+      selectEdit_body5_3.setAttribute("id", "FlexBodyPosition_edit_"+i);
+       optionEdit_body5_3_1 = document.createElement("option");
+       optionEdit_body5_3_1.setAttribute("value", "start");
+	   optionEdit_body5_3_1.innerText = decode_text("ช&#3636;ดซ&#3657;าย");
+       optionEdit_body5_3_2 = document.createElement("option");
+       optionEdit_body5_3_2.setAttribute("value", "center");
+	   optionEdit_body5_3_2.innerText = decode_text("จ&#3633;ดกลาง");
+       optionEdit_body5_3_3 = document.createElement("option");
+       optionEdit_body5_3_3.setAttribute("value", "end");
+	   optionEdit_body5_3_3.innerText = decode_text("ช&#3636;ดขวา");
+      selectEdit_body5_3.appendChild(optionEdit_body5_3_1);
+      selectEdit_body5_3.appendChild(optionEdit_body5_3_2);
+      selectEdit_body5_3.appendChild(optionEdit_body5_3_3);
+      selectEdit_body5_3.value=data[i].FlexBodyPosition;
+
+      labelEdit_body5_4 = document.createElement("label");
+      labelEdit_body5_4.innerText = decode_text("ขนาด");
+      labelEdit_body5_4.setAttribute("style", "font-size:small;");
+      selectEdit_body5_4 = document.createElement("select");
+      selectEdit_body5_4.setAttribute("id", "FlexBodySize_edit_"+i);
+       optionEdit_body5_4_1 = document.createElement("option");
+       optionEdit_body5_4_1.setAttribute("value", "xxs");
+	   optionEdit_body5_4_1.innerText = "xxs";
+       optionEdit_body5_4_2 = document.createElement("option");
+       optionEdit_body5_4_2.setAttribute("value", "xs");
+	   optionEdit_body5_4_2.innerText = "xs";
+       optionEdit_body5_4_3 = document.createElement("option");
+       optionEdit_body5_4_3.setAttribute("value", "sm");
+	   optionEdit_body5_4_3.innerText = "sm";
+       optionEdit_body5_4_4 = document.createElement("option");
+       optionEdit_body5_4_4.setAttribute("value", "md");
+	   optionEdit_body5_4_4.innerText = "md";
+       optionEdit_body5_4_5 = document.createElement("option");
+       optionEdit_body5_4_5.setAttribute("value", "lg");
+	   optionEdit_body5_4_5.innerText = "lg";
+       optionEdit_body5_4_6 = document.createElement("option");
+       optionEdit_body5_4_6.setAttribute("value", "xl");
+	   optionEdit_body5_4_6.innerText = "xl";
+       optionEdit_body5_4_7 = document.createElement("option");
+       optionEdit_body5_4_7.setAttribute("value", "xxl");
+	   optionEdit_body5_4_7.innerText = "xxl";
+       optionEdit_body5_4_8 = document.createElement("option");
+       optionEdit_body5_4_8.setAttribute("value", "3xl");
+	   optionEdit_body5_4_8.innerText = "3xl";
+       optionEdit_body5_4_9 = document.createElement("option");
+       optionEdit_body5_4_9.setAttribute("value", "4xl");
+	   optionEdit_body5_4_9.innerText = "4xl";
+       optionEdit_body5_4_10 = document.createElement("option");
+       optionEdit_body5_4_10.setAttribute("value", "5xl");
+	   optionEdit_body5_4_10.innerText = "5xl";
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_1);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_2);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_3);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_4);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_5);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_6);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_7);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_8);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_9);
+      selectEdit_body5_4.appendChild(optionEdit_body5_4_10);
+	  selectEdit_body5_4.value=data[i].FlexBodySize;
+
+      textareaEdit_body5 = document.createElement("textarea");
+      textareaEdit_body5.setAttribute("class", "form-control");
+      textareaEdit_body5.setAttribute("id", "FlexText_edit_"+i);
+      textareaEdit_body5.setAttribute("placeholder", decode_text("กร&#3640;ณาใส&#3656;ข&#3657;อความ"));
+      textareaEdit_body5.setAttribute("type", "text");
+      textareaEdit_body5.style="height:100px;";
+      textareaEdit_body5.value = data[i].FlexText;
+        
+     divEdit_body5.appendChild(labelEdit_body5);
+     divEdit_body5.appendChild(labelEdit_body5_1);
+     divEdit_body5.appendChild(inputEdit_body5_1);
+     divEdit_body5.appendChild(labelEdit_body5_2);
+     divEdit_body5.appendChild(inputEdit_body5_2);
+     divEdit_body5.appendChild(labelEdit_body5_3);
+     divEdit_body5.appendChild(selectEdit_body5_3);
+     divEdit_body5.appendChild(labelEdit_body5_4);
+     divEdit_body5.appendChild(selectEdit_body5_4);
+     divEdit_body5.appendChild(textareaEdit_body5);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body6 = document.createElement("div");
+     divEdit_body6.setAttribute("class", "form-group border border-success p-3");
+      labelEdit_body6 = document.createElement("label");
+      labelEdit_body6.setAttribute("class", "form-control border-0 text-primary");
+      labelEdit_body6.innerText = decode_text("ส&#3656;วน Footer : ป&#3640;&#3656;มต&#3656;างๆ");
+/*----------------------------------*/
+      divEdit_body6_1 = document.createElement("div");
+      divEdit_body6_1.setAttribute("class", "form-group border border-warning p-1");
+       labelEdit_body6_1_1 = document.createElement("label");
+       labelEdit_body6_1_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+       select_6_1_1 = document.createElement("select");
+       select_6_1_1.setAttribute("id", "FlexLabel1Color_edit_"+i);
+        option_select_6_1_1_1 = document.createElement("option");
+        option_select_6_1_1_1.setAttribute("value", "primary");
+		option_select_6_1_1_1.innerText = decode_text("ส&#3637;ขาว");
+        option_select_6_1_1_2 = document.createElement("option");
+        option_select_6_1_1_2.setAttribute("value", "secondary");
+		option_select_6_1_1_2.innerText = decode_text("ส&#3637;ดำ");
+       select_6_1_1.appendChild(option_select_6_1_1_1);
+       select_6_1_1.appendChild(option_select_6_1_1_2);
+       select_6_1_1.value=data[i].FlexLabel1Color;
+        
+	   labelEdit_body6_1_2 = document.createElement("label");
+       labelEdit_body6_1_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+       inputEdit_body6_1_2 = document.createElement("input");
+       inputEdit_body6_1_2.setAttribute("id", "FlexLabel1BackgroundColor_edit_"+i);
+       inputEdit_body6_1_2.value=data[i].FlexLabel1BackgroundColor;
+       inputEdit_body6_1_2.setAttribute("type", "color");
+        
+	   labelEdit_body6_1_3 = document.createElement("label");
+       labelEdit_body6_1_3.innerText = decode_text("ใส&#3656;ช&#3639;&#3656;อป&#3640;&#3656;มLink1(Label):");
+       inputEdit_body6_1_3 = document.createElement("input");
+       inputEdit_body6_1_3.setAttribute("class", "form-control");
+       inputEdit_body6_1_3.setAttribute("id", "FlexLabel1_edit_"+i);
+       inputEdit_body6_1_3.setAttribute("placeholder", decode_text("ไม&#3656;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+       inputEdit_body6_1_3.setAttribute("type", "text");
+       inputEdit_body6_1_3.setAttribute("value", data[i].FlexLabel1);
+        
+       labelEdit_body6_1_4 = document.createElement("label");
+       labelEdit_body6_1_4.innerText = decode_text("Link1:");
+       inputEdit_body6_1_4 = document.createElement("input");
+       inputEdit_body6_1_4.setAttribute("class", "form-control");
+       inputEdit_body6_1_4.setAttribute("id", "FlexLink1_edit_"+i);
+       inputEdit_body6_1_4.setAttribute("placeholder", decode_text("Link เช&#3656;น https://zoom072.net"));
+       inputEdit_body6_1_4.style = "font-size:12px;";
+       inputEdit_body6_1_4.setAttribute("type", "url");
+       inputEdit_body6_1_4.value = data[i].FlexLink1;
+
+      divEdit_body6_1.appendChild(labelEdit_body6_1_1);
+      divEdit_body6_1.appendChild(select_6_1_1);
+      divEdit_body6_1.appendChild(labelEdit_body6_1_2);
+      divEdit_body6_1.appendChild(inputEdit_body6_1_2);
+      divEdit_body6_1.appendChild(labelEdit_body6_1_3);
+      divEdit_body6_1.appendChild(inputEdit_body6_1_3);
+      divEdit_body6_1.appendChild(labelEdit_body6_1_4);
+      divEdit_body6_1.appendChild(inputEdit_body6_1_4);
+/*----------------------------------*/
+      divEdit_body6_2 = document.createElement("div");
+      divEdit_body6_2.setAttribute("class", "form-group border border-warning p-1");
+       labelEdit_body6_2_1 = document.createElement("label");
+       labelEdit_body6_2_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+       select_6_2_1 = document.createElement("select");
+       select_6_2_1.setAttribute("id", "FlexLabel2Color_edit_"+i);
+        option_select_6_2_1_1 = document.createElement("option");
+        option_select_6_2_1_1.setAttribute("value", "primary");
+	    option_select_6_2_1_1.innerText = decode_text("ส&#3637;ขาว");
+        option_select_6_2_1_2 = document.createElement("option");
+        option_select_6_2_1_2.setAttribute("value", "secondary");
+		option_select_6_2_1_2.innerText = decode_text("ส&#3637;ดำ");
+       select_6_2_1.appendChild(option_select_6_2_1_1);
+       select_6_2_1.appendChild(option_select_6_2_1_2);
+       select_6_2_1.value=data[i].FlexLabel2Color;
+
+	   labelEdit_body6_2_2 = document.createElement("label");
+       labelEdit_body6_2_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+       inputEdit_body6_2_2 = document.createElement("input");
+       inputEdit_body6_2_2.setAttribute("id", "FlexLabel2BackgroundColor_edit_"+i);
+       inputEdit_body6_2_2.value=data[i].FlexLabel2BackgroundColor;
+       inputEdit_body6_2_2.setAttribute("type", "color");
+        
+	   labelEdit_body6_2_3 = document.createElement("label");
+       labelEdit_body6_2_3.innerHTML = decode_text('ใส&#3656;ช&#3639;&#3656;อป&#3640;&#3656;มLink2(Label)-<span style="color:#2200ff">ถ&#3657;าไม&#3656;ม&#3637;ข&#3657;ามได&#3657;</span>:');
+       inputEdit_body6_2_3 = document.createElement("input");
+       inputEdit_body6_2_3.setAttribute("class", "form-control");
+       inputEdit_body6_2_3.setAttribute("id", "FlexLabel2_edit_"+i);
+       inputEdit_body6_2_3.setAttribute("placeholder", decode_text("ไม&#3656;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+       inputEdit_body6_2_3.setAttribute("type", "text");
+       inputEdit_body6_2_3.setAttribute("value", data[i].FlexLabel2);
+        
+       labelEdit_body6_2_4 = document.createElement("label");
+       labelEdit_body6_2_4.innerText = decode_text("Link2:");
+       inputEdit_body6_2_4 = document.createElement("input");
+       inputEdit_body6_2_4.setAttribute("class", "form-control");
+       inputEdit_body6_2_4.setAttribute("id", "FlexLink2_edit_"+i);
+       inputEdit_body6_2_4.setAttribute("placeholder", decode_text("Link เช&#3656;น https://zoom072.net"));
+       inputEdit_body6_2_4.style = "font-size:12px;";
+       inputEdit_body6_2_4.setAttribute("type", "url");
+       inputEdit_body6_2_4.value = data[i].FlexLink2;
+
+      divEdit_body6_2.appendChild(labelEdit_body6_2_1);
+      divEdit_body6_2.appendChild(select_6_2_1);
+      divEdit_body6_2.appendChild(labelEdit_body6_2_2);
+        
+      divEdit_body6_2.appendChild(inputEdit_body6_2_2);
+      divEdit_body6_2.appendChild(labelEdit_body6_2_3);
+      divEdit_body6_2.appendChild(inputEdit_body6_2_3);
+      divEdit_body6_2.appendChild(labelEdit_body6_2_4);
+      divEdit_body6_2.appendChild(inputEdit_body6_2_4);
+/*----------------------------------*/
+      divEdit_body6_3 = document.createElement("div");
+      divEdit_body6_3.setAttribute("class", "form-group border border-warning p-1");
+       labelEdit_body6_3_1 = document.createElement("label");
+       labelEdit_body6_3_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+       select_6_3_1 = document.createElement("select");
+       select_6_3_1.setAttribute("id", "FlexLabel3Color_edit_"+i);
+        option_select_6_3_1_1 = document.createElement("option");
+        option_select_6_3_1_1.setAttribute("value", "primary");
+		option_select_6_3_1_1.innerText = decode_text("ส&#3637;ขาว");
+        option_select_6_3_1_2 = document.createElement("option");
+        option_select_6_3_1_2.setAttribute("value", "secondary");
+		option_select_6_3_1_2.innerText = decode_text("ส&#3637;ดำ");
+       select_6_3_1.appendChild(option_select_6_3_1_1);
+       select_6_3_1.appendChild(option_select_6_3_1_2);
+       select_6_3_1.value=data[i].FlexLabel3Color;
+
+	   labelEdit_body6_3_2 = document.createElement("label");
+       labelEdit_body6_3_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+       inputEdit_body6_3_2 = document.createElement("input");
+       inputEdit_body6_3_2.setAttribute("id", "FlexLabel3BackgroundColor_edit_"+i);
+       inputEdit_body6_3_2.value=data[i].FlexLabel3BackgroundColor;
+       inputEdit_body6_3_2.setAttribute("type", "color");
+        
+	   labelEdit_body6_3_3 = document.createElement("label");
+       labelEdit_body6_3_3.innerHTML = decode_text('ใส&#3656;ช&#3639;&#3656;อป&#3640;&#3656;มLink3(Label)-<span style="color:#2200ff">ถ&#3657;าไม&#3656;ม&#3637;ข&#3657;ามได&#3657;</span>:');
+       inputEdit_body6_3_3 = document.createElement("input");
+       inputEdit_body6_3_3.setAttribute("class", "form-control");
+       inputEdit_body6_3_3.setAttribute("id", "FlexLabel3_edit_"+i);
+       inputEdit_body6_3_3.setAttribute("placeholder", decode_text("ไม&#3656;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+       inputEdit_body6_3_3.setAttribute("type", "text");
+       inputEdit_body6_3_3.setAttribute("value", data[i].FlexLabel3);
+        
+       labelEdit_body6_3_4 = document.createElement("label");
+       labelEdit_body6_3_4.innerText = decode_text("Link3:");
+       inputEdit_body6_3_4 = document.createElement("input");
+       inputEdit_body6_3_4.setAttribute("class", "form-control");
+       inputEdit_body6_3_4.setAttribute("id", "FlexLink3_edit_"+i);
+       inputEdit_body6_3_4.setAttribute("placeholder", decode_text("Link เช&#3656;น https://zoom072.net"));
+       inputEdit_body6_3_4.style = "font-size:12px;";
+       inputEdit_body6_3_4.setAttribute("type", "url");
+       inputEdit_body6_3_4.value = data[i].FlexLink3;
+
+      divEdit_body6_3.appendChild(labelEdit_body6_3_1);
+      divEdit_body6_3.appendChild(select_6_3_1);
+      divEdit_body6_3.appendChild(labelEdit_body6_3_2);
+      divEdit_body6_3.appendChild(inputEdit_body6_3_2);
+      divEdit_body6_3.appendChild(labelEdit_body6_3_3);
+      divEdit_body6_3.appendChild(inputEdit_body6_3_3);
+      divEdit_body6_3.appendChild(labelEdit_body6_3_4);
+      divEdit_body6_3.appendChild(inputEdit_body6_3_4);
+/*----------------------------------*/
+      divEdit_body6_4 = document.createElement("div");
+      divEdit_body6_4.setAttribute("class", "form-group border border-warning p-1");
+       labelEdit_body6_4_1 = document.createElement("label");
+       labelEdit_body6_4_1.innerText = decode_text("ส&#3637;ต&#3633;วอ&#3633;กษร");
+       select_6_4_1 = document.createElement("select");
+       select_6_4_1.setAttribute("id", "FlexShareLabelColor_edit_"+i);
+        option_select_6_4_1_1 = document.createElement("option");
+        option_select_6_4_1_1.setAttribute("value", "primary");
+	    option_select_6_4_1_1.innerText = decode_text("ส&#3637;ขาว");
+        option_select_6_4_1_2 = document.createElement("option");
+        option_select_6_4_1_2.setAttribute("value", "secondary");
+		option_select_6_4_1_2.innerText = decode_text("ส&#3637;ดำ");
+       select_6_4_1.appendChild(option_select_6_4_1_1);
+       select_6_4_1.appendChild(option_select_6_4_1_2);
+       select_6_4_1.value=data[i].FlexShareLabelColor;
+
+	   labelEdit_body6_4_2 = document.createElement("label");
+       labelEdit_body6_4_2.innerText = decode_text("ส&#3637;พ&#3639;&#3657;นหล&#3633;ง");
+       inputEdit_body6_4_2 = document.createElement("input");
+       inputEdit_body6_4_2.setAttribute("id", "FlexShareLabelBackgroundColor_edit_"+i);
+       inputEdit_body6_4_2.value=data[i].FlexShareLabelBackgroundColor;
+       inputEdit_body6_4_2.setAttribute("type", "color");
+        
+	   labelEdit_body6_4_3 = document.createElement("label");
+       labelEdit_body6_4_3.innerText = decode_text("ใส&#3656;ช&#3639;&#3656;อป&#3640;&#3656;ม Share(Label)");
+       inputEdit_body6_4_3 = document.createElement("input");
+       inputEdit_body6_4_3.setAttribute("class", "form-control");
+       inputEdit_body6_4_3.setAttribute("id", "FlexShareLabel_edit_"+i);
+       inputEdit_body6_4_3.setAttribute("placeholder", decode_text("ไม&#3656;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+       inputEdit_body6_4_3.setAttribute("type", "text");
+       inputEdit_body6_4_3.setAttribute("value", data[i].FlexShareLabel);
+        
+       labelEdit_body6_4_4 = document.createElement("label");
+       labelEdit_body6_4_4.innerText = decode_text("ใส&#3656;ช&#3639;&#3656;อป&#3640;&#3656;ม Share(Label)");
+       inputEdit_body6_4_4 = document.createElement("input");
+       inputEdit_body6_4_4.setAttribute("class", "form-control");
+       inputEdit_body6_4_4.setAttribute("id", "FlexShareLink_edit_"+i);
+       inputEdit_body6_4_4.style="font-size:12px;";
+       inputEdit_body6_4_4.setAttribute("type", "url");
+       inputEdit_body6_4_4.setAttribute("readonly", true);
+       inputEdit_body6_4_4.value=data[i].FlexShareLink;
+
+      divEdit_body6_4.appendChild(labelEdit_body6_4_1);
+      divEdit_body6_4.appendChild(select_6_4_1);
+      divEdit_body6_4.appendChild(labelEdit_body6_4_2);
+      divEdit_body6_4.appendChild(inputEdit_body6_4_2);
+      divEdit_body6_4.appendChild(labelEdit_body6_4_3);
+      divEdit_body6_4.appendChild(inputEdit_body6_4_3);
+      divEdit_body6_4.appendChild(labelEdit_body6_4_4);
+      divEdit_body6_4.appendChild(inputEdit_body6_4_4);
+/*----------------------------------*/
+     divEdit_body6.appendChild(labelEdit_body6);
+     divEdit_body6.appendChild(divEdit_body6_1);
+     divEdit_body6.appendChild(divEdit_body6_2);
+     divEdit_body6.appendChild(divEdit_body6_3);
+     divEdit_body6.appendChild(divEdit_body6_4);
+/*-------------------------------------------------------------------------------------*/
+     divEdit_body7 = document.createElement("div");
+     divEdit_body7.style.display="none";
+      inputEdit_body7_1 = document.createElement("input");
+      inputEdit_body7_1.setAttribute("id", "FlexLable_edit_"+i);
+      inputEdit_body7_1.value = data[i].FlexLable;
+      inputEdit_body7_2 = document.createElement("input");
+      inputEdit_body7_2.setAttribute("id", "FlexLink_edit_"+i);
+      inputEdit_body7_2.value = data[i].FlexLink;
+     divEdit_body7.appendChild(inputEdit_body7_1);
+     divEdit_body7.appendChild(inputEdit_body7_2);
+/*-------------------------------------------------------------------------------------*/
+     tableEdit_body8 = document.createElement("table");
+       tbodyEdit_body8 = document.createElement("tbody");
+        trEdit_body8_1 = document.createElement("tr");
+          tdEdit_body8_1_1 = document.createElement("td");
+          tdEdit_body8_1_1.style="text-align:right;";
+          tdEdit_body8_1_1.innerText = decode_text("เล&#3639;อก ร&#3641;ปแบบ Flex Message:");
+          tdEdit_body8_1_2 = document.createElement("td");
+           select8_1_2_1=document.createElement("select");
+           select8_1_2_1.setAttribute("id", "FlexStyle_edit_"+i);
+            option8_1_2_1_1=document.createElement("option");
+            option8_1_2_1_1.setAttribute("value", "style_1");
+            option8_1_2_1_1.innerText = decode_text("Classic");
+            option8_1_2_1_2=document.createElement("option");
+            option8_1_2_1_2.setAttribute("value", "style_2");
+            option8_1_2_1_2.innerText = decode_text("Style 2");
+            option8_1_2_1_3=document.createElement("option");
+            option8_1_2_1_3.setAttribute("value", "style_3");
+            option8_1_2_1_3.innerText = decode_text("Image Only");
+            option8_1_2_1_4=document.createElement("option");
+            option8_1_2_1_4.setAttribute("value", "style_4");
+            option8_1_2_1_4.innerText = decode_text("Button row");
+           select8_1_2_1.appendChild(option8_1_2_1_1);
+           select8_1_2_1.appendChild(option8_1_2_1_2);
+           select8_1_2_1.appendChild(option8_1_2_1_3);
+           select8_1_2_1.appendChild(option8_1_2_1_4);
+           select8_1_2_1.value = data[i].FlexStyle;
+		  tdEdit_body8_1_2.appendChild(select8_1_2_1);
+        trEdit_body8_1.appendChild(tdEdit_body8_1_1);
+        trEdit_body8_1.appendChild(tdEdit_body8_1_2);
+/*-------------------------------------------------------------------------------------*/
+        trEdit_body8_2 = document.createElement("tr");
+         tdEdit_body8_2_1 = document.createElement("td");
+         tdEdit_body8_2_1.style="text-align:right;";
+         tdEdit_body8_2_1.innerText = decode_text("เล&#3639;อก Size Flex Message:");
+         tdEdit_body8_2_2 = document.createElement("td");
+          select8_2_2 = document.createElement("select");
+          select8_2_2.setAttribute("id", "FlexSize_edit_"+i);
+           option8_2_2_1 = document.createElement("option");
+           option8_2_2_1.setAttribute("value", "giga");
+           option8_2_2_1.innerText = decode_text("Giga");
+           option8_2_2_2 = document.createElement("option");
+           option8_2_2_2.setAttribute("value", "mega");
+           option8_2_2_2.innerText = decode_text("Mega");
+           option8_2_2_3 = document.createElement("option");
+           option8_2_2_3.setAttribute("value", "kilo");
+           option8_2_2_3.innerText = decode_text("Kilo");
+           option8_2_2_4 = document.createElement("option");
+           option8_2_2_4.setAttribute("value", "micro");
+           option8_2_2_4.innerText = decode_text("Micro");
+           option8_2_2_5 = document.createElement("option");
+           option8_2_2_5.setAttribute("value", "nano");
+           option8_2_2_5.innerText = decode_text("Nano");
+          select8_2_2.appendChild(option8_2_2_1);
+          select8_2_2.appendChild(option8_2_2_2);
+          select8_2_2.appendChild(option8_2_2_3);
+          select8_2_2.appendChild(option8_2_2_4);
+          select8_2_2.appendChild(option8_2_2_5);
+          select8_2_2.value = data[i].FlexSize;
+         tdEdit_body8_2_2.appendChild(select8_2_2);
+        trEdit_body8_2.appendChild(tdEdit_body8_2_1);
+        trEdit_body8_2.appendChild(tdEdit_body8_2_2);
+/*-------------------------------------------------------------------------------------*/
+       tbodyEdit_body8.appendChild(trEdit_body8_1);
+       tbodyEdit_body8.appendChild(trEdit_body8_2);
+      tableEdit_body8.appendChild(tbodyEdit_body8);
+/*-------------------------------------------------------------------------------------*/        
+      inputEdit_body9 = document.createElement("textarea");
+      inputEdit_body9.setAttribute("id", "FlexCode_edit_"+i);
+      inputEdit_body9.value=data[i].FlexCode;
+      inputEdit_body9.style="display:none;";
+/*-------------------------------------------------------------------------------------*/
+    formEdit_body.appendChild(divEdit_body1);
+    formEdit_body.appendChild(divEdit_body2);
+    formEdit_body.appendChild(divEdit_body3);
+    formEdit_body.appendChild(divEdit_body4);
+    formEdit_body.appendChild(divEdit_body5);
+    formEdit_body.appendChild(divEdit_body6);
+    formEdit_body.appendChild(divEdit_body7);
+    formEdit_body.appendChild(tableEdit_body8);
+    formEdit_body.appendChild(inputEdit_body9);
+/*-------------------------------------------------------------------------------------*/
+  divEdit_body.appendChild(formEdit_body);
+/*-------------------------------------------------------------------------------------*/
+  divEdit_Header = document.createElement("div");
+  divEdit_Header.setAttribute("class", "modal-header");
+   labelEdit_title = document.createElement("label");
+   labelEdit_title.setAttribute("class", "modal-title");
+   labelEdit_title.innerText=decode_text("แบบฟอร&#3660;มแก&#3657;ไข Flex Message");
+   buttonEdit_title = document.createElement("button");
+   buttonEdit_title.setAttribute("class", "close btn-sm");
+   buttonEdit_title.setAttribute("data-dismiss", "modal");
+   buttonEdit_title.innerText=decode_text("&#215;");
+  divEdit_Header.appendChild(labelEdit_title);
+  divEdit_Header.appendChild(buttonEdit_title);
+/*-------------------------------------------------------------------------------------*/
+ divEdit_content = document.createElement("div");
+ divEdit_content.setAttribute("class", "modal-content");
+ divEdit_content.appendChild(divEdit_Header);
+ divEdit_content.appendChild(divEdit_body);
+ divEdit_content.appendChild(divEdit_footer);
+/*-------------------------------------------------------------------------------------*/
+ divEdit_dialog = document.createElement("div");
+ divEdit_dialog.setAttribute("class", "modal-dialog");
+ divEdit_dialog.appendChild(divEdit_content);
+/*-------------------------------------------------------------------------------------*/
+  divEdit = document.createElement("div");
+  divEdit.setAttribute("class", "modal");
+  divEdit.setAttribute("id", "Modal_edit_"+i);
+  divEdit.appendChild(divEdit_dialog);
+/*-------------------------------------------------------------------------------------*/
+  divDelete_dialog = document.createElement("div");
+  divDelete_dialog.setAttribute("class", "modal-dialog");
+   buttonDelete = document.createElement("button");
+   buttonDelete.setAttribute("id", "delete"+ data[i].MessageID);
+   buttonDelete.setAttribute("class", "btn btn-danger btn-sm text-white");
+   buttonDelete.setAttribute("data-toggle", "modal");
+   buttonDelete.setAttribute("data-target", "#Modal_Delete_"+i);
+   buttonDelete.innerText=decode_text('ลบ');
+
+   divDelete_body1 = document.createElement("div");
+   divDelete_body1.setAttribute("class", "form-group");
+    buttonDelete_body1 = document.createElement("button");
+    buttonDelete_body1.setAttribute("class", "btn btn-danger");
+    buttonDelete_body1.setAttribute("id", "button_delete_"+i);
+    buttonDelete_body1.setAttribute("onclick", 'deleteflexmessage("'+data[i].MessageID+'")');
+    buttonDelete_body1.setAttribute("data-dismiss", "modal");
+    buttonDelete_body1.innerText=decode_text("ย&#3639;นย&#3633;น");
+    buttonDelete_body2 = document.createElement("button");
+    buttonDelete_body2.setAttribute("class", "close");
+    buttonDelete_body2.setAttribute("data-dismiss", "modal");
+    buttonDelete_body2.innerText=decode_text("ยกเล&#3636;ก");
+   divDelete_body1.appendChild(buttonDelete_body1);
+   divDelete_body1.appendChild(buttonDelete_body2);
+   divDelete_body = document.createElement("div");
+   divDelete_body.setAttribute("class", "modal-body");
+   divDelete_body.appendChild(divDelete_body1);
+        
+   divDelete_content = document.createElement("div");
+   divDelete_content.setAttribute("class", "modal-content");
+   divDelete_Header = document.createElement("div");
+   divDelete_Header.setAttribute("class", "modal-header");
+    labelDelete_title = document.createElement("label");
+    labelDelete_title.setAttribute("class", "modal-title");
+    labelDelete_title.innerText=decode_text("ต&#3657;องการลบ Flex Message : "+data[i].MessageID);
+    buttonDelete_title = document.createElement("button");
+    buttonDelete_title.setAttribute("class", "close btn-sm");
+    buttonDelete_title.setAttribute("data-dismiss", "modal");
+    buttonDelete_title.innerText=decode_text("&#215;");
+   divDelete_Header.appendChild(labelDelete_title);
+   divDelete_Header.appendChild(buttonDelete_title);
+   divDelete_content.appendChild(divDelete_Header);
+   divDelete_content.appendChild(divDelete_body);
+   divDelete_dialog.appendChild(divDelete_content);
+        
+   divDelete = document.createElement("div");
+   divDelete.setAttribute("class", "modal");
+   divDelete.setAttribute("id", "Modal_Delete_"+i);
+   divDelete.appendChild(divDelete_dialog);
+
+    buttonSend = document.createElement("button");
+    buttonSend.setAttribute("id", "send" + data[i].MessageID);
+    buttonSend.setAttribute("onclick", "sendflexmessage("+i+")");
+    buttonSend.setAttribute("class", "btn btn-sm");
+    buttonSend.style="background-color:#00edbe;color:blue;";
+    buttonSend.innerText=decode_text('Share');
+        
+ divRow.appendChild(divFlex);
+ divRow.appendChild(rowNumber);
+ divRow.appendChild(buttonEdit);
+ divRow.appendChild(divEdit);
+ divRow.appendChild(buttonDelete);
+ divRow.appendChild(divDelete);
+ divRow.appendChild(buttonSend);
+/*-------------------------------------------------------------------------------------*/
+	    var sFlexMessage = JSON.stringify(JSON.parse(inputEdit_body9.value),null,0);
+        sFlexMessage = '{"type":"flex","altText":"'+data[i].altText+'","contents":'+data[i].FlexCode+'}';
+        sFlexMessage = sFlexMessage.replace(/\n/g,""); //แก&#3657;ไข \n
+        //console.log(sFlexMessage);
+        try {
+         sFlexMessage = JSON.parse(sFlexMessage);
+        }catch(err){
+         sFlexMessage = {"type":"flex","altText":"Please Check JSON","contents":{"type":"bubble","size":"giga","body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"เช&#3655;ค การข&#3638;&#3657;นบรรท&#3633;ดใหม&#3656; ท&#3637;&#3656;\nช&#3639;&#3656;อการ&#3660;ด\nห&#3633;วเร&#3639;&#3656;อง\nและข&#3657;อความ","size":"sm","color":"#0047ba","align":"center"}]}}};
         }
+        check_flex = 'Exist';
+        elmt.appendChild(divRow);
+        flex2html("flex_"+i,sFlexMessage);
+        rNumber+=1;
+      }else{
+        //elmt.innerHTML = '<span>ย&#3633;งไม&#3656;ม&#3637; Flex Message ในข&#3657;อม&#3641;ล</span>';
       }
     }
-    function logOut() {
-      liff.logout()
-      window.location.reload()
+    document.getElementById('Wait_Text').style.display='none';
+  }
+
+  function genarateMessageID(e){
+    var nMessageID = setFileName('B');
+    document.getElementById('MessageID').value = nMessageID;
+    document.getElementById('FlexShareLink').value = 'https://liff.line.me/1656633739-NjWEVAWZ?sMessageID='+nMessageID;
+  }
+  
+  function addflexmessage(e){
+    var sUserID = document.getElementById("UserID").value;
+    var sMessageID = document.getElementById('MessageID').value;
+/*------------------------------------------------------------------------------------------*/
+    var saltText = document.getElementById('altText').value;
+    if (saltText = "") {
+     alert(decode_text("ไม&#3656;ม&#3637;ช&#3639;&#3656;อการ&#3660;ด"));
+     document.getElementById('altText').focus();
+     return false;
     }
-    async function main() {
-      await liff.init({ liffId: "1656633739-NjWEVAWZ" })
-      if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block"
-        document.getElementById("myTextarea").style.display = "block"
-        if (!liff.isInClient()) {
-          document.getElementById("btnLogOut").style.display = "block"
-        }
+	saltText = saltText.replace('"','');
+    var FlexHeader = document.getElementById('FlexHeader').value;
+    if(FlexHeader = ""){
+     alert(decode_text("ไม&#3656;ม&#3637;ห&#3633;วเร&#3639;&#3656;อง"));
+     document.getElementById('FlexHeader').focus();
+     return false;
+    }
+    var FlexImage = document.getElementById('FlexImage').value;
+    FlexImage = FlexImage.replace(/\n/g,"");
+    FlexImage = FlexImage.replace(/\s+/g,"");
+    if(FlexImage==""){
+     alert(decode_text("ไม&#3656;ม&#3637; URL Image"));
+     document.getElementById('FlexImage').focus();
+     return false;
+    }else if(FlexImage.toLowerCase().indexOf('https://')==(-1)){
+     alert(decode_text("URL Picture ไม&#3656;ม&#3637; https://"));
+     document.getElementById('FlexImage').focus();
+     return false;
+    }
+    FlexImage = encodeURI(decodeURI(FlexImage));
+    FlexImage = FlexImage.match(/(https?):\/\/([\w-]+(\.[\\w-]+)*\.([a-z]+))(([\w.,@?^=%&amp;:\/~+#()!-]*)([\w@?^=%&amp;\/~+#()!-]))?/i)[0];
+    document.getElementById('FlexImage').value=FlexImage;
+    var FlexText = document.getElementById('FlexText').value;
+    if(FlexText==""){
+      alert(decode_text("ไม&#3656;ม&#3637;ข&#3657;อความ"));
+      document.getElementById('FlexText').focus();
+      return false;
+    }
+/*-------------------------------------------------------------------*/
+    var FlexLabel1 = document.getElementById('FlexLabel1').value;
+    if(FlexLabel1==""){
+     alert(decode_text("ไม&#3656;ม&#3637;ป&#3657;ายกำก&#3633;บ ป&#3640;&#3656;ม Link"));
+     document.getElementById('FlexLabel1').focus();
+     return false;
+    }else if(FlexLabel1.length>40){
+     alert(decode_text("ความยาวป&#3657;ายกำก&#3633;บ = "+FlexLabel1.length+" อ&#3633;กษร\nไม&#3656;ให&#3657;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+     document.getElementById('FlexLabel1').focus();
+     return false;
+    }
+    var FlexLink1 = document.getElementById('FlexLink1').value;
+    FlexLink1 = FlexLink1.replace(/\n/g,"");
+    FlexLink1 = FlexLink1.replace(/\s+/g,"");
+    if(FlexLink1==""){
+     alert(decode_text("ไม&#3656;ม&#3637; Link"));
+     document.getElementById('FlexLink1').focus();
+     return false;
+    }else if(FlexLink1.toLowerCase().indexOf('https://')==(-1)){
+     alert(decode_text("Link ไม&#3656;ม&#3637; https://"));
+     document.getElementById('FlexLink1').focus();
+     return false;
+    }
+    FlexLink1 = encodeURI(decodeURI(FlexLink1));
+    FlexLink1 = FlexLink1.match(/(https?):\/\/([\w-]+(\.[\\w-]+)*\.([a-z]+))(([\w.,@?^=%&amp;:\/~+#()!-]*)([\w@?^=%&amp;\/~+#()!-]))?/i)[0];
+    document.getElementById('FlexLink1').value=FlexLink1;
+/*-------------------------------------------------------------------*/
+    var FlexLabel2 = document.getElementById('FlexLabel2').value;
+    if(FlexLabel2.length>40){
+     alert(decode_text("ความยาวป&#3657;ายกำก&#3633;บ = "+FlexLabel2.length+" อ&#3633;กษร\nไม&#3656;ให&#3657;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+     document.getElementById('FlexLabel2').focus();
+     return false;
+    }
+    var FlexLink2 = document.getElementById('FlexLink2').value;
+	if(FlexLink2!=''){
+     FlexLink2 = FlexLink2.replace(/\n/g,"");
+     FlexLink2 = FlexLink2.replace(/\s+/g,"");
+     FlexLink2 = encodeURI(decodeURI(FlexLink2));
+     FlexLink2 = FlexLink2.match(/(https?):\/\/([\w-]+(\.[\\w-]+)*\.([a-z]+))(([\w.,@?^=%&amp;:\/~+#()!-]*)([\w@?^=%&amp;\/~+#()!-]))?/i)[0];
+    }
+    document.getElementById('FlexLink2').value=FlexLink2;
+/*-------------------------------------------------------------------*/
+    var FlexLabel3 = document.getElementById('FlexLabel3').value;
+    if(FlexLabel3.length>40){
+     alert(decode_text("ความยาวป&#3657;ายกำก&#3633;บ = "+FlexLabel3.length+" อ&#3633;กษร\nไม&#3656;ให&#3657;เก&#3636;น 40 ต&#3633;วอ&#3633;กษร"));
+     document.getElementById('FlexLabel3').focus();
+     return false;
+    }
+    var FlexLink3 = document.getElementById('FlexLink3').value;
+    if(FlexLink3!=''){
+     FlexLink3 = FlexLink3.replace(/\n/g,"");
+     FlexLink3 = FlexLink3.replace(/\s+/g,"");
+     FlexLink3 = encodeURI(decodeURI(FlexLink3));
+     FlexLink3 = FlexLink3.match(/(https?):\/\/([\w-]+(\.[\\w-]+)*\.([a-z]+))(([\w.,@?^=%&amp;:\/~+#()!-]*)([\w@?^=%&amp;\/~+#()!-]))?/i)[0];
+    }
+    document.getElementById('FlexLink3').value=FlexLink3;
+/*-------------------------------------------------------------------*/         
+    var FlexLabel = document.getElementById('FlexLabel1').value +
+     'ฅ|ฃ'+document.getElementById('FlexLabel2').value +
+     'ฅ|ฃ'+document.getElementById('FlexLabel3').value;
+    var FlexLink = document.getElementById('FlexLink1').value +
+     'ฅ|ฃ'+document.getElementById('FlexLink2').value +
+     'ฅ|ฃ'+document.getElementById('FlexLink3').value;
+/*-------------------------------------------------------------------*/
+	var FlexSize = document.getElementById('FlexSize').value;
+    var FlexStyle = document.getElementById('FlexStyle').value;
+/*-------------------------------------------------------------------*/
+    var FlexHeaderTextColor = document.getElementById('FlexHeaderTextColor').value;
+    var FlexHeaderBackgroundColor = document.getElementById('FlexHeaderBackgroundColor').value;
+    var FlexHeaderPosition = document.getElementById('FlexHeaderPosition').value;
+    var FlexHeaderSize = document.getElementById('FlexHeaderSize').value;
+    var FlexBodyTextColor = document.getElementById('FlexBodyTextColor').value;
+    var FlexBodyBackgroundColor = document.getElementById('FlexBodyBackgroundColor').value;
+    var FlexBodyPosition = document.getElementById('FlexBodyPosition').value;
+    var FlexBodySize = document.getElementById('FlexBodySize').value;
+    var FlexLabel1Color = document.getElementById('FlexLabel1Color').value;
+    var FlexLabel1BackgroundColor = document.getElementById('FlexLabel1BackgroundColor').value;
+    var FlexLabel2Color = document.getElementById('FlexLabel2Color').value;
+    var FlexLabel2BackgroundColor = document.getElementById('FlexLabel2BackgroundColor').value;
+    var FlexLabel3Color = document.getElementById('FlexLabel3Color').value;
+    var FlexLabel3BackgroundColor = document.getElementById('FlexLabel3BackgroundColor').value;
+    var FlexShareLabel = document.getElementById('FlexShareLabel').value;
+    var FlexShareLink = document.getElementById('FlexShareLink').value;
+    var FlexShareLabelColor = document.getElementById('FlexShareLabelColor').value;
+    var FlexShareLabelBackgroundColor = document.getElementById('FlexShareLabelBackgroundColor').value;
+    var imgFlexMessage=document.getElementById('imgFlexMessage');
+/*-------------------------------------------------------------------*/
+    if (FlexStyle=='style_1'){
+     var cContents = Box_FlexCenter_1(saltText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,FlexHeaderSize,FlexBodySize,FlexSize,imgFlexMessage);
+    }else if(FlexStyle=='style_3'){
+     var cContents = Box_FlexCenter_3(sMessageID,saltText,FlexImage,FlexLabel1,FlexLink1,FlexSize,imgFlexMessage);
+	}else if(FlexStyle=='style_4'){
+     var cContents = Box_FlexCenter_4(saltText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,FlexHeaderSize,FlexBodySize,FlexSize,imgFlexMessage);
+    }else{
+     var cContents = Box_FlexCenter_2(saltText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,FlexHeaderSize,FlexBodySize,FlexSize,imgFlexMessage);
+    }
+/*---------------------------------------------------------------------------------------------*/
+    var FlexCode = JSON.stringify(cContents,null,0);
+    //var FlexCode = '"'+cContents+'"';
+    document.getElementById('FlexCode').value=FlexCode;
+    if (FlexCode != "") {
+      $.ajax({
+        url: "https://forms.gle/m5FbhXVr5PdomZqeA",
+        data: {
+          "entry.523895742": sUserID,
+          "entry.25454203": sMessageID,
+          "entry.658613110": saltText,
+          "entry.245520783": FlexHeader,
+          "entry.1341979039": FlexHeaderTextColor,
+          "entry.1827477292": FlexHeaderBackgroundColor,
+          "entry.1353335224": FlexHeaderPosition,
+          "entry.179970080": FlexHeaderSize,
+          "entry.1466106432": FlexImage,
+          "entry.1938237624": FlexText,
+          "entry.720238289": FlexBodyTextColor,
+          "entry.2091754042": FlexBodyBackgroundColor,
+          "entry.1270579407": FlexBodyPosition,
+          "entry.19497987": FlexBodySize,
+          "entry.947892465": FlexLabel,
+          "entry.1288377331": FlexLink,
+          "entry.1736168683": FlexLabel1,
+          "entry.1062800504": FlexLink1,
+          "entry.1162734777": FlexLabel1Color,
+          "entry.780892364": FlexLabel1BackgroundColor,
+          "entry.1639168419": FlexLabel2,
+          "entry.1845373271": FlexLink2,
+          "entry.950583702": FlexLabel2Color,
+          "entry.695454682": FlexLabel2BackgroundColor,
+          "entry.406546040": FlexLabel3,
+          "entry.1354703861": FlexLink3,
+          "entry.1788860790": FlexLabel3Color,
+          "entry.252718496": FlexLabel3BackgroundColor,
+          "entry.1978080971": FlexShareLabel,
+          "entry.2033647438": FlexShareLink,
+          "entry.1577834315": FlexShareLabelColor,
+          "entry.544675163": FlexShareLabelBackgroundColor,
+          "entry.1145231522": FlexStyle,
+          "entry.1542757471": FlexSize,
+          "entry.1896603556": FlexCode,
+          "entry.2006031599": "Add",
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (data) {},
+        error: function (error) {}
+      });
+      sleep(2000);
+      //setTimeout(function() { alert(decode_text('บ&#3633;นท&#3638;กข&#3657;อม&#3641;ลแล&#3657;ว')); }, 1000);
+      window.location.reload();
+    }
+  }
+
+  function editflexmessage(j){
+    var sUserID = document.getElementById("UserID").value;
+    var sMessageID_edit = document.getElementById("MessageID_edit_"+j).value;
+    var saltText_edit = document.getElementById("altText_edit_"+j).value;
+    saltText_edit = saltText_edit.replace('"','');
+    var FlexHeader_edit = document.getElementById("FlexHeader_edit_"+j).value;
+    var FlexHeaderTextColor_edit = document.getElementById("FlexHeaderTextColor_edit_"+j).value;
+    var FlexHeaderBackgroundColor_edit = document.getElementById("FlexHeaderBackgroundColor_edit_"+j).value;
+    var FlexHeaderPosition_edit = document.getElementById("FlexHeaderPosition_edit_"+j).value;
+    var FlexHeaderSize_edit = document.getElementById("FlexHeaderSize_edit_"+j).value;
+    
+    var FlexImage_edit = document.getElementById("FlexImage_edit_"+j).value;
+    var imgFlexMessage_edit = document.getElementById("imgFlexMessage_edit_"+j);
+    
+    var FlexText_edit = document.getElementById("FlexText_edit_"+j).value;
+    var FlexBodyTextColor_edit = document.getElementById("FlexBodyTextColor_edit_"+j).value;
+    var FlexBodyBackgroundColor_edit = document.getElementById("FlexBodyBackgroundColor_edit_"+j).value;
+	var FlexBodyPosition_edit = document.getElementById("FlexBodyPosition_edit_"+j).value;
+    var FlexBodySize_edit = document.getElementById("FlexBodySize_edit_"+j).value;
+    
+    var FlexLabel1_edit = document.getElementById("FlexLabel1_edit_"+j).value;
+    var FlexLink1_edit = document.getElementById("FlexLink1_edit_"+j).value;
+    var FlexLabel1Color_edit = document.getElementById("FlexLabel1Color_edit_"+j).value;
+    var FlexLabel1BackgroundColor_edit = document.getElementById("FlexLabel1BackgroundColor_edit_"+j).value;
+    
+    var FlexLabel2_edit = document.getElementById("FlexLabel2_edit_"+j).value;
+    var FlexLink2_edit = document.getElementById("FlexLink2_edit_"+j).value;
+    var FlexLabel2Color_edit = document.getElementById("FlexLabel2Color_edit_"+j).value;
+    var FlexLabel2BackgroundColor_edit = document.getElementById("FlexLabel2BackgroundColor_edit_"+j).value;
+    
+    var FlexLabel3_edit = document.getElementById("FlexLabel3_edit_"+j).value;
+    var FlexLink3_edit = document.getElementById("FlexLink3_edit_"+j).value;
+    var FlexLabel3Color_edit = document.getElementById("FlexLabel3Color_edit_"+j).value;
+    var FlexLabel3BackgroundColor_edit = document.getElementById("FlexLabel3BackgroundColor_edit_"+j).value;
+
+     var FlexLabel_edit = FlexLabel1_edit +
+      'ฅ|ฃ'+FlexLabel2_edit +
+     'ฅ|ฃ'+FlexLabel3_edit;
+     var FlexLink_edit = FlexLink1_edit +
+      'ฅ|ฃ'+FlexLink2_edit +
+     'ฅ|ฃ'+FlexLink3_edit;
+
+    var FlexShareLabel_edit = document.getElementById("FlexShareLabel_edit_"+j).value;
+    var FlexShareLink_edit = document.getElementById("FlexShareLink_edit_"+j).value;
+    var FlexShareLabelColor_edit = document.getElementById("FlexShareLabelColor_edit_"+j).value;
+    var FlexShareLabelBackgroundColor_edit = document.getElementById("FlexShareLabelBackgroundColor_edit_"+j).value;
+
+    var FlexStyle_edit = document.getElementById("FlexStyle_edit_"+j).value;
+    var FlexSize_edit = document.getElementById("FlexSize_edit_"+j).value;
+
+/*-------------------------------------------------------------------*/
+           if (FlexStyle_edit=='style_1'){
+            var cContents_edit = Box_FlexCenter_1(saltText_edit,FlexHeader_edit,FlexHeaderTextColor_edit,FlexHeaderBackgroundColor_edit,FlexHeaderPosition_edit,FlexImage_edit,FlexText_edit,FlexBodyTextColor_edit,FlexBodyBackgroundColor_edit,FlexBodyPosition_edit,FlexLabel_edit,FlexLink_edit,FlexLabel1_edit,FlexLink1_edit,FlexLabel1Color_edit,FlexLabel1BackgroundColor_edit,FlexLabel2_edit,FlexLink2_edit,FlexLabel2Color_edit,FlexLabel2BackgroundColor_edit,FlexLabel3_edit,FlexLink3_edit,FlexLabel3Color_edit,FlexLabel3BackgroundColor_edit,FlexShareLabel_edit,FlexShareLink_edit,FlexShareLabelColor_edit,FlexShareLabelBackgroundColor_edit,FlexHeaderSize_edit,FlexBodySize_edit,FlexSize_edit,imgFlexMessage_edit);
+           }else if(FlexStyle_edit=='style_3'){
+            var cContents_edit = Box_FlexCenter_3(sMessageID_edit,saltText_edit,FlexImage_edit,FlexLabel1_edit,FlexLink1_edit,FlexSize_edit,imgFlexMessage_edit);
+	       }else if(FlexStyle_edit=='style_4'){
+            var cContents_edit = Box_FlexCenter_4(saltText_edit,FlexHeader_edit,FlexHeaderTextColor_edit,FlexHeaderBackgroundColor_edit,FlexHeaderPosition_edit,FlexImage_edit,FlexText_edit,FlexBodyTextColor_edit,FlexBodyBackgroundColor_edit,FlexBodyPosition_edit,FlexLabel_edit,FlexLink_edit,FlexLabel1_edit,FlexLink1_edit,FlexLabel1Color_edit,FlexLabel1BackgroundColor_edit,FlexLabel2_edit,FlexLink2_edit,FlexLabel2Color_edit,FlexLabel2BackgroundColor_edit,FlexLabel3_edit,FlexLink3_edit,FlexLabel3Color_edit,FlexLabel3BackgroundColor_edit,FlexShareLabel_edit,FlexShareLink_edit,FlexShareLabelColor_edit,FlexShareLabelBackgroundColor_edit,FlexHeaderSize_edit,FlexBodySize_edit,FlexSize_edit,imgFlexMessage_edit);
+           }else{
+            var cContents_edit = Box_FlexCenter_2(saltText_edit,FlexHeader_edit,FlexHeaderTextColor_edit,FlexHeaderBackgroundColor_edit,FlexHeaderPosition_edit,FlexImage_edit,FlexText_edit,FlexBodyTextColor_edit,FlexBodyBackgroundColor_edit,FlexBodyPosition_edit,FlexLabel_edit,FlexLink_edit,FlexLabel1_edit,FlexLink1_edit,FlexLabel1Color_edit,FlexLabel1BackgroundColor_edit,FlexLabel2_edit,FlexLink2_edit,FlexLabel2Color_edit,FlexLabel2BackgroundColor_edit,FlexLabel3_edit,FlexLink3_edit,FlexLabel3Color_edit,FlexLabel3BackgroundColor_edit,FlexShareLabel_edit,FlexShareLink_edit,FlexShareLabelColor_edit,FlexShareLabelBackgroundColor_edit,FlexHeaderSize_edit,FlexBodySize_edit,FlexSize_edit,imgFlexMessage_edit);
+           }
+/*---------------------------------------------------------------------------------------------*/
+    
+    var FlexCode_edit = JSON.stringify(cContents_edit,null,0);
+    $.ajax({
+      url: "https://forms.gle/m5FbhXVr5PdomZqeA",
+      data: {
+          "entry.523895742": sUserID,
+          "entry.25454203": sMessageID_edit,
+          "entry.658613110": saltText_edit,
+          "entry.245520783": FlexHeader_edit,
+          "entry.1341979039": FlexHeaderTextColor_edit,
+          "entry.1827477292": FlexHeaderBackgroundColor_edit,
+          "entry.1353335224": FlexHeaderPosition_edit,
+          "entry.179970080": FlexHeaderSize_edit,
+          "entry.1466106432": FlexImage_edit,
+          "entry.1938237624": FlexText_edit,
+          "entry.720238289": FlexBodyTextColor_edit,
+          "entry.2091754042": FlexBodyBackgroundColor_edit,
+          "entry.1270579407": FlexBodyPosition_edit,
+          "entry.19497987": FlexBodySize_edit,
+          "entry.947892465": FlexLabel_edit,
+          "entry.1288377331": FlexLink_edit,
+          "entry.1736168683": FlexLabel1_edit,
+          "entry.1062800504": FlexLink1_edit,
+          "entry.1162734777": FlexLabel1Color_edit,
+          "entry.780892364": FlexLabel1BackgroundColor_edit,
+          "entry.1639168419": FlexLabel2_edit,
+          "entry.1845373271": FlexLink2_edit,
+          "entry.950583702": FlexLabel2Color_edit,
+          "entry.695454682": FlexLabel2BackgroundColor_edit,
+          "entry.406546040": FlexLabel3_edit,
+          "entry.1354703861": FlexLink3_edit,
+          "entry.1788860790": FlexLabel3Color_edit,
+          "entry.252718496": FlexLabel3BackgroundColor_edit,
+          "entry.1978080971": FlexShareLabel_edit,
+          "entry.2033647438": FlexShareLink_edit,
+          "entry.1577834315": FlexShareLabelColor_edit,
+          "entry.544675163": FlexShareLabelBackgroundColor_edit,
+          "entry.1145231522": FlexStyle_edit,
+          "entry.1542757471": FlexSize_edit,
+          "entry.1896603556": FlexCode_edit,
+          "entry.2006031599": "Edit"
+      },
+      type: "POST",
+      dataType: "xml",
+      success: function (data) {},
+      error: function (error) {}
+    });
+    window.location.reload();
+  }
+
+  function deleteflexmessage(j){
+    var sUserID = document.getElementById("UserID").value;
+    $.ajax({
+      url: "https://forms.gle/m5FbhXVr5PdomZqeA",
+      data: {
+        "entry.523895742": sUserID,
+        "entry.25454203": j,
+        "entry.2006031599": "Delete"
+      },
+      type: "POST",
+      dataType: "xml",
+      success: function (data) {},
+      error: function (error) {}
+    });
+    window.location.reload();
+  }
+
+  function sendflexmessage(j) {
+    //alert(j);
+    var sMessageID = document.getElementById("MessageID_edit_"+j).value;
+    var saltText = document.getElementById("altText_edit_"+j).value;
+    var sFlexCode = document.getElementById("FlexCode_edit_"+j).value;
+    //console.log(sFlexCode);
+    try {
+     sFlexCode = JSON.parse(sFlexCode);
+    }catch(err){
+     sFlexCode = {"type":"bubble","size":"giga","body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":decode_text("เช&#3655;ค การข&#3638;&#3657;นบรรท&#3633;ดใหม&#3656; ท&#3637;&#3656; ช&#3639;&#3656;อการ&#3660;ด ห&#3633;วเร&#3639;&#3656;อง และข&#3657;อความ"),"size":"sm","color":"#0047ba","align":"center"}]}};
+    }
+    var sFlexMessage = {"type":"flex","altText":saltText,"contents":sFlexCode};
+    if (liff.isLoggedIn()) {
+      if (liff.isApiAvailable('shareTargetPicker')) {
+        liff.shareTargetPicker([
+          sFlexMessage
+        ])
+		.then(function (res_) {
+      	 if (res_) {
+          $('#Flex_Success').modal('show');
+          //window.alert(decode_text('ส&#3656;ง Flex Message สำเร&#3655;จ'));
+          console.log(`[${res_.status}] Message sent!`);
+		   setTimeout(function() {
+    	   $('#Flex_Success').modal('toggle');
+          }, 3000);
+      	 }
+    	}).catch(function (error) {
+      	 console.log(decode_text('ส&#3656;ง Flex Message ไม&#3656;สำเร&#3655;จ\nต&#3636;ดต&#3656;อคนเข&#3637;ยนโปรแกรม'));
+    	});
       } else {
-        document.getElementById("btnLogin").style.display = "block"
+        window.alert(decode_text('Flex Message ไม&#3656;สามารถส&#3656;งได&#3657;, Please Update Version'));
       }
+    } else {
+      window.alert(decode_text('Flex Message ไม&#3656;สามารถส&#3656;งได&#3657;, Please Login'));
     }
-    main()
-  </script>
-</body>
+  }
+
+  function SavePhoto(e) {
+    console.oldLog = console.log;
+    console.log = function(temp_value){
+      console.oldLog(temp_value);
+      window.$log = temp_value;
+    };
+    if (e.files[0]!=null){
+     let formData = new FormData();
+     formData.append("image", e.files[0])
+     var settings = {
+   		"url": "https://api.imgbb.com/1/upload?expiration=604800&key=e0d81b04803ca9fd8b050b69f223f736",
+   		"method": "POST",
+   		"timeout": 0,
+   		"processData": false,
+   		"mimeType": "multipart/form-data",
+   		"contentType": false,
+   		"data": formData
+     }; // key:andy
+     $.ajax(settings).done(function (response) {
+   	   //console.log(response);
+   	   var jx = JSON.parse(response);
+   	   console.log(jx.data.url);
+       //alert($log);
+       document.getElementById('FlexImage').focus();
+       document.getElementById('FlexImage').value = jx.data.url;
+      });
+      sleep(3000);
+    }
+   }
+
+  function SavePhoto_edit_(e,j) {
+    console.oldLog = console.log;
+    console.log = function(temp_value){
+     console.oldLog(temp_value);
+     window.$log = temp_value;
+    };
+    if (e.files[0]!=null){
+     let formData = new FormData();
+     formData.append("image", e.files[0]);
+     var settings = {
+   		"url": "ttps://api.imgbb.com/1/upload?expiration=604800&key=e0d81b04803ca9fd8b050b69f223f736",
+   		"method": "POST",
+   		"timeout": 0,
+   		"processData": false,
+   		"mimeType": "multipart/form-data",
+   		"contentType": false,
+   		"data": formData
+     }; // key:andy
+     $.ajax(settings).done(function (response) {
+   	   //console.log(response);
+   	   var jx = JSON.parse(response);
+   	   console.log(jx.data.url);
+       //alert($log);
+       document.getElementById('FlexImage_edit_'+j).focus();
+       document.getElementById('FlexImage_edit_'+j).value = jx.data.url;
+      });
+      sleep(3000);
+    }
+   }
+
+function Box_FlexCenter_1(altText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,HeaderSize,BodySize,FlexSize,imgFlexMessage){var All_button='';if(FlexLabel2!=''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}},{"type":"button","height":"sm","margin":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2!=''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}
+var size_aspectRatio=imgFlexMessage.naturalWidth+':'+imgFlexMessage.naturalHeight;var cContents={"type":"bubble","size":FlexSize,"header":{"type":"box","layout":"vertical","backgroundColor":FlexHeaderBackgroundColor,"contents":[{"type":"text","text":FlexHeader,"size":HeaderSize,"align":FlexHeaderPosition,"color":FlexHeaderTextColor,"weight":"bold","wrap":true}]},"hero":{"type":"image","url":FlexImage,"size":"full","aspectRatio":size_aspectRatio,"aspectMode":"cover","action":{"type":"uri","label":"action","uri":FlexImage}},"body":{"type":"box","layout":"vertical","backgroundColor":FlexBodyBackgroundColor,"contents":[{"type":"box","layout":"vertical","contents":[{"type":"text","text":FlexText,"size":BodySize,"align":FlexBodyPosition,"color":FlexBodyTextColor,"wrap":true}]},All_button]}};console.log(JSON.stringify(cContents));return cContents;}
+
+function Box_FlexCenter_2(altText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,HeaderSize,BodySize,FlexSize,imgFlexMessage){var All_button='';if(FlexLabel2!=''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}},{"type":"button","height":"sm","margin":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2!=''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}
+var size_aspectRatio=imgFlexMessage.naturalWidth+':'+imgFlexMessage.naturalHeight;var cContents={"type":"bubble","size":FlexSize,"hero":{"type":"image","url":FlexImage,"size":"full","aspectRatio":size_aspectRatio,"aspectMode":"cover","action":{"type":"uri","label":"action","uri":FlexImage}},"body":{"type":"box","layout":"vertical","backgroundColor":FlexBodyBackgroundColor,"contents":[{"type":"box","layout":"vertical","backgroundColor":FlexHeaderBackgroundColor,"contents":[{"type":"text","text":FlexHeader,"size":HeaderSize,"align":FlexHeaderPosition,"color":FlexHeaderTextColor,"weight":"bold","wrap":true}]},{"type":"box","layout":"vertical","contents":[{"type":"text","text":FlexText,"size":BodySize,"align":FlexBodyPosition,"color":FlexBodyTextColor,"wrap":true}]},All_button]}};console.log(JSON.stringify(cContents));return cContents;}
+
+function Box_FlexCenter_3(sMessageID,saltText,FlexImage,FlexLabel1,FlexLink1,Size_Image,imgFlexMessage){var size_aspectRatio=imgFlexMessage.naturalWidth+':'+imgFlexMessage.naturalHeight;return{"type":"bubble","size":Size_Image,"hero":{"type":"image","url":FlexImage,"size":"full","aspectRatio":size_aspectRatio,"aspectMode":"cover","action":{"type":"uri","uri":FlexLink1,"label":FlexLabel1}}};}
+  
+function Box_FlexCenter_4(altText,FlexHeader,FlexHeaderTextColor,FlexHeaderBackgroundColor,FlexHeaderPosition,FlexImage,FlexText,FlexBodyTextColor,FlexBodyBackgroundColor,FlexBodyPosition,FlexLabel,FlexLink,FlexLabel1,FlexLink1,FlexLabel1Color,FlexLabel1BackgroundColor,FlexLabel2,FlexLink2,FlexLabel2Color,FlexLabel2BackgroundColor,FlexLabel3,FlexLink3,FlexLabel3Color,FlexLabel3BackgroundColor,FlexShareLabel,FlexShareLink,FlexShareLabelColor,FlexShareLabelBackgroundColor,HeaderSize,BodySize,FlexSize,imgFlexMessage){var All_button='';if(FlexLabel2!=''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}},{"type":"button","height":"sm","margin":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2!=''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel2Color,"color":FlexLabel2BackgroundColor,"action":{"type":"uri","label":FlexLabel2,"uri":FlexLink2}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3!=''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexLabel3Color,"color":FlexLabel3BackgroundColor,"action":{"type":"uri","label":FlexLabel3,"uri":FlexLink3}}]}]},{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};}else if(FlexLabel2==''&&FlexLabel3==''){All_button={"type":"box","layout":"vertical","contents":[{"type":"box","layout":"vertical","margin":"sm","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"button","height":"sm","style":FlexLabel1Color,"color":FlexLabel1BackgroundColor,"action":{"type":"uri","label":FlexLabel1,"uri":FlexLink1}},{"type":"button","height":"sm","margin":"sm","style":FlexShareLabelColor,"color":FlexShareLabelBackgroundColor,"action":{"type":"uri","label":FlexShareLabel,"uri":FlexShareLink}}]}]}]};};var size_aspectRatio=imgFlexMessage.naturalWidth+':'+imgFlexMessage.naturalHeight;var cContents={"type":"bubble","size":FlexSize,"hero":{"type":"image","url":FlexImage,"size":"full","aspectRatio":size_aspectRatio,"aspectMode":"cover","action":{"type":"uri","label":"action","uri":FlexImage}},"body":{"type":"box","layout":"vertical","backgroundColor":FlexBodyBackgroundColor,"contents":[{"type":"box","layout":"vertical","backgroundColor":FlexHeaderBackgroundColor,"contents":[{"type":"text","text":FlexHeader,"size":HeaderSize,"align":FlexHeaderPosition,"color":FlexHeaderTextColor,"weight":"bold","wrap":true}]},{"type":"box","layout":"vertical","contents":[{"type":"text","text":FlexText,"size":BodySize,"align":FlexBodyPosition,"color":FlexBodyTextColor,"wrap":true}]},All_button]}};console.log(JSON.stringify(cContents));return cContents;}
+
+  function encode_text(str) {
+    var buf = [];
+    for (var i = str.length - 1; i >= 0; i--) {
+      buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+    }
+    return buf.join('');
+  }
+
+  function decode_text(str) {
+    return str.replace(/&#(\d+);/g, function (match, dec) {
+      return String.fromCharCode(dec);
+    });
+  }
+
+  function DateToThai(DateSource) {
+    var strhour = DateSource.getHours();
+    var strMinute = DateSource.getMinutes();
+    var strTimeHHMM = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
+    var timehour = strTimeHHMM[strhour];
+    var timeminute = strTimeHHMM[strMinute];
+    var weekday = new Array(7);
+    weekday[0] = "อาท&#3636;ตย&#3660;";
+    weekday[1] = "จ&#3633;นทร&#3660;";
+    weekday[2] = "อ&#3633;งคาร";
+    weekday[3] = "พ&#3640;ธ";
+    weekday[4] = "พฤห&#3633;สบด&#3637;";
+    weekday[5] = "ศ&#3640;กร&#3660;";
+    weekday[6] = "เสาร&#3660;";
+    var WeekDayB = weekday[DateSource.getDay()];
+    var DateB = DateSource.getDate();
+    var MonthB = ["มกราคม", "ก&#3640;มภาพ&#3633;นธ&#3660;", "ม&#3637;นาคม", "เมษายน", "พฤษภาคม", "ม&#3636;ถ&#3640;นายน", "กรกฎาคม", "ส&#3636;งหาคม", "ก&#3633;นยายน", "ต&#3640;ลาคม", "พฤศจ&#3636;กายน", "ธ&#3633;นวาคม"][DateSource.getMonth()];
+    var YearB = DateSource.getFullYear() + 543;
+    var total_fullDate = decode_text('ว&#3633;น' + WeekDayB + 'ท&#3637;&#3656; ' + DateB + ' ' + MonthB + ' พ.ศ. ' + YearB + ' เวลา ' + timehour + ':' + timeminute + ' น.');
+    return total_fullDate;
+  }
+
+  function do_Click(butoon){
+    butoon.click();
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function setFileName(preFile){
+    var d = new Date();
+    var yy = d.getFullYear()+543;
+    yy = yy.toString().substring(2,4);
+    var m = d.getMonth();
+    m = m + 1;
+    if (m<10){
+      m = '0'+m.toString();
+    }else{
+      m = m.toString();
+    }
+    var dd = d.getDate();
+    if (dd<10){
+      dd = '0'+dd.toString();
+    }else{
+      dd = dd.toString();
+    }
+    var hh = d.getHours();
+    if (hh<10){
+      hh = '0'+hh.toString();
+    }else{
+      hh = hh.toString();
+    }
+    var mm = d.getMinutes();
+    if (mm<10){
+      mm = '0'+mm.toString();
+    }else{
+      mm = mm.toString();
+    }
+    var ss = d.getSeconds();
+    if (ss<10){
+      ss = '0'+ss.toString();
+    }else{
+      ss = ss.toString();
+    }
+    var sFileName = preFile +yy+ m + dd + hh + mm + ss;
+    return sFileName;
+  }
+</script> 
+              </div> 
+             </div> 
+            </article> 
+            <div class="comments" id="comments"> 
+            </div> 
+            <script type="text/javascript">
+      //<![CDATA[
+       if (typeof(jQuery) == 'undefined') {
+        //output the script (load it from google api)
+        document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></scr" + "ipt>");
+       }
+      //]]>
+     </script> 
+            <script type="text/javascript">
+
+         var Items = {};
+         var Msgs = {};
+         var Config = {'maxThreadDepth':'0'};
+        
+       //<![CDATA[
+       //Global setting
+        Config.maxThreadDepth = 3;//Kedalaman tingkat threaded comment
+        Display_Emo = true;//Tampilkan emoticon? ketik "false" untuk menyembunyikan
+        Replace_Youtube_Link = false;//Embed video YouTube, ketik "false" untuk mendisable
+        Replace_Image_Link = false;//Auto replace link image,  ketik "false" untuk mendisable.
+        Replace_Force_Tag = false;//Auto replace virtual tag contoh: [pre] menjadi <pre>, dan [/pre] menjadi </pre>, apabila salah menulis, tidak akan berfungsi
+        Replace_Image_Ext = ['JPG', 'GIF', 'PNG', 'BMP'];//(support: jpg, gif, png, bmp),hanya berfungsi apabila Replace_Image_Link=true
+        //Pengaturan Emoticon
+        Emo_List = [
+':)'  	,'https://twemoji.maxcdn.com/36x36/1f600.png',
+':('  	,'https://twemoji.maxcdn.com/36x36/1f615.png',
+'hihi'  ,'https://twemoji.maxcdn.com/36x36/1f601.png',
+':-)'  	,'https://twemoji.maxcdn.com/36x36/1f60f.png',
+':D'  	,'https://twemoji.maxcdn.com/36x36/1f603.png',
+'=D'  	,'https://twemoji.maxcdn.com/36x36/1f62c.png',
+':-d'  	,'https://twemoji.maxcdn.com/36x36/1f604.png',
+';('  	,'https://twemoji.maxcdn.com/36x36/1f61e.png',
+';-('  	,'https://twemoji.maxcdn.com/36x36/1f62d.png',
+'@-)'   ,'https://twemoji.maxcdn.com/36x36/1f616.png',
+':o'	,'https://twemoji.maxcdn.com/36x36/1f62e.png',     
+':&gt;)','https://twemoji.maxcdn.com/36x36/1f606.png',     
+'(o)'	,'https://twemoji.maxcdn.com/36x36/1f609.png',     
+':p'	,'https://twemoji.maxcdn.com/36x36/1f614.png',     
+':-?'	,'https://twemoji.maxcdn.com/36x36/2753.png', 
+'(p)'	,'https://twemoji.maxcdn.com/36x36/1f619.png', 
+':-s'	,'https://twemoji.maxcdn.com/36x36/1f625.png',
+'8-)'	,'https://twemoji.maxcdn.com/36x36/1f60e.png',
+':-t'	,'https://twemoji.maxcdn.com/36x36/1f624.png',
+':-b'	,'https://twemoji.maxcdn.com/36x36/1f634.png',
+'b-('	,'https://twemoji.maxcdn.com/36x36/1f635.png',
+'(y)'	,'https://twemoji.maxcdn.com/36x36/1f44d.png',
+'x-)'	,'https://twemoji.maxcdn.com/36x36/1f60d.png',
+'(h)'	,'https://twemoji.maxcdn.com/36x36/1f44f.png',   
+        ];
+//Config Force tag list, define all in lower case
+  Force_Tag = [
+ '[pre]','<pre>',
+ '[/pre]','</pre>',
+ '<pre class="brush: plain; title: ; notranslate" title="">','&lt;code&gt;',
+ '</pre>','</code>'
+ ];
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3 o=\'.1c\';3 1b=$(\'#O-19\').G(\'A\');u 1l(F){3 1j=\' \\n\\r\\t\\f\\1D\\1G\\1F\\1E\\2l\\2k\\2i\\2f\\2c\\26\\25\\23\\1Y\\1S\\1N\\1L\\1H\\2v\\1M\\2p\\24\\22\\1R\';E(3 i=0;i<F.5;i++){9(1j.d(F.1Q(i))!=-1){F=F.b(0,i);11}}z F}$(\'#1P .1i p\').j(u(y,7){9(1J){3 l=\'1v://13.V.W/1y?v=\';3 8=7.d(l);D(8!=-1){1d=7.b(8);J=1l(1d);3 X=J.d(\'&\');3 N=\'\';9(X==-1){N=J.b(l.5)}Y{N=J.b(l.5,X)}3 1r=\'<1u B="1T" A="1v://13.V.W/1U/\'+N+\'?1V=1" 1W="0" 2w></1u>\';7=7.b(0,8)+1r+7.b(8+J.5);8=7.d(l);9(8==-1){l=\'1Z://13.V.W/1y?v=\';8=7.d(l)}}}9(21){3 Z=\'\';3 s=7;E(3 i=0;i<1w.5;i++){3 l=\'.\'+1w[i];3 m=s.C();3 8=m.d(l);D(8!=-1){k=s.b(0,8+l.5);m=k.C();3 q=\'2h://\';3 w=m.d(q);3 I=\'\';D(w!=-1){I=q.M();k=k.b(w+q.5);m=k.C();w=m.d(q)}q=\'2n://\';m=k.C();w=m.d(q);D(w!=-1){I=q.M();k=k.b(w+q.5);m=k.C();w=m.d(q)}9(I==\'\'||k.5<6){11}k=I+k;Z+=s.b(0,8+l.5-k.5)+\'<10 A="\'+k+\'" B="2r"/>\';s=s.b(8+l.5);m=s.C();8=m.d(l)}}7=Z+s}9(1A){3 5=x.5;9(5%2==1){5--}E(3 i=0;i<5;i+=2){3 S=\'<10 A="\'+x[i+1]+\'" B="1B"/>\';8=7.d(x[i]);D(8!=-1){7=7.b(0,8)+S+7.b(8+x[i].5);8=7.d(x[i])}}}9(1I){3 5=R.5;9(5%2==1){5--}E(3 i=0;i<5;i+=2){D(1){3 s=7.M();8=s.d(R[i]);9(8!=-1){7=7.b(0,8)+R[i+1]+7.b(8+R[i].5)}Y{11}}}}z 7});$(\'.1K\').j(u(y,7){9(1A){3 5=x.5;9(5%2==1){5--}3 12=\'\';E(3 i=0;i<5;i+=2){3 1e=\'<1f>\'+x[i]+\'</1f>\';3 S=\'<10 A="\'+x[i+1]+\'" B="1B"/>\';12+=\'<Q B="1O">\'+S+1e+\'</Q>\'}z 12}});$(\'.1g .1i p\').j(u(i,h){T=h.M();y=T.d(\'@<a U="#c\');9(y!=-1){14=T.d(\'</a>\',y);9(14!=-1){h=h.b(0,y)+h.b(14+4)}}z h});u 1k(g){r=g.d(\'c\');9(r!=-1)g=g.b(r+1);z g}u 1m(g){g=\'&1X=\'+g+\'#%1n\';1o=1b.20(/#%1n/,g);z 1o}u 1p(){j=$(o).j();$(o).j(\'\');o=\'.1c\';$(o).j(j);$(\'#O-19\').G(\'A\',1b)}u 1q(e){g=$(e).G(\'15\');g=1k(g);j=$(o).j();9(o==\'.1c\'){1s=\'<a U="#1t" 27="1p()">\'+28.29+\'</a><a 2a="1t"/>\';$(o).j(1s)}Y{$(o).j(\'\')}o=\'#2b\'+g;$(o).j(j);$(\'#O-19\').G(\'A\',1m(g))}16=2d.2e.U;17=\'#O-2g\';18=16.d(17);9(18!=-1){1x=16.b(18+17.5);1q(\'#2j\'+1x)}E(3 i=0;i<P.5;i++){9(\'1z\'2m P[i]){3 g=P[i].1z;3 1a=2o($(\'#c\'+g+\':L\').G(\'1C\'));$(\'#c\'+g+\' .2q:L\').j(u(y,7){3 H=P[i].15;9(1a>=2s.2t){$(\'#c\'+H+\':L .2u\').1h()}3 K=$(\'#c\'+H+\':L\').j();K=\'<Q B="1g" 15="c\'+H+\'" 1C="\'+(1a+1)+\'">\'+K+\'</Q>\';$(\'#c\'+H).1h();z(7+K)})}}',62,157,'|||var||length||oldhtml|check_index|if||substring||indexOf|||par_id|||html|img_src|search_key|upper_html||Cur_Cform_Hdr||http_search||temp_html||function||find_http|Emo_List|index|return|src|class|toUpperCase|while|for|str|attr|child_id|save_http|yt_link|child_html|first|toLowerCase|yt_code|comment|Items|div|Force_Tag|img_html|temp|href|youtube|com|yt_code_index|else|save_html|img|break|newhtml|www|index_tail|id|cur_url|search_formid|search_index|editor|par_level|Cur_Cform_Url|comment_form|ht|img_code|span|comment_wrap|remove|comment_body|whitespace|Valid_Par_Id|trim|Cform_Ins_ParID|7B|n_cform_url|Reset_Comment_Form|Display_Reply_Form|yt_video|reset_html|origin_cform|iframe|http|Replace_Image_Ext|ret_id|watch|parentId|Display_Emo|comment_emo|level|x5b|x7d|x7c|x5d|u2008|Replace_Force_Tag|Replace_Youtube_Link|comment_emo_list|u2007|u200a|u2006|item|comment_block|charAt|u3000|u2005|comment_youtube|embed|autohide|frameborder|parentID|u2004|https|replace|Replace_Image_Link|u2029|u2003|u2028|u2002|u2001|onclick|Msgs|addComment|name|r_f_c|u2000|window|location|xa0|form_|HTTP|x0b|rc|x3e|x3c|in|HTTPS|parseInt|u200b|comment_child|comment_img|Config|maxThreadDepth|comment_reply|u2009|allowfullscreen'.split('|'),0,{}))   
+var avatar=$("#comments");avatar.find('.comment_avatar img').each(function() {var ava = $(this).attr('src');$(this).show().attr('src', ava.replace(/\/s[0-9]+(\-c)?\//,"/s45-c/"));});
+//]]>
+</script> 
+           </div> 
+          </div>
+         </div> 
+         <!--Can't find substitution for tag [adEnd]--> 
+        </div> 
+        <div class="blog-pager" id="blog-pager"> 
+         <a class="home-link" href="https://photoofdays.blogspot.com/">🏠</a> 
+        </div> 
+        <div class="clear"></div> 
+       </div>
+      </div> 
+     </aside> 
+    </div> 
+    <aside id="side-kanan"> 
+     <div class="sidebar section" id="sidebar-kanan">
+      <div class="widget Stats" data-version="1" id="Stats1"> 
+       <h2>จำนวนการดูหน้าเว็บรวม</h2> 
+       <div class="widget-content"> 
+        <div id="Stats1_content" style="display: none;"> 
+         <span id="Stats1_sparklinespan" style="display:inline-block; width:75px; height:30px"></span> 
+         <span class="counter-wrapper text-counter-wrapper" id="Stats1_totalCount"> </span> 
+         <div class="clear"></div> 
+        </div> 
+       </div> 
+      </div>
+      <div class="widget Translate" data-version="1" id="Translate1"> 
+       <h2 class="title"> Translate </h2> 
+       <div id="google_translate_element">
+        <div class="skiptranslate goog-te-gadget" dir="ltr" style="display: none;">
+         <div id=":0.targetLanguage">
+          <select class="goog-te-combo" aria-label="วิดเจ็ตแปลภาษา"></select>
+         </div>ขับเคลื่อนโดย 
+         <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google แปลภาษา">แปลภาษา</a></span>
+        </div>
+       </div> 
+       <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'th',
+              autoDisplay: 'true',
+              layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+            }, 'google_translate_element');
+                                                  }
+        </script> 
+        <!-- Google Tag Manager --> 
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MXX5GSM');</script> 
+        <!-- End Google Tag Manager --> 
+        <!-- Google Tag Manager (noscript) --> 
+        <noscript>
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXX5GSM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript> 
+        <!-- End Google Tag Manager (noscript) --> 
+       </div> 
+       <div class="clear"></div> 
+      </div>
+      <div class="widget HTML" data-version="1" id="HTML3"> 
+       <div class="widget-content"> 
+        <div id="add_Time_Refresh_all">
+         <span id="add_date_time_"></span>
+        </div> 
+        <script type="text/javascript">
+  //Add Span
+  var x=document.querySelector('div[id="add_Time_Refresh_all"]');
+  var span_=document.createElement("span");
+  span_.setAttribute("id", "add_date_time_");
+  x.insertBefore(span_,x.childNodes[0]);
+  //setInterval
+  function refreshTime_(){
+  	var d=new Date();
+  	var hh = d.getHours();
+  	if (hh<10){
+  		hh = '0'+hh.toString();
+  	}else{
+  		hh = hh.toString();
+  	}
+  	var mm = d.getMinutes();
+  	if (mm<10){
+  		mm = '0'+mm.toString();
+  	}else{
+  		mm = mm.toString();
+  	}
+  	var ss = d.getSeconds();
+  	if (ss<10){
+  		ss = '0'+ss.toString();
+  	}else{
+  		ss = ss.toString();
+  	}
+  	var sTimeTitle = ' ' + hh + ':' + mm + ':' + ss +' ';
+  	var span_1=document.getElementById('add_date_time_');
+  	span_1.innerHTML = '<span></span><span>' + sTimeTitle + '</span><span></span>';
+  };
+  setInterval(refreshTime_,1000);
+  /*setTimeout(function() {
+   window.location.href = window.location;
+  },120000);*/
+</script> 
+       </div> 
+       <div class="clear"></div> 
+      </div>
+       </div> 
+      </div> 
+     </div> 
+    </aside> 
+   </div> 
+   <div class="clear"></div> 
+  </div>
+  <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5041833909497014&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1637799925&amp;plat=3%3A32%2C4%3A32%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fphotoofdays.blogspot.com%2Fp%2Fflex-message-json-share.html%3Fm%3D1&amp;ea=0&amp;flash=0&amp;host=ca-host-pub-1556223355139109&amp;pra=5&amp;wgl=1&amp;dt=1637878263348&amp;bpp=100&amp;bdt=284&amp;idt=209&amp;shv=r20211111&amp;mjsv=m202111110101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=5808002961362&amp;frm=20&amp;pv=2&amp;ga_vid=1909199278.1637762270&amp;ga_sid=1637878264&amp;ga_hid=1473246998&amp;ga_fc=1&amp;u_tz=420&amp;u_his=2&amp;u_h=760&amp;u_w=360&amp;u_ah=760&amp;u_aw=360&amp;u_cd=24&amp;u_sd=3&amp;dmc=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=360&amp;bih=627&amp;scr_x=0&amp;scr_y=0&amp;eid=44754332%2C31062938%2C31063759%2C31060475&amp;oid=2&amp;pvsid=2238483135429398&amp;pem=578&amp;tmod=1203055805&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C360%2C0%2C360%2C627%2C360%2C627&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;cms=1&amp;fu=32768&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=310" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins> 
+  <div class="banner2 section no-items section" id="banner2"></div> 
+  <div class="clear"></div> 
+  <footer id="copyrightx"> 
+   <div id="copy"> 
+    <p>copyright © <a href="https://photoofdays.blogspot.com/">ภาพดี ๆ ๐๗๒</a> All Right Reserved . Created by <span id="diginet"><a href="https://photoofdays.blogspot.com/" target="_blank">Photo_Theme</a></span> . Powered by <a href="https://www.blogger.com">Blogger</a></p> 
+   </div> 
+   <div class="clear"></div> 
+  </footer> 
+  <script type="text/javascript">
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 400) {
+				$('#BounceToTop').fadeIn();
+			} else {
+				$('#BounceToTop').fadeOut();
+			}
+		});
+		$('#BounceToTop').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 1000);
+		});
+	});
+</script> 
+  <div class="BounceToTop"> 
+   <a id="BounceToTop"> <i class="fa fa-angle-up"></i> </a> 
+  </div> 
+  <script type="text/javascript">
+	$(function () {
+		$(window).scroll(function () {
+			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+			if ($(this).scrollTop() > 800) {
+				$('#BounceToBottom').fadeIn();
+			} else {
+				$('#BounceToBottom').fadeOut();
+			}
+		});
+		$('#BounceToBottom').click(function () {
+			$('body,html').animate({
+				scrollTop:$(document).height()
+				}, 1000);
+		});
+	});
+</script> 
+  <div class="BounceToBottom"> 
+   <a id="BounceToBottom"> <i class="fa fa-angle-down"></i> </a> 
+  </div> 
+  <script type="text/javascript">
+$(function(){$(".menu").click(function(){$("#css-menus").css({right:"0"})}),$(".close-menu").click(function(){$("#css-menus").css({right:"-340px"})})});
+//<![CDATA[
+var _0x80f4 = ["odd", "addClass", "#cssmenux ul ul li:odd", "even", "#cssmenux ul ul li:even", "active", "removeClass", "#cssmenux li", "li", "closest", "next", "ul", "is", ":visible", "normal", "slideUp", "#cssmenux ul ul:visible", "slideDown", "length", "children", "find", "click", "#cssmenux > ul > li > a", "toLowerCase", "href", "indexOf", "highlight", "li.highlight", "parent", "each", ".main-navx ul li a", "ready", "#pull", ".main-navx ul", "height", "preventDefault", "slideToggle", "on", "width", ":hidden", "style", "removeAttr", "resize", "toggleClass", "fast", ".search-form", ".searchbutton", "screen and (min-width: 60em)", "matchMedia", "matches", "onload", "diginet", "getElementById", "location", "https://photoofdays.blogspot.com", "setAttribute", "rel", "nofollow", "innerHTML", "<a href='https://photoofdays.blogspot.com/' target='_blank' title='The Hero'>Photo_Theme</a>"];
+$(_0x80f4[2])[_0x80f4[1]](_0x80f4[0]), $(_0x80f4[4])[_0x80f4[1]](_0x80f4[3]), $(_0x80f4[22])[_0x80f4[21]](function () {
+    $(_0x80f4[7])[_0x80f4[6]](_0x80f4[5]),
+    $(this)[_0x80f4[9]](_0x80f4[8])[_0x80f4[1]](_0x80f4[5]);
+    var _0x599ax1 = $(this)[_0x80f4[10]]();
+    return _0x599ax1[_0x80f4[12]](_0x80f4[11]) && _0x599ax1[_0x80f4[12]](_0x80f4[13]) && ($(this)[_0x80f4[9]](_0x80f4[8])[_0x80f4[6]](_0x80f4[5]), _0x599ax1[_0x80f4[15]](_0x80f4[14])),
+    _0x599ax1[_0x80f4[12]](_0x80f4[11]) && !_0x599ax1[_0x80f4[12]](_0x80f4[13]) && ($(_0x80f4[16])[_0x80f4[15]](_0x80f4[14]), _0x599ax1[_0x80f4[17]](_0x80f4[14])),
+    0 == $(this)[_0x80f4[9]](_0x80f4[8])[_0x80f4[20]](_0x80f4[11])[_0x80f4[19]]()[_0x80f4[18]] ? !0 : !1
+});
+$(document)[_0x80f4[31]](function () {
+    var _0x599ax2 = location[_0x80f4[24]][_0x80f4[23]]();
+    $(_0x80f4[30])[_0x80f4[29]](function () {
+        if (_0x599ax2[_0x80f4[25]](this[_0x80f4[24]][_0x80f4[23]]()) > -1) {
+            $(_0x80f4[27])[_0x80f4[6]](_0x80f4[26]);
+            $(this)[_0x80f4[28]]()[_0x80f4[1]](_0x80f4[26])
+        }
+    })
+});
+$(function () {
+    var _0x599ax3 = $(_0x80f4[32]);
+    menu = $(_0x80f4[33]);
+    menuHeight = menu[_0x80f4[34]]();
+    $(_0x599ax3)[_0x80f4[37]](_0x80f4[21], function (_0x599ax4) {
+        _0x599ax4[_0x80f4[35]]();
+        menu[_0x80f4[36]]()
+    });
+    $(window)[_0x80f4[42]](function () {
+        var _0x599ax5 = $(window)[_0x80f4[38]]();
+        if (_0x599ax5 > 320 && menu[_0x80f4[12]](_0x80f4[39])) {
+            menu[_0x80f4[41]](_0x80f4[40])
+        }
+    })
+});
+$(function () {
+    $(_0x80f4[46])[_0x80f4[21]](function () {
+        $(this)[_0x80f4[43]](_0x80f4[5]),
+        $(_0x80f4[45])[_0x80f4[36]](_0x80f4[44])
+    })
+});
+var mql = window[_0x80f4[48]](_0x80f4[47]);
+mql[_0x80f4[49]] && (window[_0x80f4[50]] = function () {
+    var _0x599ax7 = document[_0x80f4[52]](_0x80f4[51]);
+    null == _0x599ax7 && (window[_0x80f4[53]][_0x80f4[24]] = _0x80f4[54]),
+    _0x599ax7[_0x80f4[55]](_0x80f4[24], _0x80f4[54]),
+    _0x599ax7[_0x80f4[55]](_0x80f4[56], _0x80f4[57]),
+    _0x599ax7[_0x80f4[58]] = _0x80f4[59]
+})
+//]]>
+</script> 
+  <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-44413949-4', 'auto', 'blogger');
+      ga('blogger.send', 'pageview');
+    </script> 
+  <!-- Cloudflare Web Analytics --> 
+  <!-- --> 
+  <!-- End Cloudflare Web Analytics --> 
+  <!-- --> 
+  <iframe sandbox="allow-scripts" srcdoc="<!DOCTYPE html><body><script nonce=&quot;&quot;>(function(){/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var d=&quot;function&quot;==typeof Object.create?Object.create:function(a){var c=function(){};c.prototype=a;return new c},e;if(&quot;function&quot;==typeof Object.setPrototypeOf)e=Object.setPrototypeOf;else{var f;a:{var g={a:!0},l={};try{l.__proto__=g;f=l.a;break a}catch(a){}f=!1}e=f?function(a,c){a.__proto__=c;if(a.__proto__!==c)throw new TypeError(a+&quot; is not extensible&quot;);return a}:null}var m=e;/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+var n={};function p(){var a=&quot;undefined&quot;!==typeof window?window.trustedTypes:void 0;return null!==a&amp;&amp;void 0!==a?a:null}var q;function r(){var a,c;if(void 0===q)try{q=null!==(c=null===(a=p())||void 0===a?void 0:a.createPolicy(&quot;google#safe&quot;,{createHTML:function(b){return b},createScript:function(b){return b},createScriptURL:function(b){return b}}))&amp;&amp;void 0!==c?c:null}catch(b){q=null}return q};var t=function(a,c){if(c!==n)throw Error(&quot;Bad secret&quot;);this.g=a},u=function(){};t.prototype=d(u.prototype);t.prototype.constructor=t;if(m)m(t,u);else for(var v in u)if(&quot;prototype&quot;!=v)if(Object.defineProperties){var w=Object.getOwnPropertyDescriptor(u,v);w&amp;&amp;Object.defineProperty(t,v,w)}else t[v]=u[v];t.prototype.toString=function(){return this.g.toString()};function x(a){var c,b=null===(c=r())||void 0===c?void 0:c.createScriptURL(a);return new t(null!==b&amp;&amp;void 0!==b?b:a,n)};if(!function(){if(self.origin)return&quot;null&quot;===self.origin;if(&quot;&quot;!==location.host)return!1;try{return window.parent.escape(&quot;&quot;),!1}catch(a){return!0}}())throw Error(&quot;sandboxing error&quot;);
+window.addEventListener(&quot;message&quot;,function(a){var c=a.ports[0];a=a.data;var b=a.callbackName.split(&quot;.&quot;),h=window;&quot;window&quot;===b[0]&amp;&amp;b.unshift();for(var k=0;k<b.length-1;k++)h[b[k]]={},h=h[b[k]];h[b[b.length-1]]=function(y){c.postMessage(JSON.stringify(y))};b=document.createElement(&quot;script&quot;);a=x(a.url);if(a instanceof t)a=a.g;else throw Error(&quot;Unexpected type when unwrapping TrustedResourceUrl&quot;);b.src=a;document.body.appendChild(b)},!0);}).call(this);
+</script></body>" src="data:text/html;charset=UTF-8;base64,PCFET0NUWVBFIGh0bWw+PGJvZHk+PHNjcmlwdCBub25jZT0iIj4oZnVuY3Rpb24oKXsvKgoKIENvcHlyaWdodCBUaGUgQ2xvc3VyZSBMaWJyYXJ5IEF1dGhvcnMuCiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogQXBhY2hlLTIuMAoqLwp2YXIgZD0iZnVuY3Rpb24iPT10eXBlb2YgT2JqZWN0LmNyZWF0ZT9PYmplY3QuY3JlYXRlOmZ1bmN0aW9uKGEpe3ZhciBjPWZ1bmN0aW9uKCl7fTtjLnByb3RvdHlwZT1hO3JldHVybiBuZXcgY30sZTtpZigiZnVuY3Rpb24iPT10eXBlb2YgT2JqZWN0LnNldFByb3RvdHlwZU9mKWU9T2JqZWN0LnNldFByb3RvdHlwZU9mO2Vsc2V7dmFyIGY7YTp7dmFyIGc9e2E6ITB9LGw9e307dHJ5e2wuX19wcm90b19fPWc7Zj1sLmE7YnJlYWsgYX1jYXRjaChhKXt9Zj0hMX1lPWY/ZnVuY3Rpb24oYSxjKXthLl9fcHJvdG9fXz1jO2lmKGEuX19wcm90b19fIT09Yyl0aHJvdyBuZXcgVHlwZUVycm9yKGErIiBpcyBub3QgZXh0ZW5zaWJsZSIpO3JldHVybiBhfTpudWxsfXZhciBtPWU7LyoKCiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogQXBhY2hlLTIuMAoqLwp2YXIgbj17fTtmdW5jdGlvbiBwKCl7dmFyIGE9InVuZGVmaW5lZCIhPT10eXBlb2Ygd2luZG93P3dpbmRvdy50cnVzdGVkVHlwZXM6dm9pZCAwO3JldHVybiBudWxsIT09YSYmdm9pZCAwIT09YT9hOm51bGx9dmFyIHE7ZnVuY3Rpb24gcigpe3ZhciBhLGM7aWYodm9pZCAwPT09cSl0cnl7cT1udWxsIT09KGM9bnVsbD09PShhPXAoKSl8fHZvaWQgMD09PWE/dm9pZCAwOmEuY3JlYXRlUG9saWN5KCJnb29nbGUjc2FmZSIse2NyZWF0ZUhUTUw6ZnVuY3Rpb24oYil7cmV0dXJuIGJ9LGNyZWF0ZVNjcmlwdDpmdW5jdGlvbihiKXtyZXR1cm4gYn0sY3JlYXRlU2NyaXB0VVJMOmZ1bmN0aW9uKGIpe3JldHVybiBifX0pKSYmdm9pZCAwIT09Yz9jOm51bGx9Y2F0Y2goYil7cT1udWxsfXJldHVybiBxfTt2YXIgdD1mdW5jdGlvbihhLGMpe2lmKGMhPT1uKXRocm93IEVycm9yKCJCYWQgc2VjcmV0Iik7dGhpcy5nPWF9LHU9ZnVuY3Rpb24oKXt9O3QucHJvdG90eXBlPWQodS5wcm90b3R5cGUpO3QucHJvdG90eXBlLmNvbnN0cnVjdG9yPXQ7aWYobSltKHQsdSk7ZWxzZSBmb3IodmFyIHYgaW4gdSlpZigicHJvdG90eXBlIiE9dilpZihPYmplY3QuZGVmaW5lUHJvcGVydGllcyl7dmFyIHc9T2JqZWN0LmdldE93blByb3BlcnR5RGVzY3JpcHRvcih1LHYpO3cmJk9iamVjdC5kZWZpbmVQcm9wZXJ0eSh0LHYsdyl9ZWxzZSB0W3ZdPXVbdl07dC5wcm90b3R5cGUudG9TdHJpbmc9ZnVuY3Rpb24oKXtyZXR1cm4gdGhpcy5nLnRvU3RyaW5nKCl9O2Z1bmN0aW9uIHgoYSl7dmFyIGMsYj1udWxsPT09KGM9cigpKXx8dm9pZCAwPT09Yz92b2lkIDA6Yy5jcmVhdGVTY3JpcHRVUkwoYSk7cmV0dXJuIG5ldyB0KG51bGwhPT1iJiZ2b2lkIDAhPT1iP2I6YSxuKX07aWYoIWZ1bmN0aW9uKCl7aWYoc2VsZi5vcmlnaW4pcmV0dXJuIm51bGwiPT09c2VsZi5vcmlnaW47aWYoIiIhPT1sb2NhdGlvbi5ob3N0KXJldHVybiExO3RyeXtyZXR1cm4gd2luZG93LnBhcmVudC5lc2NhcGUoIiIpLCExfWNhdGNoKGEpe3JldHVybiEwfX0oKSl0aHJvdyBFcnJvcigic2FuZGJveGluZyBlcnJvciIpOwp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibWVzc2FnZSIsZnVuY3Rpb24oYSl7dmFyIGM9YS5wb3J0c1swXTthPWEuZGF0YTt2YXIgYj1hLmNhbGxiYWNrTmFtZS5zcGxpdCgiLiIpLGg9d2luZG93OyJ3aW5kb3ciPT09YlswXSYmYi51bnNoaWZ0KCk7Zm9yKHZhciBrPTA7azxiLmxlbmd0aC0xO2srKyloW2Jba11dPXt9LGg9aFtiW2tdXTtoW2JbYi5sZW5ndGgtMV1dPWZ1bmN0aW9uKHkpe2MucG9zdE1lc3NhZ2UoSlNPTi5zdHJpbmdpZnkoeSkpfTtiPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO2E9eChhLnVybCk7aWYoYSBpbnN0YW5jZW9mIHQpYT1hLmc7ZWxzZSB0aHJvdyBFcnJvcigiVW5leHBlY3RlZCB0eXBlIHdoZW4gdW53cmFwcGluZyBUcnVzdGVkUmVzb3VyY2VVcmwiKTtiLnNyYz1hO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYil9LCEwKTt9KS5jYWxsKHRoaXMpOwo8L3NjcmlwdD48L2JvZHk+" style="display: none;"></iframe>
+ </body>
 </html>
