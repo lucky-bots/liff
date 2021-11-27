@@ -4,6 +4,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFs" "ไม่ระบุชื่อ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ส่ง เมสเสจ</title>
+         <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+     <script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+    </script>
     </head>
     <body>
         <h1 id="displaynamefield"></h1>
@@ -22,19 +27,17 @@
             var userId = "";
             document.getElementById("logout").style.display ="none";
             window.onload = function() {
-                initializeLiff("1656633739-29ex3geA");
+                initializeLiff();
             };
-         function initializeLiff(myLiffId) {
-                liff
-                    .init({
-                        liffId: myLiffId
-                    })
-                    .then(() => {
+         function initializeLiff(myLiffId)                 {
+                
+                liff.init({ liffId: "1656633739-29ex3geA" }).then(() => {
                         //LINEアプリで起動しているかどうかとログインをしているのかを判断している
                         if (!liff.isInClient() && !liff.isLoggedIn()){
                             window.alert("เข้าสู่ระบบ");
-                            liff.login();
-                        }else{
+                  liff.login();
+                        }
+                        else{
                             // start to use LIFF's api
                             liff.getProfile().then(function(profile) {
                                 document.getElementById('displaynamefield').textContent = 'ยินดีต้อนรับ' + profile.displayName + 'เข้าสู่ระบบ';
@@ -55,12 +58,14 @@
             $(function() {
                 $('#send').click(function(e) {
                     e.preventDefault();
-                    var val = $('#message').val();
+                    var val = $('#message').value;
                     liff.shareTargetPicker([
-                       {
-                            type: "text",
-                            text: val
-                       }
+                     {  
+                     "type": "flex",
+                     "altText": "Flex   Message",
+                     "contents": 
+                       val
+                     }
                         ])
                         .then(
                             alert("ยืนยัน")
