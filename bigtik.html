@@ -39,69 +39,240 @@
 
 {
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://www.img.in.th/images/628d6c5141a1eba3c38c146fae7e53e1.jpg",
-    "size": "full",
-    "aspectRatio": "20:20",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "http://linecorp.com/"
-    }
-  },
   "body": {
     "type": "box",
-    "layout": "horizontal",
+    "layout": "vertical",
     "contents": [
       {
-        "type": "text",
-        "text": "รบกวนเพื่อนๆ ช่วยสมัครทีขอแนะนำ",
-        "weight": "bold",
-        "size": "md",
+        "type": "image",
+        "url": "https://i.ibb.co/hFwjD39/hlth-background2nd.jpg",
         "align": "center",
-        "color": "#ff0066"
-      }
-    ],
-    "backgroundColor": "#ffffcc"
-  },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "primary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "สมัคร คลิ๊ก !!",
-          "uri": "http://auto.ambbetking.com/signup?ref=7301"
-        },
-        "color": "#ff0066"
+        "size": "full",
+        "aspectMode": "cover",
+        "aspectRatio": "1:1.6"
       },
       {
-        "type": "button",
-        "style": "primary",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "แชร์",
-          "uri": "https://liff.line.me/1656633739-NjWEVAWZ"
-        },
-        "color": "#ff0066"
-      },
-      {
-        "type": "spacer",
-        "size": "sm"
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://i.ibb.co/vjsy27Y/hlth-2nd-Menu-top.png",
+                "gravity": "top",
+                "aspectMode": "fit",
+                "size": "full",
+                "aspectRatio": "4:1"
+              }
+            ],
+            "height": "70px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "uri",
+                      "label": "เมนูคำสั่ง",
+                      "uri": "line://app/1655425084-3OQ8Mn9J?type=text&text=mentionall"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "แทค",
+                      "data": "คำสั่งแทค ใช้เรียกสมาชิกทั้งกลุ่ม"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  },
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "แทค: ",
+                      "data": "คำสั่งนี้ ใช้ตั่งจำนวนที่ต้องการแทค เฉพาะคนเดียว ตั้งจำนวนให้คำสั่งต่อไป"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "data": "หลังจากตั้งจำนวนครั้งในการแทคแล้ว ให้ใช้คำสั่งนี้เพื่อแทค",
+                      "label": "แทค @"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "เตะ @",
+                      "data": "ใช้ลบสมาชิกออกจากกลุ่ม"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  },
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "uri",
+                      "label": "เชิญ",
+                      "uri": "line://app/1655425084-3OQ8Mn9J?type=text&text=getid"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "อ่าน/ปิดอ่าน",
+                      "data": "คำสั่งนี้ใช้เปิด กับปิด จับคนอ่าน"
+                    },
+                    "color": "#0f222f60",
+                    "style": "primary",
+                    "height": "sm"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "กันหมด on /  กันหมด off",
+                      "data": "ใช้ป้องกันเกรียนบินกลุ่ม กันทั้งหมด"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "postback",
+                      "label": "เทส/  สปีด",
+                      "data": "ใช้การทำงานของบอท"
+                    },
+                    "height": "sm",
+                    "color": "#0f222f60",
+                    "style": "primary"
+                  }
+                ],
+                "width": "230px",
+                "offsetStart": "14.5px",
+                "spacing": "sm",
+                "margin": "sm"
+              },
+              {
+                "type": "spacer"
+              }
+            ],
+            "backgroundColor": "#00ccff80",
+            "width": "259.2px",
+            "offsetStart": "20px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://www.img.in.th/images/417215dac04b318beaf2bfdc6fa64c99.png",
+                "gravity": "top",
+                "aspectMode": "fit",
+                "size": "full",
+                "aspectRatio": "4:1"
+              }
+            ],
+            "height": "75px"
+          }
+        ],
+        "offsetBottom": "463px"
       }
     ],
-    "flex": 0,
-    "backgroundColor": "#ffffcc"
+    "paddingAll": "0px",
+    "height": "480px"
   }
 }
-
 
 
 
