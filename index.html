@@ -14,42 +14,12 @@
       }
       body {
         display: block;
+        padding: 26px;
         height: 100vh;
         display: -ms-grid;
         display: grid;
         place-items: center;
         background-color: #dfe9f5;
-      }
-      .wrapper {
-        width: 100vw;
-        padding-bottom: 2em;
-      }
-      .container {
-        width: 100%;
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        padding: 0 2em;
-        gap: 3em;
-        font-size: 16px;
-      }
-      a {
-        background-color: #07001f;
-        color: #ffffff;
-        display: block;
-        width: 95vw;
-        max-width: 450px;
-        position: relative;
-        font-size: 18px;
-        margin: 1em auto 0 auto;
-        text-align: center;
-        text-decoration: none;
-        padding: 1em 0;
-        border-radius: 5px;
       }
       .card {
         width: 100%;
@@ -61,17 +31,6 @@
         -webkit-box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
                 box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
       }
-      h3 {
-        width: 70%;
-        padding: 0.6em 0;
-        border-radius: 5px 35px 35px 5px;
-        position: relative;
-        margin-left: -0.6em;
-        font-weight: 400;
-        font-size: 1.6em;
-        letter-spacing: 0.15em;
-        color: #ffffff;
-      }
       h1 {
         font-size: 2em;
         margin: 0.8em 0;
@@ -79,17 +38,6 @@
       }
       .card ul {
         list-style: none;
-      }
-      li {
-        position: relative;
-        margin: auto;
-        width: 60%;
-        padding-bottom: 0.4em;
-        color: #000742;
-      }
-      ul li:not(:last-child) {
-        margin-bottom: 1.8em;
-        border-bottom: 1px solid rgb(164, 165, 170);
       }
     button { display: none;
     width: 80%; 
@@ -105,7 +53,6 @@
 </head>
 <body>
         <div class="card basic">
-          <h3>แชร์ Flex Message</h3>
           <h1> By => Ben </h1>
           <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
           <button id="btnLogin" onclick="liff.login()">Log In</button>
