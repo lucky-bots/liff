@@ -19,13 +19,25 @@
     </style>
 </head>
 <body>
-  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-    async function sendShare() {
-      const result = await liff.shareTargetPicker([
+  <div class="wrapper">
+      <div class="container">
+        <div class="card basic">
+          <h3>BASIC</h3>
+          <h1>$12.99</h1>
+          <ul>
+            <li>2GB Disk Storage</li>
+            <li>2 Email Address</li>
+            <li>10GB Bandwidth</li>
+            <li>3 Months Support</li>
+          </ul>
+          <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
+          <button id="btnLogin" onclick="liff.login()">Log In</button>
+          <button id="btnLogOut" onclick="logOut()">Log Out</button>
+        </div>
+          <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+          <script>
+            async function sendShare() {
+            const result = await liff.shareTargetPicker([
 
   {  
  "type": "flex",
@@ -124,5 +136,7 @@
     }
     main()
   </script>
-</body>
+     </div>
+   </div>
+ </body>
 </html>
