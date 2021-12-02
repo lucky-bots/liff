@@ -341,18 +341,19 @@
 }
 }
 
-             ])
-      if (result) {
+       ])
+          if (result) {
         alert(`[${result.status}] Message sent!`)
-      } else { 
-        alert(`ส่งไม่สำเร็จ`)
+      } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
-      if (minorVer === undefined) {
-          alert('ไม่สามารถส่งในบราวเซอร์ได้')
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
           return
         }
-       if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('คุณยกเลิกแชร์ flex message')
+
+        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
+          alert('ShareTargetPicker was canceled in LINE app')
         }
       }
     }
@@ -361,7 +362,7 @@
       window.location.reload()
     }
     async function main() {
-      await liff.init({ liffId: "1656633739-NjWEVAWZ" })
+      await liff.init({ liffId: "1656633739-vekx9ekl" })
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
@@ -373,5 +374,5 @@
     }
     main()
   </script>
- </body>
-</html>
+</body>
+</html>  
