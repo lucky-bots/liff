@@ -129,11 +129,11 @@
         alert(`ส่งไม่สำเร็จ`)
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
       if (minorVer === undefined) {
-          alert('ShareTargetPicker was canceled in external browser')
+          alert('ไม่สามารถส่งในบราวเซอร์ได้')
           return
         }
        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
+          alert('คุณยกเลิกแชร์ flex message')
         }
       }
     }
