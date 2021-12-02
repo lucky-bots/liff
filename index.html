@@ -40,7 +40,7 @@
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU);
     font-family: 'Mali', cursive;
     font-size: 20px;
-    color: #FF1700;
+    color: #FFFFFF;
     padding: 15px ; 
     margin: 16px auto }
     </style>
@@ -125,7 +125,8 @@
              ])
       if (result) {
         alert(`[${result.status}] Message sent!`)
-      } else {
+      } else { 
+        alert(`ส่งไม่สำเร็จ`)
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
       if (minorVer === undefined) {
           alert('ShareTargetPicker was canceled in external browser')
