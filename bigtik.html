@@ -32,8 +32,7 @@
  "altText": "มีคนกล่าวถึงมึง",
  "contents": 
   
-
-{
+             {
   "type": "flex",
   "altText": "this is a flex message",
   "contents": {
@@ -89,7 +88,7 @@
                 "size": "lg",
                 "wrap": true
               }
-              ],
+            ],
             "justifyContent": "center",
             "margin": "md"
           }
@@ -228,7 +227,25 @@
         "layout": "vertical",
         "contents": [
           {
-            "type": "text",
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "📱 OS :",
+                "weight": "bold",
+                "gravity": "center",
+                "color": "#ffffff"
+              }
+            ],
+            "justifyContent": "center"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
                 "text": "hello, world",
                 "margin": "md",
                 "wrap": true
@@ -285,7 +302,7 @@
   }
 }
 }
-}
+      
 
    }
              ])
