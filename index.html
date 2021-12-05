@@ -3,343 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>Flex message by Ben</title>
+  <title>My LIFF App</title>
   <style>
-      body {
-        display: block;
-        padding: 20px;
-        height: 80vh;
-        display: -ms-grid;
-        display: grid;
-        place-items: center;
-        background-color: #000000;
-      }
-      .card {
-        width: 100%;
-        position: relative;
-        background-color: #b08702;
-        border-radius: 10px;
-        padding: 5em 0;
-        text-align: center;
-        -webkit-box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-                box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        font-size: 2em;
-        margin: 0.1em 0;
-        color: #1ca8ff;
-        font-family: 'Mali', cursive;
-      }
-      h2 {
-        font-size: 2em;
-        margin: 0.1em 0;
-        color: #ff1c1c;
-        font-family: 'Mali', cursive;
-      }
-      .card ul {
-        list-style: none;
-      }
-    button { display: none;
+    body { padding: 26px }
+    button, #myTextarea{ display: none;
     width: 80%; 
     height: 10%;
     border-radius: 80px 80px 80px;
-    background-color: #000000;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU);
     font-family: 'Mali', cursive;
     font-size: 20px;
-    color: #ffcc26;
-    padding: 15px ; 
-    margin: 16px auto ;
-    }
+    color: #FF1700;
+    padding: 10px ; 
+    margin: 16px auto }
     </style>
 </head>
 <body>
-        <div class="card basic">
-          <h2> Flex Message </h2>
-          <h1> By => Ben </h1>
-          <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-          <button id="btnLogin" onclick="liff.login()">Log In</button>
-          <button id="btnLogOut" onclick="logOut()">Log Out</button>
-        </div>
-          <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-          <script>
-            async function sendShare() {
-            const result = await liff.shareTargetPicker([
-
-  {  
- "type": "flex",
- "altText": "มีคนกล่าวถึงมึง",
- "contents":
-{
-  "type": "bubble",
-  "size": "giga",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "✔ ท่านได้ทำการลงทะเบียนเรียบร้อยแล้ว",
-        "weight": "bold",
-        "align": "center",
-        "color": "#ffffff",
-        "size": "lg"
-      }
-    ],
-    "paddingAll": "0px",
-    "backgroundColor": "#00ad00",
-    "height": "50px",
-    "justifyContent": "center"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "image",
-                "url": "https://linevoom.line.me/img/no_profile1.png"
-              }
-            ],
-            "width": "80px",
-            "height": "80px",
-            "cornerRadius": "150px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello, world",
-                "weight": "bold",
-                "size": "lg",
-                "wrap": true
-              }
-            ],
-            "justifyContent": "center",
-            "margin": "md"
-          }
-        ]
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "📧 E-mail :",
-                "weight": "bold",
-                "gravity": "center",
-                "color": "#ffffff"
-              }
-            ],
-            "justifyContent": "center"
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello, world",
-                "margin": "md",
-                "wrap": true
-              }
-            ],
-            "margin": "md",
-            "justifyContent": "center",
-            "borderWidth": "2px",
-            "backgroundColor": "#eadbc8"
-          }
-        ],
-        "margin": "md",
-        "borderWidth": "3px",
-        "borderColor": "#c7a170",
-        "cornerRadius": "md",
-        "backgroundColor": "#c7a170"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "📞 Phone No. :",
-                "weight": "bold",
-                "gravity": "center",
-                "color": "#ffffff"
-              }
-            ],
-            "justifyContent": "center"
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello, world",
-                "margin": "md",
-                "wrap": true
-              }
-            ],
-            "margin": "md",
-            "justifyContent": "center",
-            "borderWidth": "2px",
-            "backgroundColor": "#eadbc8"
-          }
-        ],
-        "margin": "md",
-        "borderWidth": "3px",
-        "borderColor": "#c7a170",
-        "cornerRadius": "md",
-        "backgroundColor": "#c7a170"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "url": "https://play-lh.googleusercontent.com/74iMObG1vsR3Kfm82RjERFhf99QFMNIY211oMvN636_gULghbRBMjpVFTjOK36oxCbs=s180-rw"
-              },
-              {
-                "type": "text",
-                "text": "LINE ID :",
-                "weight": "bold",
-                "gravity": "center",
-                "color": "#ffffff",
-                "margin": "md"
-              }
-            ],
-            "justifyContent": "center"
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello, world",
-                "margin": "md",
-                "wrap": true
-              }
-            ],
-            "margin": "md",
-            "justifyContent": "center",
-            "borderWidth": "2px",
-            "backgroundColor": "#eadbc8"
-          }
-        ],
-        "margin": "md",
-        "borderWidth": "3px",
-        "borderColor": "#c7a170",
-        "cornerRadius": "md",
-        "backgroundColor": "#c7a170"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "📱 OS :",
-                "weight": "bold",
-                "gravity": "center",
-                "color": "#ffffff"
-              }
-            ],
-            "justifyContent": "center"
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "text",
-                "text": "hello, world",
-                "margin": "md",
-                "wrap": true
-              }
-            ],
-            "margin": "md",
-            "justifyContent": "center",
-            "borderWidth": "2px",
-            "backgroundColor": "#eadbc8"
-          }
-        ],
-        "margin": "md",
-        "borderWidth": "3px",
-        "borderColor": "#c7a170",
-        "cornerRadius": "md",
-        "backgroundColor": "#c7a170"
-      }
-    ],
-    "paddingAll": "10px",
-    "backgroundColor": "#eadbc899"
-  },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "contents": [
-      {
-        "type": "image",
-        "url": "https://sv1.picz.in.th/images/2021/09/08/Ci38Xl.png",
-        "size": "full",
-        "animated": true,
-        "aspectMode": "cover",
-        "aspectRatio": "16:3"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "image",
-            "url": "https://sv1.picz.in.th/images/2021/08/04/2qQv8n.png",
-            "animated": true,
-            "size": "sm"
-          }
-        ],
-        "position": "absolute"
-      }
-    ],
-    "paddingAll": "0px",
-    "action": {
-      "type": "uri",
-      "label": "action",
-      "uri": "line://nv/profilePopup/mid=ufb9d34cac39cc328b9febede9f106341"
-    }
-  }
-}
-}
-}
-
-       ])
-          if (result) {
+  <textarea id="myTextarea">
+</textarea>
+  <button id="btnShare" onclick="myFunction()">Share Target Picker</button>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>function myFunction() {
+  var x = document.getElementById("myTextarea").value;
+    async function sendShare() {
+      const result = await liff.shareTargetPicker([x])
+      console.log (x)
+      if (result) {
         alert(`[${result.status}] Message sent!`)
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
@@ -354,6 +45,7 @@
         }
       }
     }
+   }
     function logOut() {
       liff.logout()
       window.location.reload()
@@ -361,7 +53,7 @@
     async function main() {
       await liff.init({ liffId: "1656633739-NjWEVAWZ" })
       if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block"
+document.getElementById("myTextarea").style.display = "block"      document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
         }
@@ -372,4 +64,5 @@
     main()
   </script>
 </body>
-</html>  
+</html>
+        
