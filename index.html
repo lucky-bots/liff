@@ -17,6 +17,10 @@
     padding: 10px ; 
     margin: 16px auto }
     </style>
+<script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.2.0"></script>
+<script>
+	window.vConsole = new window.VConsole();
+</script>
 </head>
 <body>
   <textarea id="myTextarea">
@@ -53,7 +57,8 @@
     async function main() {
       await liff.init({ liffId: "1656633739-NjWEVAWZ" })
       if (liff.isLoggedIn()) {
-document.getElementById("myTextarea").style.display = "block"      document.getElementById("btnShare").style.display = "block"
+          document.getElementById("myTextarea").style.display = "block";      
+          document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
         }
