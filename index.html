@@ -10,7 +10,6 @@
     width: 80%; 
     height: 10%;
     border-radius: 80px 80px 80px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU);
     font-family: 'Mali', cursive;
     font-size: 20px;
     color: #FF1700;
@@ -19,6 +18,7 @@
     </style>
 </head>
 <body>
+<button background-color id="btnProfile" onclick="location.href='<button id="btnScan" onclick="location.href='https://liff.line.me/1656633739-29ex3geA'">scan</button>'">scan</button>
 <button id="btnScan" onclick="location.href='https://liff.line.me/1656633739-29ex3geA'">scan</button>
 <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
@@ -108,6 +108,7 @@
       await liff.init({ liffId: "1656633739-NjWEVAWZ" })
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block",
+        document.getElementById("btnProfile").style.display = "block",
         document.getElementById("btnScan").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
