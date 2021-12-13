@@ -74,14 +74,13 @@ span:hover {
         text-shadow: 0 0 0 white;
     }
 }
-a
-{
+a{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 200px;
-    height: 60px;
+    width: 80px;
+    height: 50px;
     text-align: center;
     text-decoration: none;
     color: #fff;
@@ -230,9 +229,7 @@ a:hover:before
     async function main() {
       await liff.init({ liffId: "1656633739-NjWEVAWZ" })
       if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block",
-        document.getElementById("btnProfile").style.display = "block",
-        document.getElementById("btnScan").style.display = "block"
+        document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
         }
