@@ -74,62 +74,6 @@ span:hover {
         text-shadow: 0 0 0 white;
     }
 }
-a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 80px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 60px;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    background: linear-gradient(90deg,#F2E955,#806CF7,#CF46F1,#FF6858);
-    border-radius: 50px;
-    background-size: 400%;
-}
-a:hover
-{
-    animation: animate 8s linear infinite;
-}
-@keyframes animate
-{
-    0%
-    {
-        background-position: 0%;
-    }
-    100%
-    {
-        background-position: 400%;
-    }
-}
-a:before
-{
-    position: absolute;
-    content: '';
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg,#39FE5E,#806CF7,#CF46F1);
-    border-radius: 50px;
-    background-size: 400%;
-    opacity: 0;
-    transition: 0.5s;
-}
-a:hover:before
-{
-    filter: blur(20px);
-    opacity: 1;
-    animation: animae 8s linear infinite;
-}
   </style>
  </head>
     
