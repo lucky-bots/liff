@@ -1,0 +1,55 @@
+/* Created by Niush Sitaula */
+
+div {
+    background: white;
+    padding: 1em;
+    color:red;
+    text-align:center ;
+}
+
+div u{
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+span {
+    color: transparent;
+    text-shadow: 0 0 30px black;
+    -webkit-transition: all 0.7s 0.3s ease;
+    -o-transition: all 0.7s 0.3s ease;
+    transition: all 0.7s 0.3s ease;
+}
+span:hover {
+    text-shadow: 0 0 0 black;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+@-webkit-keyframes blurout {
+    from {
+        text-shadow: 0 0 30px black;
+    }
+    to {
+        text-shadow: 0 0 0 black;
+    }
+}
+
+@keyframes blurout {
+    from {
+        text-shadow: 0 0 30px black;
+    }
+    to {
+        text-shadow: 0 0 0 black;
+    }
+}
+
