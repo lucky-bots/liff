@@ -1,6 +1,137 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Controlling CSS Animation - Play State and Random Rebuild</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+div {
+    background: white;
+    padding: 1em;
+    color:red;
+    text-align:center ;
+}
+
+div u{
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+span {
+    color: transparent;
+    text-shadow: 0 0 30px black;
+    -webkit-transition: all 0.7s 0.3s ease;
+    -o-transition: all 0.7s 0.3s ease;
+    transition: all 0.7s 0.3s ease;
+}
+span:hover {
+    text-shadow: 0 0 0 black;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+@-webkit-keyframes blurout {
+    from {
+        text-shadow: 0 0 30px black;
+    }
+    to {
+        text-shadow: 0 0 0 black;
+    }
+}
+
+@keyframes blurout {
+    from {
+        text-shadow: 0 0 30px black;
+    }
+    to {
+        text-shadow: 0 0 0 black;
+    }
+}
+
+
+   #iframe {
+   width: 100%;
+   higth: 50%
+    }
+        </style> 
+</head>
+    
+    <body>
+        <div>
+            <p class="focus">ยินดีต้อนรับเข้าสู่...  อนาจักร เบนซิน</p>
+            <u>อนิเมชั่น สไตล์ เบน</u>
+        </div>
+        <iframe id = "iframe" src= "https://hackslot.bet/"></ifram>
+       </hr>
+      <script>
+      // Created by Niush Sitaula
+
+$(document).ready(function() {
+    $(".focus").lettering();
+    resetAnimation();
+});
+
+function removeAnimation() {
+    var myFocusText = $(".focus").text();
+    for (var i = 1; i <= myFocusText.length; i++) {
+        $(".char" + i).css({ "animation-iteration-count": "1" });
+    }
+}
+
+function resetAnimation() {
+    var myFocusText = $(".focus").text();
+
+    for (var i = 1; i <= myFocusText.length; i++) {
+        var randomNum = Math.random() * (2 - 0.5) + 0.5;
+        $(".char" + i).css({
+            animation: "blurout " + randomNum + "s ease-out infinite forwards alternate"
+        });
+    }
+    isPaused = false;
+    $(".pause").text("Pause Animation");
+}
+
+var isPaused = false;
+function pauseAnimation(e) {
+    if (!isPaused) {
+        var myFocusText = $(".focus").text();
+        for (var i = 1; i <= myFocusText.length; i++) {
+            $(".char" + i).css({ "animation-play-state": "paused" });
+        }
+        $(".pause").text("Play Animation");
+        isPaused = true;
+    } else {
+        $(".pause").text("Pause Animation");
+        playAnimation();
+        isPaused = false;
+    }
+}
+
+function playAnimation() {
+    var myFocusText = $(".focus").text();
+    for (var i = 1; i <= myFocusText.length; i++) {
+        $(".char" + i).css({ "animation-play-state": "running" });
+    }
+}
+
+      </scirpt>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
         <title>scan</title>
     <style>
     
@@ -11,14 +142,9 @@ body {
 
 
 
-#iframe {
-   width: 100%;
-   higth: 50%
-}
     </style>
     </head>
     <body>_
-     _<iframe id = "iframe" src= "https://hackslot.bet/"></ifram>
-       </hr>
+     
     </body>
 </html>
