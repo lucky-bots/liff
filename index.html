@@ -3,68 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
-    body { padding: 26px }
-    #btnScan{
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
-    align-items: center;
-    background-color: initial;
-    background-image: linear-gradient(#464d55, #25292e);
-    border-radius: 8px;
-    border-width: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    flex-direction: column;
-    font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 18px;
-    height: 52px;
-    justify-content: center;
-    line-height: 1;
-    margin: 0;
-    outline: none;
-    overflow: hidden;
-    padding: 0 32px;
-    text-align: center;
-    text-decoration: none;
-    transform: translate3d(0, 0, 0);
-    transition: all 150ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    }
-    #btnProfile{
-    background-color:#ff6600;
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
-    color: #000000
-    }
-    #btnShare{
-    background-color:#000000;
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
-    color: #ffffff
-    }
-    button { display: none
-    width: 50%; 
-    height: 10%;
-    border-radius: 80px 80px 80px;
-    padding: 10px ; 
-    margin: 16px auto
-    }
-    </style>
-</head>
-<body>
-<button id="btnProfile" onclick="location.href='https://liff.line.me/1656633739-jDWO6pWv'">โปรไฟล์</button>
-<button id="btnScan" onclick="location.href='https://liff.line.me/1656633739-29ex3geA'">แสกน</button>
-<button id="btnShare" onclick="sendShare()">แชร์ ลืฟ</button>
+  <!-- Created by Niush Sitaula -->
+        <title>เมสเสจ อนิเมชั่น สไตล์</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <p class="focus">ยินดีต้อนรับเข้าสู่...  อนาจักร เบนซิน</p>
+            <u>อนิเมชั่น สไตล์ เบน</u>
+        </div>
+        <button id="btnProfile" onclick="location.href='https://liff.line.me/1656633739-jDWO6pWv'">โปรไฟล์</button>
+  <button id="btnScan" onclick="location.href='https://liff.line.me/1656633739-29ex3geA'">แสกน</button>
+  <button id="btnShare" onclick="sendShare()">แชร์ ลืฟ</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="scirpt.js"></scirpt>
   <script>
     async function sendShare() {
       const result = await liff.shareTargetPicker([
@@ -127,7 +83,7 @@
    }
              ])
       if (result) {
-        alert(`[${result.status}] Message sent!`)
+        alert(`[${result.status}] ส่งสำเร็จ`)
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 
@@ -137,7 +93,7 @@
         }
 
         if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
+          alert('การแชร์ถูก ยกเลิก')
         }
       }
     }
@@ -160,5 +116,5 @@
     }
     main()
   </script>
-</body>
+    </body>
 </html>
