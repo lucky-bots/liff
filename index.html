@@ -8,7 +8,8 @@
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
         <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
-     <script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+<script>
   // VConsole will be exported to `window.VConsole` by default.
   var vConsole = new window.VConsole();
     </script>
@@ -73,86 +74,63 @@ span:hover {
         text-shadow: 0 0 0 white;
     }
 }
-  a{
-    position:relative;
-    display:flex;
-    padding:15px 30px;
-    width:200px;
-    color:#2196f3;
-    margin:auto;
-    align-items:center;
-    text-align:center ;
-    height:50px;
-    justify-content:center;
-    text-transform:uppercase;
-    letter-spacing:4px;
-    text-decoration:none;
-    font-size:24px;
-    overflow:hidden;
-    transition:0.25;
+a
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 60px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,#F2E955,#806CF7,#CF46F1,#FF6858);
+    border-radius: 50px;
+    background-size: 400%;
 }
-a:hover{
-    color:#255784;
-    background:#2196f3;
-    box-shadow:0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
-    transition-delay:1s;
+a:hover
+{
+    animation: animate 8s linear infinite;
 }
-a span{
-    position:absolute;
-    display:block;
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
 }
-a span:nth-child(1){
-   top:0;
-    left:-100%;
-    width:100%;
-    height:2px;
-    background:linear-gradient(90deg,transparent,#2196f3 );  
-    
+a:before
+{
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#39FE5E,#806CF7,#CF46F1);
+    border-radius: 50px;
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
 }
-a:hover span:nth-child(1){
-    left:100%;
-    transition:1s;
-} 
-
-a span:nth-child(2){
-    top:-100%;
-    right:0;
-    width:2px;
-    height:100%;
-    background:line-gradient(180deg,transparent ,#2196f3);
+a:hover:before
+{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animae 8s linear infinite;
 }
-
-a:hover span:nth-child(2){
-    top:100%;
-    transition:1s;
-    transition-delay:0.25s;
-}
-a span:nth-child(3){
-   bottom:0;
-    right:-100%;
-    width:100%;
-    height:2px;
-    background:linear-gradient(270deg,transparent,#2196f3 );  
-    
-}
-a:hover span:nth-child(3){
-    right:100%;
-    transition:1s;
-    transition-delay:0.5s;
-} 
-a span:nth-child(4){
-    bottom:-100%;
-    left:0;
-    width:2px;
-    height:100%;
-    background:line-gradient(360deg,transparent ,#2196f3);
-}
-a:hover span:nth-child(4){
-    bottom:100%;
-    transition:1s;
-    transition-delay:0.75s;
-}
-
   </style>
  </head>
     
@@ -162,12 +140,7 @@ a:hover span:nth-child(4){
             <u>อนิเมชั่น สไตล์ เบน</u>
         </div>
         <button id="btnProfile" onclick="location.href='https://liff.line.me/1656633739-jDWO6pWv'">โปรไฟล์</button>
-        <a href = "https://liff.line.me/1656633739-29ex3geA">
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         แสกน
+        <a href = "https://liff.line.me/1656633739-29ex3geA"> แสกน
          </a>
   <button id="btnShare" onclick="sendShare()">แชร์ ลืฟ</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
