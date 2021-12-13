@@ -3,22 +3,37 @@
     <head>
         <title>Controlling CSS Animation - Play State and Random Rebuild</title>
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <!-- Created by Niush Sitaula -->
+        <title>แสกน</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- <style>
-div {
+        <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+     <script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+    </script>
+  <style>
+    #iframe {
+   width: 100%;
+   higth: 100%
+    }
+   div {
     background: white;
     padding: 1em;
     color:red;
     text-align:center ;
 }
-
-div u{
+  div u{
     font-size:10px;
     letter-spacing:2px;
 }
-
-p {
+   p {
     font-size: 2em;
     font-weight: bold;
     font-family: Arial, sans-serif;
@@ -40,8 +55,7 @@ span:hover {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-
-@-webkit-keyframes blurout {
+   @-webkit-keyframes blurout {
     from {
         text-shadow: 0 0 30px black;
     }
@@ -49,8 +63,7 @@ span:hover {
         text-shadow: 0 0 0 black;
     }
 }
-
-@keyframes blurout {
+  @keyframes blurout {
     from {
         text-shadow: 0 0 30px black;
     }
@@ -58,74 +71,19 @@ span:hover {
         text-shadow: 0 0 0 black;
     }
 }
-
-
-   #iframe {
-   width: 100%;
-   higth: 100%
-    }
-        </style> 
-</head>
+  </style>
+ </head>
     
     <body>
         <div>
             <p class="focus">ยินดีต้อนรับเข้าสู่...  อนาจักร เบนซิน</p>
             <u>อนิเมชั่น สไตล์ เบน</u>
         </div>
-        <iframe id = "iframe" src= "https://hackslot.bet/"></ifram>
+        <hr>
+        <iframe id = "iframe" src= "https://hackslot.bet/"></iframe>
        </hr>
-      <script>
-      // Created by Niush Sitaula
-
-$(document).ready(function() {
-    $(".focus").lettering();
-    resetAnimation();
-});
-
-function removeAnimation() {
-    var myFocusText = $(".focus").text();
-    for (var i = 1; i <= myFocusText.length; i++) {
-        $(".char" + i).css({ "animation-iteration-count": "1" });
-    }
-}
-
-function resetAnimation() {
-    var myFocusText = $(".focus").text();
-
-    for (var i = 1; i <= myFocusText.length; i++) {
-        var randomNum = Math.random() * (2 - 0.5) + 0.5;
-        $(".char" + i).css({
-            animation: "blurout " + randomNum + "s ease-out infinite forwards alternate"
-        });
-    }
-    isPaused = false;
-    $(".pause").text("Pause Animation");
-}
-
-var isPaused = false;
-function pauseAnimation(e) {
-    if (!isPaused) {
-        var myFocusText = $(".focus").text();
-        for (var i = 1; i <= myFocusText.length; i++) {
-            $(".char" + i).css({ "animation-play-state": "paused" });
-        }
-        $(".pause").text("Play Animation");
-        isPaused = true;
-    } else {
-        $(".pause").text("Pause Animation");
-        playAnimation();
-        isPaused = false;
-    }
-}
-
-function playAnimation() {
-    var myFocusText = $(".focus").text();
-    for (var i = 1; i <= myFocusText.length; i++) {
-        $(".char" + i).css({ "animation-play-state": "running" });
-    }
-}
-
-      </script>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="myscripts.js"></script>
+  
     </body>
 </html>
-
