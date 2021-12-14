@@ -1,84 +1,191 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFs" "ไม่ระบุชื่อ">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ส่ง เมสเสจ</title>
-         <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
-     <script>
-  // VConsole will be exported to `window.VConsole` by default.
-  var vConsole = new window.VConsole();
-    </script>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <!-- Created by Niush Sitaula -->
+        <title>เมสเสจ อนิเมชั่น สไตล์</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+    body{
+    background-image:url(https://i.pinimg.com/originals/92/c5/b2/92c5b20f647f2b2d546ee54131f18148.gif);
+    background-filter:blur(100px);
+    height:100%;
+    width:100%;
+    font-family: 'Pattaya', sans-serif;  
+}
+button { display: none;
+    width: 80%; 
+    background-color: Green;
+    border-radius: 80px 80px 80px;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 10px ; 
+    margin: 16px auto }
+ div {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1em;
+    color: white;
+    text-align:center ;
+}
+  div u{
+    font-size:10px;
+    letter-spacing:2px;
+}
+   p {
+    font-weight: bold;
+    color: #00FF33;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+span {
+    color: transparent;
+    text-shadow: 0 0 30px #00FF33;
+    -webkit-transition: all 0.7s 0.3s ease;
+    -o-transition: all 0.7s 0.3s ease;
+    transition: all 0.7s 0.3s ease;
+}
+span:hover {
+    text-shadow: 0 0 0 #00FF33;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+   @-webkit-keyframes blurout {
+    from {
+        text-shadow: 0 0 30px #00FF33;
+    }
+    to {
+        text-shadow: 0 0 0 #00FF33;
+    }
+}
+  @keyframes blurout {
+    from {
+        text-shadow: 0 0 30px #00FF33;
+    }
+    to {
+        text-shadow: 0 0 0 #00FF33;
+    }
+}   
+  h1{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 5px;
+    color: red;
+} 
+  h2{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+  h3{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 40px;
+    color: blue;
+}
+  </style>
+ </head>
+    
     <body>
-        <h1 id="displaynamefield"></h1>
-        <button type="button" class="btn btn-danger" id="logout" onclick="LogoutAction();">ออกระบบ</button>
-        
-        <form id="send-message">
-            <p>กรอกข้อความที่ต้องการส่ง</p>
-            <input type="text" id="message" name="message" size="30" placeholder="วางข้อความในนี้">
-            <button id="send" class="btn btn-primary">ส่ง</button>
-        </form>
-                  <!-- load jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!-- load LIFF SDK -->
-        <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-        <script>
-            var userId = "";
-            document.getElementById("logout").style.display ="none";
-            window.onload = function() {
-                initializeLiff();
-            };
-         function initializeLiff(myLiffId)                 {
-                
-                liff.init({ liffId: "1656633739-29ex3geA" }).then(() => {
-                        //LINEアプリで起動しているかどうかとログインをしているのかを判断している
-                        if (!liff.isInClient() && !liff.isLoggedIn()){
-                            window.alert("เข้าสู่ระบบ");
-                  liff.login();
-                        }
-                        else{
-                            // start to use LIFF's api
-                            liff.getProfile().then(function(profile) {
-                                document.getElementById('displaynamefield').textContent = 'ยินดีต้อนรับ' + profile.displayName + 'เข้าสู่ระบบ';
-                                userId = profile.userId;
-                                if (!liff.isInClient()){
-                                    document.getElementById("logout").style.display = "block"
-                                }
-                            }).catch(function(error) {
-                                window.alert('Error getting profile: ' + error);
-                            })
-                        }
-                        })
-                    .catch((err) => {
-                        document.getElementById('displaynamefield').textContent = err;
-                    });
-            }
-            // メッセージの送信
-            $(function() {
-                $('#send').click(function(e) {
-                    e.preventDefault();
-                    var val = $('#message').value;
-                    liff.shareTargetPicker([
-                     {  
-           
-                      type: "text" 
-                      text: val
-   
-                     }
-                        ])
-                        .then(
-                            alert("ยืนยัน")
-                        ).catch(function(res) {
-                            alert("ไม่สำเร็จ")
-                        })
-                });
-            });
-            // ログアウトの処理
-            function LogoutAction(){
-                liff.logout();
-                window.location.reload();
-            }
-        </script>
+        <div>
+            <h3 class="focus" id="focus">ขอต้อนรับเข้าสู่....</h3>
+       <h2 class="focus" id="focus1">แชร์ ไร้ขีดจำกัด</h2> 
+       <h1 class="focus" id="focus2">เบนซิน</h1>
+            <u>อนิเมชั่น สไตล์ เบน</u>
+        </div>
+        <a href='https://liff.line.me/1656633739-jDWO6pWv'">โปรไฟล์</a><br/>
+        <a href = "https://liff.line.me/1656633739-29ex3geA"> แสกน
+         </a><br/><br/>
+  <button id="btnShare" onclick="sendShare()">แชร์ ลืฟ</button>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="myscripts.js"></script>
+  <script>
+    async function sendShare() {
+      const result = await liff.shareTargetPicker([
+                       
+ {  
+ "type": "flex",
+ "altText": "มีคนกล่าวถึงมึง",
+ "contents":
+          
+   {
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://www.img.in.th/images/55b124529716bc78d29b92753d593b9a.png",
+    "size": "full",
+    "aspectRatio": "100:130",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "https://liff.line.me/1656633739-NjWEVAWZ"
+    },
+    "animated": true
+  },
+  "body": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "text",
+        "text": "อย่าปล่อยให้เพจโกงลอยนวล",
+        "size": "lg",
+        "weight": "bold",
+        "color": "#cc4466",
+        "align": "center"
+      }
+    ],
+    "backgroundColor": "#000000"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "spacing": "sm",
+    "contents": [],
+    "flex": 0,
+    "backgroundColor": "#000000"
+  }
+} 
+
+   }
+             ])
+      if (result) {
+        alert(`[${result.status}] ส่งสำเร็จ`)
+      } else {
+        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
+          return
+        }
+
+        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
+          alert('การแชร์ถูก ยกเลิก')
+        }
+      }
+    }
+    function logOut() {
+      liff.logout()
+      window.location.reload()
+    }
+    async function main() {
+      await liff.init({ liffId: "1656633739-NjWEVAWZ" })
+      if (liff.isLoggedIn()) {
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
+        }
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
+      }
+    }
+    main()
+  </script>
     </body>
 </html>
