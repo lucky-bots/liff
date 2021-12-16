@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
- <title>เมสเสจ อนิเมชั่น สไตล์</title> <script src="https://code.jquery.com/jquery-3.1.1.js"></script> 
+          <title>เมสเสจ อนิเมชั่น สไตล์</title> 
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script> 
  <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script> 
  <link rel="stylesheet" type="text/css" href="style.css"> 
  
  <style> 
  @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
  // Created by Niush Sitaula
-
+  body{
+    background-filter:blur(100px);
+    height:100%;
+    width:100%;
+    font-family: 'Pattaya', sans-serif;  
+}
+button { display: none;
+    width: 80%; 
+    background-color: Green;
+    border-radius: 80px 80px 80px;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 10px ; 
+    margin: 16px auto }
+ div {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1em;
+    color: white;
+    text-align:center ;
+}
+  div u{
+    font-size:10px;
+    letter-spacing:2px;
+}
+   p {
+    font-weight: bold;
+    color: Green;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+span {
+    color: transparent;
+    text-shadow: 0 0 30px Green;
+    -webkit-transition: all 0.7s 0.3s ease;
+    -o-transition: all 0.7s 0.3s ease;
+    transition: all 0.7s 0.3s ease;
+}
+span:hover {
+    text-shadow: 0 0 0 #ffd700;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+   @-webkit-keyframes blurout {
+    from {
+        text-shadow: 0 0 30px Green;
+    }
+    to {
+        text-shadow: 0 0 0 Green;
+    }
+}
+  @keyframes blurout {
+    from {
+        text-shadow: 0 0 30px Green;
+    }
+    to {
+        text-shadow: 0 0 0 Green;
+    }
+}   
+  h1{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 40px;
+    color: red;
+} 
+  h2{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+  h3{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 30px;
+    color: blue;
+}
+  </style>
+<script>
+var myVar;
 $(document).ready(function() {
     $(".focus").lettering();
     resetAnimation();
@@ -82,7 +161,43 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> <script src="myscripts.js"></script> <script> async function sendShare() { const result = await liff.shareTargetPicker([ { "type": "flex", "altText": "มีคนกล่าวถึงมึง", "contents": { "type": "bubble", "hero": { "type": "image", "url": "https://www.img.in.th/images/94b6f8ee1fbf618fc12f7783166713f2.png", "size": "full", "aspectRatio": "100:130", "aspectMode": "cover", "action": { "type": "uri", "uri": "https://liff.line.me/1656633739-NjWEVAWZ" }, "animated": true }, "body": { "type": "box", "layout": "horizontal", "contents": [ { "type": "text", "text": "อย่าปล่อยให้เพจโกงลอยนวล", "size": "lg", "weight": "bold", "color": "#cc4466", "align": "center" } ], "backgroundColor": "#000000" }, "footer": { "type": "box", "layout": "horizontal", "spacing": "sm", "contents": [], "flex": 0, "backgroundColor": "#000000" }} 
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> 
+<script src="myscripts.js"></script> 
+<script> 
+async function sendShare() { 
+const result = await liff.shareTargetPicker([ 
+{ "type": "flex", 
+"altText": "มีคนกล่าวถึงมึง", 
+"contents": 
+
+{ "type": "bubble", 
+   "hero": { 
+            "type": "image", 
+             "url": "https://www.img.in.th/images/94b6f8ee1fbf618fc12f7783166713f2.png", 
+             "size": "full", 
+             "aspectRatio": "100:130", 
+             "aspectMode": "cover", 
+              "action": { 
+               "type": "uri", 
+                 "uri": "https://liff.line.me/1656633739-NjWEVAWZ" }, 
+                    "animated": true }, 
+                     "body": { "type": 
+                       "box", "layout": "horizontal", 
+                        "contents": [ { 
+                          "type": "text", 
+                            "text": "อย่าปล่อยให้เพจโกงลอยนวล", 
+"size": "lg", 
+"weight": "bold", 
+"color": "#cc4466", 
+"align": "center" } ], 
+"backgroundColor": "#000000" }, 
+"footer": { 
+"type": "box", 
+"layout": "horizontal", 
+"spacing": "sm", 
+"contents": [], 
+"flex": 0, 
+"backgroundColor": "#000000" }} 
  
  } ]) 
  if (result) { 
