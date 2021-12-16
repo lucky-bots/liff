@@ -72,21 +72,7 @@ span:hover {
         text-shadow: 0 0 0 Green;
     }
 }   
-  h1{
-    font-family: 'Pattaya', sans-serif;
-    font-size: 40px;
-    color: red;
-} 
-  h2{
-    font-family: 'Pattaya', sans-serif;
-    font-size: 30px;
-    color: white;
-}
-  h3{
-    font-family: 'Pattaya', sans-serif;
-    font-size: 30px;
-    color: blue;
-}
+
   </style>
 <script>
 var myVar;
@@ -137,10 +123,7 @@ function playAnimation() {
         $(".char" + i).css({ "animation-play-state": "running" });
     }
 }
-
-body{ background-image:url(https://i.pinimg.com/originals/92/c5/b2/92c5b20f647f2b2d546ee54131f18148.gif); background-filter:blur(100px); height:100%; width:100%; font-family: 'Pattaya', sans-serif; }
- button { display: none; width: 80%; background-color: Green; border-radius: 80px 80px 80px; font-family: 'Pattaya', sans-serif; font-size: 20px; color: black; padding: 10px ; margin: 16px auto } div { background-color: rgba(255, 255, 255, 0); padding: 1em; color: white; text-align:center ;} div u{ font-size:10px; letter-spacing:2px;} p { font-weight: bold; color: #00FF33; padding: 0; margin: 0; text-align: center;}span { color: transparent; text-shadow: 0 0 30px #00FF33; -webkit-transition: all 0.7s 0.3s ease; -o-transition: all 0.7s 0.3s ease; transition: all 0.7s 0.3s ease;}span:hover { text-shadow: 0 0 0 #00FF33; -webkit-transition: all 0.5s ease-out; -o-transition: all 0.5s ease-out; transition: all 0.5s ease-out;} @-webkit-keyframes blurout { from { text-shadow: 0 0 30px #00FF33; } to { text-shadow: 0 0 0 #00FF33; }} @keyframes blurout { from { text-shadow: 0 0 30px #00FF33; } to { text-shadow: 0 0 0 #00FF33; }} h1{ font-family: 'Pattaya', sans-serif; font-size: 5px; color: red;} h2{ font-family: 'Pattaya', sans-serif; font-size: 40px; color: white;} h3{ font-family: 'Pattaya', sans-serif; font-size: 40px; color: blue;} 
- </style> 
+</script>
  </head> 
  <body onload="myFunction()" style="margin:0;">
 
@@ -205,7 +188,9 @@ const result = await liff.shareTargetPicker([
 } 
  else { const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 if (minorVer === undefined) 
-{ alert('ShareTargetPicker was canceled in external browser') return }
+{ alert('ShareTargetPicker was canceled in external browser') 
+return 
+}
 
 if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) { alert('การแชร์ถูก ยกเลิก') } } 
 } 
