@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <title>All slot</title>
   <style>
@@ -24,7 +27,7 @@
 }
   h2{
     position: relative;
-    font-size: 9vw;
+    font-size: 7vw;
     color: #000;
     -webkit-text-stroke: 0.8vw #000;
     text-transform: uppercase;
@@ -38,7 +41,7 @@ h2::before{
     height: 100%;
     color: #ff6;
     -webkit-text-stroke: 0vw #000;
-    border-right: 15px solid #f44;
+    border-right: 15px solid #000;
     overflow: hidden;
     animation: animate 3.6s linear infinite;
 }
@@ -63,8 +66,8 @@ h2::before{
       padding-left: 2px;
       text-align: left;
       content: "";
-      background: #091200 url('https://c.tenor.com/zsvLXbnq-msAAAAC/now-loading-sonic06.gif') no-repeat center;
-      background-size: 300px 252px;
+      background: #000 url('https://www.img.in.th/images/d4bd7baf9abd51beb50870396805ca96.gif') no-repeat center;
+      background-size: 300px 400px;
     }
 
     .app-loading.app-dark::after {
@@ -91,7 +94,7 @@ h2::before{
     .slider-end::before {
       transform: translateX(130%);
     }
-    body, h1,h2,h3,h4,h5,h6 {
+    body, h1,h3,h4,h5,h6 {
     font-family: "Montserrat", 
     sans-serif
     } 
@@ -101,7 +104,16 @@ h2::before{
     } /* Set the width of the sidebar to 120px */ 
     .w3-sidebar {width: 120px;background: #000;
         
-    } /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */ 
+    } 
+    h1 {
+        color: #FF0A00;
+    }
+    h3{
+        color: #FFE800;
+    }
+    h4{
+        color: #DEFFD3;
+    }
     #main {
         margin-left: 0
         
@@ -110,6 +122,7 @@ h2::before{
     }
         
     }
+
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TBZP32CDL"></script>
@@ -130,10 +143,123 @@ h2::before{
           <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a> 
           <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a> <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a> <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a> 
           </div> 
-    </div> <!-- Page Content --> 
-          <div class="w3-padding-large" id="main"> <!-- Header/Home --> <header class="w3-container w3-padding-32 w3-center w3-black" id="home"> <h1 class="w3-jumbo"><span class="w3-hide-small">ALL SLOT</span> I LOVE SLOT</h1> <p>FOR U</p>
-              </header> <!-- About Section -->
-              <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">  <h2 data-text="AllSlotByBen">AllSlotByBen</h2><hr style="width:200px" class="w3-opacity"> <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3> <p class="w3-wide">Photography</p> <div class="w3-white"> <div class="w3-dark-grey" style="height:28px;width:95%"></div> </div> <p class="w3-wide">Web Design</p> <div class="w3-white"> <div class="w3-dark-grey" style="height:28px;width:85%"></div> </div> <p class="w3-wide">Photoshop</p> <div class="w3-white"> <div class="w3-dark-grey" style="height:28px;width:80%"></div> </div><br> <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey"> <div class="w3-quarter w3-section"> <span class="w3-xlarge">11+</span><br> Partners </div> <div class="w3-quarter w3-section"> <span class="w3-xlarge">55+</span><br> Projects Done </div> <div class="w3-quarter w3-section"> <span class="w3-xlarge">89+</span><br> Happy Clients </div> <div class="w3-quarter w3-section"> <span class="w3-xlarge">150+</span><br> Meetings </div> </div> <button class="w3-button w3-light-grey w3-padding-large w3-section"> <i class="fa fa-download"></i> Download Resume </button> <!-- Grid for pricing tables --> <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3> <div class="w3-row-padding" style="margin:0 -16px"> <div class="w3-half w3-margin-bottom"> <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off"> <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li> <li class="w3-padding-16">Web Design</li> <li class="w3-padding-16">Photography</li> <li class="w3-padding-16">5GB Storage</li> <li class="w3-padding-16">Mail Support</li> <li class="w3-padding-16"> <h2>$ 10</h2> <span class="w3-opacity">per month</span> </li> <li class="w3-light-grey w3-padding-24"> <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button> </li> </ul> </div> <div class="w3-half"> <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off"> <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li> <li class="w3-padding-16">Web Design</li> <li class="w3-padding-16">Photography</li> <li class="w3-padding-16">50GB Storage</li> <li class="w3-padding-16">Endless Support</li> <li class="w3-padding-16"> <h2>$ 25</h2> <span class="w3-opacity">per month</span> </li> <li class="w3-light-grey w3-padding-24"> <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button> </li> </ul> </div> <!-- End Grid/Pricing tables --> </div> <!-- Testimonials --> <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3> <img src="raju.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px"> <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p> <p>Jane Doe saved us from a web disaster.</p><br> <img src="ex.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px"> <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p> <p>No one is better than Jane Doe.</p> <!-- End About Section --> </div> <!-- Portfolio Section --> <div class="w3-padding-64 w3-content" id="photos"> <h2 class="w3-text-light-grey">My Photos</h2> <hr style="width:200px" class="w3-opacity"> <!-- Grid for photos --> <div class="w3-row-padding" style="margin:0 -16px"> <div class="w3-half"> <img src="up1.jpg" style="width:100%"> <img src="up2.jpg" style="width:100%"> <img src="up10.jpg" style="width:100%"> <img src="up3.jpg" style="width:100%"> <img src="raju.jpeg" style="width:100%"> </div> <div class="w3-half"> <img src="up5.jpg" style="width:100%"> <img src="up6.jpg" style="width:100%"> <img src="up7.jpg" style="width:100%"> <img src="up8.jpg" style="width:100%"> <img src="up9.jpg" style="width:100%"> <img src="up11.jpg" style="width:100%"> </div> <!-- End photo grid --> </div> <!-- End Portfolio Section --> </div> <!-- Contact Section --> <div class="w3-padding-64 w3-content w3-text-grey" id="contact"> <h2 class="w3-text-light-grey">Contact Me</h2> <hr style="width:200px" class="w3-opacity"> <div class="w3-section"> <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Dhaka , Bangladesh</p> <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 01782856448</p> <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mahedihasanraju@mail.com</p> </div><br> <p>Lets get in touch. Send me a message:</p> <form action="/action_page.php" target="_blank"> <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p> <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p> <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p> <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p> <p> <button class="w3-button w3-light-grey w3-padding-large" type="submit"> <i class="fa fa-paper-plane"></i> SEND MESSAGE </button> </p> </form> <!-- End Contact Section --> </div> <!-- Footer --> <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge"> <i class="fa fa-facebook-official w3-hover-opacity"></i> <i class="fa fa-instagram w3-hover-opacity"></i> <i class="fa fa-snapchat w3-hover-opacity"></i> <i class="fa fa-pinterest-p w3-hover-opacity"></i> <i class="fa fa-twitter w3-hover-opacity"></i> <i class="fa fa-linkedin w3-hover-opacity"></i> <p class="w3-medium">Powered by <a target="_blank" class="w3-hover-text-blue">Mahedi Hasan Raju</a></p> <!-- End footer --> </footer> <!-- END PAGE CONTENT --> </div>
+    </div>
+         
+             <!-- Page Content --> 
+             <div class="w3-padding-large" id="main"> <!-- Header/Home --> <header class="w3-container w3-padding-32 w3-center w3-black" id="home"> <h1>ALL SLOT</h1><h2 data-text=" ❝ ⍹⍷ ❤️️ぢしΟ ✞ ❞"> ❝ ⍹⍷ ️ ぢしΟ ✞ ❞</h2> </header>  <!-- About Section -->
+                 
+              
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>แหล่งรวมโปรเด็ด ๆ เพจชัวร์ ๆ ให้ทุก คนเลือกตามความต้องการ มีครบทุกค่าย เพจมียอดถอนเท่านั้นที่ลงให้เพื่อนๆ และยังมีบริการ อีกหลายอย่าง เช่น แสกนสล็อต เช็คเพจโกง </h4>  <button onclick="step3()" class="w3-button w3-red">pg</button>  &nbsp;&nbsp;&nbsp;<button onclick="step4()" class="w3-button w3-yellow">slotxo</button> &nbsp;&nbsp;&nbsp;<button onclick="step2()" class="w3-button w3-green">pussy</button>  <br/> <br/><button onclick="step1()" class="w3-button w3-blue">918kiss</button>&nbsp;&nbsp;&nbsp;<button onclick="step5()" class="w3-button w3-white">scan</button>&nbsp;&nbsp;&nbsp; <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-orange">Joker</button>
+                  </div>
+                  
+                  <div class="w3-container">
+                  <div id="id01" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                 <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h3>Joker</h3>
+                  </header>
+                  <div class="w3-container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                  <p>by ben</p>
+                </footer>
+             </div>
+          </div>
+       </div>
+             <div class="w3-container">
+                  <div id="step1" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                 <span onclick="document.getElementById('step1').style.display='none'" 
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h3>918kiss</h3>
+                  </header>
+                  <div class="w3-container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                  <p>by ben</p>
+                </footer>
+             </div>
+          </div>
+       </div>
+               <div class="w3-container">
+                  <div id="step2" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                 <span onclick="document.getElementById('step2').style.display='none'" 
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h3>pussy</h3>
+                  </header>
+                  <div class="w3-container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                  <p>by ben</p>
+                </footer>
+             </div>
+          </div>
+       </div>
+             <div class="w3-container">
+                  <div id="step3" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                 <span onclick="document.getElementById('step3').style.display='none'" 
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h3>pg</h3>
+                  </header>
+                  <div class="w3-container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                  <p>by ben</p>
+                </footer>
+             </div>
+          </div>
+       </div>
+                 <div class="w3-container">
+                  <div id="step4" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                 <span onclick="document.getElementById('step4').style.display='none'" 
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h3>slotxo</h3>
+                  </header>
+                  <div class="w3-container">
+                  <p>Some text..</p>
+                  <p>Some text..</p>
+                  </div>
+                  <footer class="w3-container w3-teal">
+                  <p>by ben</p>
+                </footer>
+             </div>
+          </div>
+       </div>
+  
+  <script>
+    function step1() {
+        document.getElementById('step1').style.display = 'block'
+    };
+    function step2() {
+        document.getElementById('step2').style.display = 'block'
+        
+    };
+    function step3(){
+        document.getElementById('step3').style.display = 'block'
+    };
+    function step4(){
+        document.getElementById('step4').style.display = 'block'
+    }
+
+</script>
   <script>
     function removeLoading() {
       const app = document.querySelector('#app');
@@ -208,9 +334,9 @@ h2::before{
           app.classList.remove('slider-end');
           app.classList.remove('slider');
         }, 800);
-      }, 2000);
+      }, 3000);
     };
-  </script>
+</script>
 </body>
 
 </html>
