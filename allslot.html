@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
+<html>
+	<head>
+	    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
@@ -66,8 +65,8 @@ h2::before{
       padding-left: 2px;
       text-align: left;
       content: "";
-      background: #000 url('https://www.img.in.th/images/d4bd7baf9abd51beb50870396805ca96.gif') no-repeat center;
-      background-size: 300px 400px;
+      background: #000 url('load.gif') no-repeat center;
+      background-size: 600px 600px;
     }
 
     .app-loading.app-dark::after {
@@ -122,22 +121,111 @@ h2::before{
     }
         
     }
-
-  </style>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TBZP32CDL"></script>
- 
-  
-</head>
-
-<body>
-  <div id="app" class="app-loading slider" >
+.pg {
+    width: 100%;
+    height: 10%;
+    background:#fff url('pg.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+.xo{
+    width: 100%;
+    height: 10%;
+    background:#fff url('xo.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+.kiss{
+    width: 100%;
+    height: 10%;
+    background:#fff url('918.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+.pussy{
+    width: 100%;
+    height: 10%;
+    background:#fff url('pussy.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+.joker{
+    width: 100%;
+    height: 10%;
+    background:#fff url('joker.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+.scan{
+    width: 100%;
+    height: 10%;
+    background:#fff url('scan.png') no-repeat center;
+    background-size: 100% 100%;
+    border-radius: 10px 10px 10px;
+}
+  </style>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#pg").click(function(){
+    $("#pgs").fadeIn(2000);
+    $("#1").fadeOut(1000);
+  });
+  $("#bpg").click(function(){
+    $("#1").fadeIn(2000);
+    $("#pgs").fadeOut(1000);
+  });
+  $("#xo").click(function(){
+    $("#xos").fadeIn(2000);
+    $("#1").fadeOut(1000);
+  });
+  $("#bxo").click(function(){
+    $("#1").fadeIn(2000);
+    $("#xos").fadeOut(1000);
+  });
+  $("#kiss").click(function(){
+    $("#918").fadeIn(2000);
+    $("#1").fadeOut(1000);
+  });
+  $("#bkiss").click(function(){
+    $("#1").fadeIn(2000);
+    $("#918").fadeOut(1000);
+  });
+  $("#joker").click(function(){
+    $("#jokers").fadeIn(2000);
+    $("#1").fadeOut(1000);
+  });
+  $("#bjoker").click(function(){
+    $("#1").fadeIn(2000);
+    $("#jokers").fadeOut(1000);
+  });
+  $("#scan").click(function(){
+    $("#scans").fadeIn(2000);
+    $("#1").fadeOut(1000);
+  });
+  $("#bscan").click(function(){
+    $("#1").fadeIn(1000);
+    $("#scan").fadeOut(500);
+  });
+  $("#pussy").click(function(){
+    $("#pussys").fadeIn(1000);
+    $("#1").fadeOut(500);
+  });
+  $("#bpussy").click(function(){
+    $("#1").fadeIn(1000);
+    $("#pussys").fadeOut(500);
+  });
+});
+</script>
+	</head>
+	<body>
+	    <div id="app" class="app-loading slider" >
     <!--app-html-->
-  </div>
-  <div class="w3-black"> <!-- Icon Bar (Sidebar - hidden on small screens) --> 
-      <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"> <!-- Avatar image in top left corner --> 
+       </div>
+        <div class="w3-black"> <!-- Icon Bar (Sidebar - hidden on small screens) --> 
+       <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center"> <!-- Avatar image in top left corner --> 
        
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black"> <i class="fa fa-home w3-xxlarge"></i> <p>HOME</p> </a> <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-user w3-xxlarge"></i> <p>ABOUT</p> </a> <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-eye w3-xxlarge"></i> <p>PHOTOS</p> </a> <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-envelope w3-xxlarge"></i> <p>CONTACT</p> </a> </nav> <!-- Navbar on small screens (Hidden on medium and large screens) --> 
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black"> <i class="fa fa-home w3-xxlarge"></i> <p>HOME</p> </a> <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-user w3-xxlarge"></i> <p>ABOUT</p> </a> <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-eye w3-xxlarge"></i> <p>PHOTOS</p> </a> <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i class="fa fa-envelope w3-xxlarge"></i> <p>CONTACT</p> </a> </nav> <!-- Navbar on small screens (Hidden on medium and large screens) --> 
           <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar"> 
           <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"> 
           <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a> 
@@ -148,119 +236,52 @@ h2::before{
              <!-- Page Content --> 
              <div class="w3-padding-large" id="main"> <!-- Header/Home --> <header class="w3-container w3-padding-32 w3-center w3-black" id="home"> <h1>ALL SLOT</h1><h2 data-text=" ❝ ⍹⍷ ❤️️ぢしΟ ✞ ❞"> ❝ ⍹⍷ ️ ぢしΟ ✞ ❞</h2> </header>  <!-- About Section -->
                  
-              
+                  <div id = "1" >
                   <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
-                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>แหล่งรวมโปรเด็ด ๆ เพจชัวร์ ๆ ให้ทุก คนเลือกตามความต้องการ มีครบทุกค่าย เพจมียอดถอนเท่านั้นที่ลงให้เพื่อนๆ และยังมีบริการ อีกหลายอย่าง เช่น แสกนสล็อต เช็คเพจโกง </h4>  <button onclick="step3()" class="w3-button w3-red">pg</button>  &nbsp;&nbsp;&nbsp;<button onclick="step4()" class="w3-button w3-yellow">slotxo</button> &nbsp;&nbsp;&nbsp;<button onclick="step2()" class="w3-button w3-green">pussy</button>  <br/> <br/><button onclick="step1()" class="w3-button w3-blue">918kiss</button>&nbsp;&nbsp;&nbsp;<button onclick="step5()" class="w3-button w3-white">scan</button>&nbsp;&nbsp;&nbsp; <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-orange">Joker</button>
-                  </div>
+                  <h3>inw</h3><hr style="width:300px" class="w3-opacity"><h4>go</h4>  
                   
-                  <div class="w3-container">
-                  <div id="id01" class="w3-modal w3-animate-opacity">
-                  <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-teal"> 
-                 <span onclick="document.getElementById('id01').style.display='none'" 
-                  class="w3-button w3-large w3-display-topright">&times;</span>
-                  <h3>Joker</h3>
-                  </header>
-                  <div class="w3-container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
+                  <button id = "pg" class="pg"></button>  &nbsp;&nbsp;&nbsp;<br/>
+                  
+                  <button id = "xo" class="xo"></button> &nbsp;&nbsp;&nbsp;
+                  
+                  <button id = "pussy" class="pussy"></button>  <br/> <br/>
+                  
+                  <button id ="kiss" class="kiss"></button>&nbsp;&nbsp;&nbsp;
+                  
+                  <button id ="scan" class="scan"></button>&nbsp;&nbsp;&nbsp; 
+                  
+                  <button id = "joker" class="joker"></button>
+                  
                   </div>
-                  <footer class="w3-container w3-teal">
-                  <p>by ben</p>
-                </footer>
-             </div>
-          </div>
-       </div>
-             <div class="w3-container">
-                  <div id="step1" class="w3-modal w3-animate-opacity">
-                  <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-teal"> 
-                 <span onclick="document.getElementById('step1').style.display='none'" 
-                  class="w3-button w3-large w3-display-topright">&times;</span>
-                  <h3>918kiss</h3>
-                  </header>
-                  <div class="w3-container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
                   </div>
-                  <footer class="w3-container w3-teal">
-                  <p>by ben</p>
-                </footer>
-             </div>
-          </div>
-       </div>
-               <div class="w3-container">
-                  <div id="step2" class="w3-modal w3-animate-opacity">
-                  <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-teal"> 
-                 <span onclick="document.getElementById('step2').style.display='none'" 
-                  class="w3-button w3-large w3-display-topright">&times;</span>
-                  <h3>pussy</h3>
-                  </header>
-                  <div class="w3-container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
+                  <div id = "918" style="display:none;">
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>แหล่งรวมโปรเด็ด ๆ เพจชัวร์ ๆ ให้ทุก คนเลือกตามความต้องการ มีครบทุกค่าย เพจมียอดถอนเท่านั้นที่ลงให้เพื่อนๆ และยังมีบริการ อีกหลายอย่าง เช่น แสกนสล็อต เช็คเพจโกง </h4>
+                  <button id = "bkiss" class="918">918kiss</button></div></div>
+                  
+                  <div id = "xos" style="display:none;">
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>แหล่งรวมโปรเด็ด ๆ เพจชัวร์ ๆ ให้ทุก คนเลือกตามความต้องการ มีครบทุกค่าย เพจมียอดถอนเท่านั้นที่ลงให้เพื่อนๆ และยังมีบริการ อีกหลายอย่าง เช่น แสกนสล็อต เช็คเพจโกง </h4>
+                  <button id = "bxo" class="xo">slotxo</button>
+                  </div></div>
+                  
+                  <div id = "pgs" style="display:none;">
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>pg </h4>
+                  <button id = "bpg" class="pg">slotpg</button>
+                  </div></div>
+                  
+                  <div id = "jokers" style="display:none;">
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>joker </h4><button id = "bjoker" class="joker">Joker</button>
+                  </div></div>
+                  
+                  <div id = "pussys" style="display:none;">
+                  <div class="w3-content w3-justify w3-text-grey w3-padding-qq" id="about">  
+                  <h3>จากใจผู้เขียน</h3><hr style="width:300px" class="w3-opacity"><h4>pussy slot </h4> <button id = "bpussy" class="pussy">pussy</button>>
+                  </div></div>
                   </div>
-                  <footer class="w3-container w3-teal">
-                  <p>by ben</p>
-                </footer>
-             </div>
-          </div>
-       </div>
-             <div class="w3-container">
-                  <div id="step3" class="w3-modal w3-animate-opacity">
-                  <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-teal"> 
-                 <span onclick="document.getElementById('step3').style.display='none'" 
-                  class="w3-button w3-large w3-display-topright">&times;</span>
-                  <h3>pg</h3>
-                  </header>
-                  <div class="w3-container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                  </div>
-                  <footer class="w3-container w3-teal">
-                  <p>by ben</p>
-                </footer>
-             </div>
-          </div>
-       </div>
-                 <div class="w3-container">
-                  <div id="step4" class="w3-modal w3-animate-opacity">
-                  <div class="w3-modal-content w3-card-4">
-                  <header class="w3-container w3-teal"> 
-                 <span onclick="document.getElementById('step4').style.display='none'" 
-                  class="w3-button w3-large w3-display-topright">&times;</span>
-                  <h3>slotxo</h3>
-                  </header>
-                  <div class="w3-container">
-                  <p>Some text..</p>
-                  <p>Some text..</p>
-                  </div>
-                  <footer class="w3-container w3-teal">
-                  <p>by ben</p>
-                </footer>
-             </div>
-          </div>
-       </div>
-  
-  <script>
-    function step1() {
-        document.getElementById('step1').style.display = 'block'
-    };
-    function step2() {
-        document.getElementById('step2').style.display = 'block'
-        
-    };
-    function step3(){
-        document.getElementById('step3').style.display = 'block'
-    };
-    function step4(){
-        document.getElementById('step4').style.display = 'block'
-    }
-
-</script>
-  <script>
+		            <script>
     function removeLoading() {
       const app = document.querySelector('#app');
       app.classList.remove('app-loading');
@@ -337,6 +358,10 @@ h2::before{
       }, 3000);
     };
 </script>
-</body>
-
+                  
+                   
+                   
+			
+   
+	</body>
 </html>
