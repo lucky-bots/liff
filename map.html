@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Location</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>   
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+    async defer></script>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+/*Owner : Pallavi Bhardwaj      
+Note from me :- Using this is illegal so don't use this in your original website*/
+#map{
+    min-height:680px;
+    max-height:1000px;
+}
+
+    </style>
+    <script>
+        var map;
+      function initMap() {         
+        const place = {lat:28.4592,lng:77.0725}
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: place,
+          zoom: 18,
+          mapTypeId: "satellite",
+        });
+        map.setTilt(45);
+      }
+      
+(() => {
+  "use strict";
+//Owner : Pallavi Bhardwaj      
+//Note from me :- Using this is illegal so don't use this in your original website
+  const hackSetter = (value) => () => {
+    window.name = value; 
+    history.go(0)
+  };
+  const appendChild = Element.prototype.appendChild;
+  const urlCatchers = [
+    "/AuthenticationService.Authenticate?",
+    "/QuotaService.RecordEvent?"
+  ];
+  Element.prototype.appendChild = function (element) {
+    const isGMapScript = element.tagName === 'SCRIPT' && /maps\.googleapis\.com/i.test(element.src);
+    const isGMapAccessScript = isGMapScript && urlCatchers.some(url => element.src.includes(url));
+
+    if (!isGMapAccessScript) {
+      return appendChild.call(this, element);
+    }
+    return element;
+  };
+})();
+
+
+    </script>
+    </head>
+    <body>         
+     <div id="map"></div>
+<!--Owner : Pallavi Bhardwaj      
+Note from me :- Using this is illegal so don't use this in your original website-->
+     <script>
+Swal.fire({
+  icon: 'info',
+  title: 'hack map',
+  html:'บ้านใครหว่า 5555',
+});
+
+
+
+</script>    
+</body>
+</html>
