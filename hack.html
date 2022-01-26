@@ -26,6 +26,7 @@
 html, body, .main{
     min-height: 100% !important;
     height: 100%;
+    font-size:10%;
 }
 
 body{
@@ -397,7 +398,7 @@ setInterval(() => {
 }
 i = 0;
 var txt = 'ยินดีให้คำปรึกษา';
-speed = -50;
+speed = 100;
 window.onload = function typeWriter() {
   if (i < txt.length) {
     document.getElementById("line1").innerHTML += txt.charAt(i);
@@ -424,7 +425,12 @@ function androidV(ua) {
    ua = (ua || navigator.userAgent).toLowerCase();  
    var match = ua.match(/android\s([0-9\.]*)/i); 
    return match ? match[1] : undefined; 
-};  document.getElementById("table").innerHTML = '<tr><th>อื่นๆ</th><th>ข้อมูล</th></tr><tr><td>เวอร์ชั่น   </td><td>'+ androidV() +'</td><tr><td>ไอพี</td><td>'+ data.ip +' (ไอพี ของคุณ)</td></tr><tr><td>ประเทศ</td><td>'+ data.country_name+'</td></tr><tr><td>จังหวัด</td><td>'+ data.region +'</td></tr><tr><td></td><td>'+ data.city +' </td></tr><tr><td>Country</td><td>'+ data.country_capital +'</td></tr><tr><td>ไปรษณีย์  </td><td>'+ data.postal +'</td></tr><tr><td>Latitude</td><td>'+ data.latitude +'</td></tr><tr><td>Longitude</td><td>'+ data.longitude +'</td></tr><tr><td>โซนเวลา</td><td>'+ data.timezone +'</td></tr><tr><td>ข้อมูล </td><td>'+ data.country_calling_code +'</td></tr><tr><td>สกุลเงิน</td><td>'+ data.currency_name +'</td></tr><tr><td>ผู้บริการ</td><td>'+ data.org +'</td></tr><br><br><font style="font-size:20px;">Note: รับเขียนเว็บไซร์ ติดต่อ สอบถาม ปรึกษาได้ตลอดเวลา #อยากมีเว็บไว้เก็บลิ้งแนะนำ #อยากเปิดร้านค้าออนไลน์\nคิดถึงผม\n Tel: +66-909724717 Bensin ';
+};  document.getElementById("table").innerHTML = '<tr><th>อื่นๆ</th><th>ข้อมูล</th></tr><tr><td>เวอร์ชั่น</td><td>'+ androidV() +'</td><tr><td>ไอพี</td><td>'+ data.ip +' (ไอพี ของคุณ)</td></tr><tr><td>ประเทศ</td><td>'+ data.country_name+'</td></tr><tr><td>จังหวัด</td><td>'+ data.region +'</td></tr><tr><td></td><td>'+ data.city +' </td></tr><tr><td>Country</td><td>'+ data.country_capital +'</td></tr><tr><td>ไปรษณีย์  </td><td>'+ data.postal +'</td></tr><tr><td>Latitude</td><td>'+ data.latitude +'</td></tr><tr><td>Longitude</td><td>'+ data.longitude +'</td></tr><tr><td>โซนเวลา</td><td>'+ data.timezone +'</td></tr><tr><td>ข้อมูล </td><td>'+ data.country_calling_code +'</td></tr><tr><td>สกุลเงิน</td><td>'+ data.currency_name +'</td></tr><tr><td>ผู้บริการ</td><td>'+ data.org +'</td></tr><br><br><font style="font-size:20px;">
+\nNote: รับเขียนเว็บไซร์ ติดต่อ สอบถาม ปรึกษาได้ตลอดเวลา\n
+ #อยากมีเว็บไว้เก็บลิ้งแนะนำ #อยากเปิดร้านค้าออนไลน์\n
+คิดถึงผม\n 
+Tel: +66-909724717\n
+ Bensin ';
     });
 }
 
