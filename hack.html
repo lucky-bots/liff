@@ -1,33 +1,54 @@
+<!-- Created by Bobby Gatto -->
+
 <!-- Created by Pallavi Bhardwaj -->
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>H A C K Y o U B y M e</title>
+        <title>Location</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>   
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <style>
-    #table {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+        /* Created by Bobby Gatto */
+
+/* Created by Pallavi Bhardwaj */
+#animation{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body, .main{
+    min-height: 100% !important;
+    height: 100%;
+}
+
+body{
+    background-color:#000;
+}
+
+#table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
     font-size:13px;
-    color:#000;
-    background-color:#fff;
+    color:lime;
+    margin:10% 0 10% 0;
+    display:none;
+    border-style:dotted;
+    padding:10px;
 }
 
-#table td,#table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.no-border {
-  border: 0 !important;
+#table th{
+    text-align:left;
+    
 }
 
 #table td:nth-child(odd) {
@@ -38,47 +59,378 @@
     font-weight:500;
 }
 
-#table tr:hover {
-    background-color: #ddd;
+#main{
+    display: none;
+    height:100%;
+    width:100%;
+    background-color:#000;
+    overflow-y:scroll;
+    color:lime;
+    font-size:10px;
+    padding:10px 0 0 10px;
 }
 
-#table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #1E90FF;
-    color: white;
-    color:#fff;
+#animation{
+    display:none;
 }
-   </style>
-</head>
+
+pre{
+    color:red;
+    font-size:13px;
+    margin-left:20px;
+}
+
+#code{
+    display:none;
+}
+
+#line2{
+    display:none;
+}
+
+#code2{
+    display:none;    
+}
+
+.red{
+    color:red;
+}
+.blue{
+    color:dodgerblue;
+}
+.white{
+    color:white;
+}
+
+.progress,.progress1{
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: none;
+  height: 40px;
+  width: 100%;
+}
+
+#progress{
+    display:none;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  transition-delay:3s;
+  box-shadow: 0 10px 40px -10px lime;
+  border-radius: 100px;
+  background: lime;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.swal-overlay {
+  background-color: rgba(43, 165, 137, 0.45);
+}
+
+.swal-modal {
+  background-color: #343434;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  font-size: 12px;
+  border: 1px solid #3e549a;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    Margin:0px;
+    Padding:0px;
+    font-family: 'Poppins', sans-serif;
+}
+Body{
+   Background-color:black; 
+}
+.center{
+    Position:absolute;
+    top:50%;
+    left:50%;
+    Transform:translate(-50%,-50%);
+}
+.loader{
+    width:255px;
+    height:50px;
+    border:3px solid green;
+    Border-radius:10px;
+    Display:flex;
+    Align-items:center;
+    Justify-content:center;
+    
+}
+.inner{
+    width:0px;
+    height:40px;
+    Background:green;
+    Animation:animate 3s infinite linear;
+    
+    Position:absolute;
+    left:10px;
+}
+@keyframes animate{
+    100%{
+        width:245px;
+    }
+}
+H3{
+    Text-align:center;
+    Margin-top:50px;
+    color:green;
+}
+.link-4{ 
+ 
+  width:250px;
+  font-weight:999;
+  height:30px ;
+  font-size:15px;
+  padding-top:5px;
+  border-radius:5px;
+ margin-bottom:5vw;
+ text-decoration:none;
+ Z-index:100; Background-color:rgba(255,255,255,0.04);
+Color:white;
+Backdrop-filter:blur(3px);
+Text-align:center;
+Position:absolute;
+top:90%;
+left:50%;
+Transform:translate(-50%,-50%);
+Border:2px solid rgba(255,255,255,0.04);
+}
+h2{
+    position: relative;
+    font-size: 10vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+}
+h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 4.6s linear infinite;
+}
+#creat,#creat1,#creat3,#creat4,#creat5,#creat6,#creat2,#creat7{
+    display: none;
+}
+</style>
+    </head>
     <body>
-     <table id="table">         
+        <div class="center">
+         <div class="loader" id="load">
+             <div class="inner"></div>
+         </div>
+         <div id="creat">
+            <h2 data-text="Creative...">Creative...</h2></div><div id="creat1">
+            <h2 data-text="Bensin..">Bensin..</h2></div>
+         <div id="creat2">
+            <h2 data-text="รับเขียนเว็บ">รับเขียนเว็บ</h2></div><div id="creat3">
+            <h2 data-text="อยากมีเว็บ">อยากมีเว็บ</h2></div>
+            
+         <div id="creat4">
+            <h2 data-text="ร้านค้า">ร้านค้า</h2></div><div id="creat5">
+            <h2 data-text="คิดถึงเบน ">คิดถึงเบน</h2></div>
+          <div id="creat6">
+            <h2 data-text="0909724717">0909724717</h2></div><div id="creat7">
+            <h2 data-text="Bensin..">Bensin..</h2></div>
+     </div>   
+      
+     <bgsound src="คลิป.mp3">  
+     <audio id="myAudio" autoplay>
+  <source src="คลิป.mp3" type="audio/mp3">
+</audio>
+<!--pre>
+           
+███████████████████████████████████
+█─█─██▀▄─██─▄▄▄─█▄─█─▄█▄─▄▄─█▄─▄▄▀█
+█─▄─██─▀─██─███▀██─▄▀███─▄█▀██─▄─▄█
+▀▄▀▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀
+       </pre-->
+       <table id="table"></table>   
+     <canvas id="animation"></canvas>
+     <div id="main">
+        รับเขียนเว็บไซร์ ติดต่สอบถาม ปรึกษาได้ตลอดเวลา <br>
+        ผม <br><br>
+        <p id="line1">
+            <font class="red"> Tel: +66-909724717 
+            </font><font class="blue">~</font>Bensin<font class="white"></font>
+        </p>
+        <br>        
+        <p id="code">
+ #อยากมีเว็บไว้เก็บลิ้งแนะนำ <conio.h><br>
+#อยากเปิดร้านค้าออนไลน<stdlib.h><br>
+ ์คิดถึงผม<conio.h><br>
+<stdlib.h><br>
+<br>
+  <br>
+  0909724717  
+<br>
+  <br>
+ <br> <!--div class="progress"><div class="progress-value"></div></div-->          
+      <p id="line2">
+            <font class="red">kali@root:</font><font class="blue">~</font><font class="white">$</font> nmap -sV <font id="nmap"></font>
+        </p>  
+     <p id="code2">
+      <font id="startnmap"></font> <br>
+
+<br>
+         
+<div id="progress"><div class="progress-value"></div></div>
+     </p>
+     </div> 
+     
      <script>
-Swal.fire({
-  title: 'โทรศัพท์มึงโดนแฮ็กหละสาส',
-  iconHtml: '<img src="https://www.pngplay.com/wp-content/uploads/2/Hacker-PNG-Background.png" height="100px" width="100px"/>',
-  text:"มึงพลาดแล้วที่คลิ๊ก อยากลองของหรอ 5555\n คลิ๊ก ok เลย มึงได้รู้ว่า โดนจริงป่าว 555",
-  customClass: {
-    icon: 'no-border'
+
+globalThis.time = 0;
+
+window.addEventListener('click', function   (){
+    document.getElementById('load').style.display = 'block';
+        
+    var audio = document.getElementById("myAudio");
+    audio.play()
+    });
+function timing(){
+    if (time ==4) {
+        document.getElementById('load').style.display = 'none';
+        document.getElementById('creat').style.display = 'block';
+        
+    }
+    else if (time== 7){
+    document.getElementById('creat').style.display = 'none';
+    document.getElementById('creat1').style.display = 'block';
+     
+    }
+    else if (time== 10){
+    document.getElementById('creat1').style.display = 'none';
+    document.getElementById('creat2').style.display = 'block';
+     
+    }
+    else if (time== 13){
+    document.getElementById('creat2').style.display = 'none';
+    document.getElementById('creat3').style.display = 'block';
+     
+    }
+    else if (time== 16){
+    document.getElementById('creat3').style.display = 'none';
+    document.getElementById('creat4').style.display = 'block';
+     
+    }
+    else if (time== 19){
+    document.getElementById('creat4').style.display = 'none';
+    document.getElementById('creat5').style.display = 'block';
+     
+    }
+    else if (time== 22){
+    document.getElementById('creat5').style.display = 'none';
+    document.getElementById('creat6').style.display = 'block';
+    
+     
+    }
+    else if (time== 25){
+    document.getElementById('creat6').style.display = 'none';
+    
+    }
+    else if (time== 27){
+document.getElementById('main').style.display = 'block';    
+     
+    }
+    else if (time ==55){
+     document.getElementById('main').style.display = 'none'; 
+      
+       document.body.style.background = "#000";
+       document.getElementById('table').style.display = 'block';
+    }
+    else if (time ==60){
+        animation()
+     document.getElementById('table').style.display = 'none'; 
+      
+       document.body.style.background = "#000";
+       document.getElementById('animation').style.display = 'block';
+    }
+    else{
+        
+    }
+    time++;
+}
+setInterval(timing,1000);
+function Animation(){
+hacker = document.getElementById('animation');
+const s = window.screen;
+const w = (hacker.width = s.width);
+const h = (hacker.height = (s.height-50));
+const ctx = hacker.getContext("2d");
+const p = Array(Math.floor(w / 10) + 1).fill(0);
+const random = (items) => items[Math.floor(Math.random() * items.length)];
+const hex = "ในวันที่ฝนพร่ำ อยากหนีฝนพร่ำไปกอดเทอ".split("");
+
+setInterval(() => {
+    ctx.fillStyle = "rgba(0, 0, 0, .01)";
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = "lime";
+    p.map((v, i) => {
+        ctx.fillText(random(hex), i * 10, v);
+        p[i] = v >= h || v > 50 + 10000 * Math.random() ? 0 : v + 10;
+    });
+
+}, 1000 / 30);
+}
+i = 0;
+var txt = 'ยินดีให้คำปรึกษา';
+speed = -50;
+window.onload = function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("line1").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
-});
+  else{ document.getElementById('code').style.display = 'block';
+  document.getElementsByClassName('progress')[0].style.display = 'flex';
+  }
+};
+
+
 </script>
-<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
- <script>
+<script> 
+
 function getIP(json) {
 
 var ipad = json.ip;
+document.getElementById("nmap").innerHTML = ipad;
+document.getElementById("startnmap").innerHTML = ipad;
 link = "https://ipapi.co/"+ipad+"/json/"
 $.getJSON(link, function(data) {
 function androidV(ua) { 
    ua = (ua || navigator.userAgent).toLowerCase();  
-   var match = ua.match(/android\s([0-9\.]*)|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i); 
+   var match = ua.match(/android\s([0-9\.]*)/i); 
    return match ? match[1] : undefined; 
-};          document.getElementById("table").innerHTML = '<tr><th>About</th><th>Information</th></tr><tr><td>Android Version</td><td>'+ androidV() +'</td><tr><td>IP Adress</td><td>'+ data.ip +' (It may vary depending on your network...)</td></tr><tr><td>Country</td><td>'+ data.country_name+'</td></tr><tr><td>Region</td><td>'+ data.region +'</td></tr><tr><td>City</td><td>'+ data.city +' (It may be not exact because of ISP Provider Server location...)</td></tr><tr><td>Country Capital</td><td>'+ data.country_capital +'</td></tr><tr><td>Postal Code</td><td>'+ data.postal +'</td></tr><tr><td>Latitude</td><td>'+ data.latitude +'</td></tr><tr><td>Longitude</td><td>'+ data.longitude +'</td></tr><tr><td>TimeZone</td><td>'+ data.timezone +'</td></tr><tr><td>Phone Code</td><td>'+ data.country_calling_code +'</td></tr><tr><td>Currency</td><td>'+ data.currency_name +'</td></tr><tr><td>ISP</td><td>'+ data.org +'</td></tr>';
+};  document.getElementById("table").innerHTML = '<tr><th>อื่นๆ</th><th>ข้อมูล</th></tr><tr><td>เวอร์ชั่น   </td><td>'+ androidV() +'</td><tr><td>ไอพี</td><td>'+ data.ip +' (ไอพี ของคุณ)</td></tr><tr><td>ประเทศ</td><td>'+ data.country_name+'</td></tr><tr><td>จังหวัด</td><td>'+ data.region +'</td></tr><tr><td></td><td>'+ data.city +' </td></tr><tr><td>Country</td><td>'+ data.country_capital +'</td></tr><tr><td>ไปรษณีย์  </td><td>'+ data.postal +'</td></tr><tr><td>Latitude</td><td>'+ data.latitude +'</td></tr><tr><td>Longitude</td><td>'+ data.longitude +'</td></tr><tr><td>โซนเวลา</td><td>'+ data.timezone +'</td></tr><tr><td>ข้อมูล </td><td>'+ data.country_calling_code +'</td></tr><tr><td>สกุลเงิน</td><td>'+ data.currency_name +'</td></tr><tr><td>ผู้บริการ</td><td>'+ data.org +'</td></tr><br><br><font style="font-size:20px;">Note: รับเขียนเว็บไซร์ ติดต่อ สอบถาม ปรึกษาได้ตลอดเวลา #อยากมีเว็บไว้เก็บลิ้งแนะนำ #อยากเปิดร้านค้าออนไลน์\nคิดถึงผม\n Tel: +66-909724717 Bensin ';
     });
 }
 
-</script>   
-</body>
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    </body>
 </html>
