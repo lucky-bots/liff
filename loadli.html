@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <META HTTP-EQUIV="Refresh" CONTENT="5;URL=live22.html">
+  <style>
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+body {
+    font-family: monospace;
+    background: #000;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 2px solid #00fff5;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #00fff5;
+    border-radius: 50%;
+    bottom: -10px;
+    right: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5
+}
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+#myDiv {
+  display: none;
+  text-align: center;
+       }
+  </style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+ <!-- จบ โหลด -->
+ 
+ 
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,212 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-          <title>เมสเสจ อนิเมชั่น สไตล์</title> 
-  <script src="https://code.jquery.com/jquery-3.1.1.js"></script> 
- <script src="https://cdn.rawgit.com/davatron5000/Lettering.js/master/jquery.lettering.js"></script> 
- <link rel="stylesheet" type="text/css" href="style.css"> 
- 
- <style> 
- @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
- // Created by Niush Sitaula
-  body{
-    background-filter:blur(100px);
-    height:100%;
-    width:100%;
-    font-family: 'Pattaya', sans-serif;  
+    <head>
+   <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Text Animation</title>
+   <link rel="stylesheet" href="style.css">
+   <META HTTP-EQUIV="Refresh" CONTENT="10;URL=home.html">
+   <style>
+*{
+padding:0;
+margin:0;
+font-family:Courier New;
 }
-button { display: none;
-    width: 80%; 
-    background-color: Green;
-    border-radius: 80px 80px 80px;
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
-    color: black;
-    padding: 10px ; 
-    margin: 16px auto }
- div {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 1em;
-    color: white;
-    text-align:center ;
+body {
+background:#000;
+    
 }
-  div u{
-    font-size:10px;
-    letter-spacing:2px;
+.container {
+text-align:center; 
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:100%;
+    
 }
-   p {
-    font-weight: bold;
-    color: Green;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.container span{
+display:block ;
+text-transform:uppercase ;
 }
-span {
-    color: transparent;
-    text-shadow: 0 0 30px Green;
-    -webkit-transition: all 0.7s 0.3s ease;
-    -o-transition: all 0.7s 0.3s ease;
-    transition: all 0.7s 0.3s ease;
+.text1 {
+font-size:45px;
+color:white;
+font-weight:700;
+letter-spacing:4px;
+margin-bottom:20px;
+background:black;
+position:relative;
+animation:text 5s 1;
 }
-span:hover {
-    text-shadow: 0 0 0 #ffd700;
-    -webkit-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+.text2 {
+font-size:30px;
+color:#34ebd2;
+animation:texts 5s 5;
+animation-delay:4s;
 }
-   @-webkit-keyframes blurout {
-    from {
-        text-shadow: 0 0 30px Green;
-    }
-    to {
-        text-shadow: 0 0 0 Green;
-    }
+@keyframes text{
+0%{
+    color:black;
+    margin-bottom:-40px;
 }
-  @keyframes blurout {
-    from {
-        text-shadow: 0 0 30px Green;
-    }
-    to {
-        text-shadow: 0 0 0 Green;
-    }
-}   
-
-  </style>
-<script>
-$(document).ready(function() {
-    $(".focus").lettering();
-    resetAnimation();
-});
-
-function removeAnimation() {
-    var myFocusText = $(".focus").text();
-    for (var i = 1; i <= myFocusText.length; i++) {
-        $(".char" + i).css({ "animation-iteration-count": "1" });
-    }
+30%{
+    letter-spacing:12px;
+    margin-bottom:-40px;
+}
+85%{
+    letter-spacing:4px;
+    margin-bottom:-40px;
+    
+}
 }
 
-function resetAnimation() {
-    var myFocusText = $(".focus").text();
-
-    for (var i = 1; i <= myFocusText.length; i++) {
-        var randomNum = Math.random() * (2 - 0.5) + 0.5;
-        $(".char" + i).css({
-            animation: "blurout " + randomNum + "s ease-out infinite forwards alternate"
-        });
-    }
-    isPaused = false;
-    $(".pause").text("Pause Animation");
+@keyframes texts{
+0%{
+    color:white;
 }
-
-var isPaused = false;
-function pauseAnimation(e) {
-    if (!isPaused) {
-        var myFocusText = $(".focus").text();
-        for (var i = 1; i <= myFocusText.length; i++) {
-            $(".char" + i).css({ "animation-play-state": "paused" });
-        }
-        $(".pause").text("Play Animation");
-        isPaused = true;
-    } else {
-        $(".pause").text("Pause Animation");
-        playAnimation();
-        isPaused = false;
-    }
+10%{
+    color:#ff0000;
 }
-
-function playAnimation() {
-    var myFocusText = $(".focus").text();
-    for (var i = 1; i <= myFocusText.length; i++) {
-        $(".char" + i).css({ "animation-play-state": "running" });
-    }
+25%{
+    color:#ff00ff;
 }
-</script>
- </head> 
- <body onload="myFunction()" style="margin:0;">
+40%{
+    color:#40ff00;
 
-<div id="loader"></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">  
-<p class="focus" id="focus">ขอต้อนรับเข้าสู่....</p> <p class="focus" id="focus1">แชร์ ไร้ขีดจำกัด</p> <p class="focus" id="focus2">เบนซิน</p> <u>อนิเมชั่น สไตล์ เบน</u> </div> <a href='https://liff.line.me/1656633739-jDWO6pWv'">โปรไฟล์</a><br/> <a href = "https://liff.line.me/1656633739-29ex3geA"> แสกน </a><br/><br/> <button id="btnShare" onclick="sendShare()">แชร์ ลืฟ</button> <button id="btnLogin" onclick="liff.login()">Log In</button> <button id="btnLogOut" onclick="logOut()">Log Out</button>
-</div>
- <script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
 }
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
+55%{
+    color:#ffff00;
 }
-</script>
-<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> 
-<script src="myscripts.js"></script> 
-<script> 
-async function sendShare() { 
-const result = await liff.shareTargetPicker([ 
-{ "type": "flex", 
-"altText": "มีคนกล่าวถึงมึง", 
-"contents": 
-
-{
-  "type": "bubble",
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "image",
-        "url": "https://www.img.in.th/images/50a7c919d2de3776219c173cef2c80a6.png",
-        "size": "full",
-        "aspectMode": "cover",
-        "aspectRatio": "2:1",
-        "gravity": "center",
-        "animated": true,
-        "action": {
-          "type": "uri",
-          "label": "action",
-          "uri": "https://liff.line.me/1656633739-NjWEVAWZ"
-        }
-      },
-      {
-        "type": "text",
-        "text": "help",
-        "align": "center",
-        "color": "#000000"
-      }
-    ],
-    "paddingAll": "0px",
-    "backgroundColor": "#000000"
-  }
+70%{
+    color:#ff8000;
 }
-
-
- } ]) 
- if (result) { 
- alert(`[${result.status}] ส่งสำเร็จ`) 
-} 
- else { const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
-if (minorVer === undefined) 
-{ alert('ShareTargetPicker was canceled in external browser') 
-return 
+85%{
+    color:#0040ff;
 }
-
-if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) { alert('การแชร์ถูก ยกเลิก') } } 
-} 
-function logOut() { 
-liff.logout() 
-window.location.reload() 
-} 
-async function main() { 
-await liff.init({ liffId: "1656633739-NjWEVAWZ" }) 
-if (liff.isLoggedIn()) { 
-document.getElementById("btnShare").style.display = "block" 
-if (!liff.isInClient()) { 
-document.getElementById("btnLogOut").style.display = "block" } } else { document.getElementById("btnLogin").style.display = "block" } } main() 
-</script>
-</body>
+}
+   </style>
+    </head>
+    <body>
+        <div class="container">
+        <span class="text1">welcome to</span>
+        <span class="text2">All Pro Slot</span>
+        
+        </div>
+    </body>
 </html>
