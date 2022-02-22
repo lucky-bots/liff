@@ -1,98 +1,257 @@
-<html>
- <head>
-  <title>ALL PRO PS</title> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <link rel="stylesheet" href="css/styles.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
    <script type="text/javascript" src="js/jquery.js">
    </script>
- </head>
- <body class="w3-light-grey w3-content" style="max-width:1600px"> 
-  <div class="w3-top"> 
-   <div class="w3-bar w3-wide w3-padding w3-card" style=" background-image:url(img/h.png);"> 
-    <a href="#home" class="w3-bar-item w3-button w3-hover-blue w3-hover-text-red" style="margin-left:200px; margin-top:-5px;"><b>APS</b> </a> 
-     <span class="w3-button w3-lage w3-hover-text-red w3-hover-green" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <!-- Float links to the right. Hide them on small screens --> 
-    <div class="w3-right w3-hide-small"> 
-     <a href="#projects" class="w3-bar-item w3-button">Projects</a> 
-     <a href="#about" class="w3-bar-item w3-button">About</a> 
-     <a href="#contact" class="w3-bar-item w3-button">Contact</a> 
-    </div> 
-   </div> 
-  </div> 
-  <!-- Overlay effect when opening sidebar on small screens --> 
  
-  <!-- !PAGE CONTENT! --> 
-  <div class="w3-main" style="margin-left:300px"> 
-   <!-- Header --> 
-   <header id="portfolio"> 
-    <a href="#"><img src="" style="width:6px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> 
-    <div class="w3-container"> 
-     <img src="img/logoo.png" style="margin-top:10px;"> 
-     <div class="w3-section w3-bottombar w3-padding-16"> 
-     <h1><b>PUSSY</b></h1>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button> 
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button> 
-     </div> 
-    </div> 
-   </header> 
-   <!-- First Photo Grid--> 
+ 
+  <title>ALL PRO</title>
+  <style>
+@font-face {
+    font-family: 'iannnnn-dogregular';
+    src: url('iannnnn-dog-light-webfont.woff2') format('woff2'),
+         url('iannnnn-dog-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+    body{
+        background: green;
+        font-family: 'iannnnn-dogregular';
+    }
+    
+   h1 {
+   font-family: 'iannnnn-dogregular';
+  color: #fff;
+  text-shadow: 4px 4px 4px #000000;
+  letter-spacing:2px;
+}
+    .app-loading::after {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      padding-left: 2px;
+      text-align: left;
+      content: "";
+      background:#241C23 url('img/load8.gif') no-repeat center;
+      background-size: 350px 250px;
+    }
+   .app-loading.app-dark::after {
+      background-color: #000;
+      background-image: url('/img/load10.gif');
+    }
+
+    .slider::before {
+      z-index: 1000001;
+      padding-left: 2px;
+      background-color: #FFD700;
+      width: 150%;
+      height: 200%;
+      content: "";
+      transform: translateX(-130%) skewX(-10deg);
+      transition: transform 1.2s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .slider-end::before {
+      transform: translateX(130%);
+    }
+    .head{
+        width: 140%;
+        height: 55px;
+        margin-top: 0px;
+        margin-left: -10px;
+        margin-right: -10px;
+        position: flex;
+    }
+  .navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 17px;
+  }
+  iframe, #back{
+      margin-left: 70px;
+      margin-bottom: 30px;
+  }
   
-   <div class="w3-row-padding"> 
-   <center>
-      <div id="pg"> 
-   <div class="w3-row-padding"> 
-   <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-    <img src="img/rma.png" class="pro">
-   <a href="https://d20gjgsn2f0jqy.cloudfront.net/Iamrobot/6203f6545d54a5001b9870e6.html" ><br/><h1><b>RMA</b></h1></a><br/>
-   
-   </div>
-   </div>
-   <button  class="benback" style="background-image:url(img/back.png);" onclick="window.location='loadback.html'"></button>
-   </div>
-   <br/><br/><br/>
-   </center>
-   <!-- Footer --> 
-   
-   <footer class="navbar" style="background-image:url(img/foots.png);">
- <a href="#home" class="w3-bar-item w3-button w3-hover-blue w3-hover-text-red" style="margin-left:200px; margin-top:15px;"></a>
-</div>
-   </footer> 
-  
-   <!-- End page content --> 
+    .pro{
+    border-radius: 9%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 5px 5px 5px #000;
+    margin-left: 15px;
+    background-color:rgba(0, 0, 0, 0.9);
+    height: 200px;
+    width: 150px;
+    background-position: center;
+}
+.ben{
+    background-image:url(img/so.png);
+    width:100%;
+    height:100px;
+    background-position: center;
+    border-radius: 5%;
+    margin-left: 0;
+    margin-top: -50px;
+}
+.been{
+    height:60px;
+    width: 150px;
+    background-position: center;
+    border-radius: 5%;
+    
+}
+.benn{
+    border-radius: 20px 20px 20px 20px ;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #ACACAC;
+    box-shadow: 5px 5px 5px #000;
+    background-color:rgba(0, 0, 0, 0.9);
+    height: 70px;
+    width: 50px;
+    margin-bottom:20px;
+}
+.benback{
+    border-radius: 9%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 5px 5px 5px #000;
+    background-color:rgba(0, 0, 0, 0.9);
+    height: 70px;
+    width: 55%;
+    background-position: center;
+}
+
+.mar{
+    margin-top: 65px;
+    margin-bottom: 30px;
+}
+.ben-padding{
+    left: 0;
+}
+h5, h1{
+    text-align: center;
+}
+  </style>
+ 
+</head>
+
+<body>
+  <div id="app" class="app-loading  slider">
+    <!--app-html-->
   </div>
+   <!-- bar Heading--> 
+  <div class="w3-top" > 
+   <div class="head" style=" background-image:url(img/heaad.png);"> 
+   </div> 
+  </div>  
+  
+     <div id="pg" class="mar"> 
+     <h1><b>ALL PRO PUSSY</b></h1>
+   <div class="ben-padding"> 
+   <img src="img/00.png" class="pro">
+  <img src="img/00.png" class="pro">
+   <a href="#" ><br/><h5> Wait update</h5></a>
+    <iframe width="200" height="100" src="https://www.youtube.com/embed/6oCZ-btd9EI?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     <img src="img/00.png" class="pro">
+  <img src="img/00.png" class="pro">
+   <a href="#" ><br/><h5> Wait update</h5></a>
  
+   
+   </div>
+   <button  class="benback" id="back" style="background-image:url(img/back.png);" onclick="window.location='loadback.html'"></button>
+   </div>
+    <footer class="navbar" style="background-image:url(img/ff.png);">
+   </footer> 
   <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script> 
- </body>
+    function removeLoading() {
+      const app = document.querySelector('#app');
+      app.classList.remove('app-loading');
+      app.classList.remove('slider');
+    }
+    function isDarkModule(){
+      const body = document.querySelector('body')
+      const isDark = Number((new URLSearchParams(location.search)).get('isDark')) === 0 ? true : false;
+      return isDark ? body.setAttribute("class","") : body.setAttribute("class","dark")
+    }
+    if ((new URLSearchParams(location.search)).get('source') === 'app') {
+      removeLoading()
+      isDarkModule()
+    }
+
+    const whiteListRoute = ['/play'];
+    const url = location.href.split('?')[0]
+    if (whiteListRoute.some(item => url.endsWith(item))) {
+      removeLoading()
+    }
+
+  // window.__INITIAL_STATE__ = '<vuex-state>';
+  </script>
+  <script>
+    function getCookie(cname) {
+      let name = cname + '=';
+      let ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return '';
+    }
+
+    let app = document.querySelector('#app');
+    if (getCookie('darkTheme') === 'true') {
+      app.classList.add('app-dark');
+    }
+
+    let lastTouchEnd = 0;  
+    document.documentElement.addEventListener('touchstart', function (event) {
+      
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    });
+    document.documentElement.addEventListener('touchend', function (event) {
+      let now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        
+        event.preventDefault();
+      } else { 
+        lastTouchEnd = now;
+      }
+    }, false);
+    
+    document.documentElement.addEventListener('gesturestart', function (event) {
+      event.preventDefault();
+    });
+
+    window.onload = function () {
+      setTimeout(() => {
+        app.classList.add('slider-end');
+        setTimeout(() => {
+          app.classList.remove('app-loading');
+        }, 300);
+
+       
+        setTimeout(() => {
+          app.classList.remove('slider-end');
+          app.classList.remove('slider');
+        }, 500);
+      }, 1500);
+    };
+  </script>
+</body>
+
 </html>
