@@ -1,19 +1,91 @@
-<html>
- <head>
-  <title>ALL PRO SLOT</title> 
-  <meta charset="UTF-8"> 
-  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4883429,document.body||document.documentElement)</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-   <script type="text/javascript" src="static/js/jquery.js">
+   <script type="text/javascript" src="js/jquery.js">
    </script>
+ 
+ 
+  <title>ALL PRO</title>
   <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;
-     
+    body{
+        background: #00FFBF;
+    }
+   h1 {
+  color: white;
+  text-shadow: 4px 4px 4px #000000;
+  letter-spacing:2px;
 }
+    .app-loading::after {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      padding-left: 2px;
+      text-align: left;
+      content: "";
+      background:#242424 url('img/load3.gif') no-repeat center;
+      background-size: 350px 250px;
+    }
 
+    .app-loading.app-dark::after {
+      background-color: #000;
+      background-image: url('/img/load10.gif');
+    }
+
+    .slider::before {
+      z-index: 1000001;
+      padding-left: 2px;
+      background-color: #FFD700;
+      width: 150%;
+      height: 200%;
+      content: "";
+      transform: translateX(-130%) skewX(-10deg);
+      transition: transform 1.2s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .slider-end::before {
+      transform: translateX(130%);
+    }
+    .head{
+        width: 140%;
+        height: 55px;
+        margin-top: 0px;
+        margin-left: -10px;
+        margin-right: -10px;
+        position: flex;
+    }
+  .navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: blue;
+  height: 20px;
+  }
+    .pro{
+    border-radius: 9%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 5px 5px 5px #000;
+    
+    background-color:rgba(0, 0, 0, 0.9);
+    height: 200px;
+    width: 64%;
+    background-position: center;
+}
 .ben{
     background-image:url(img/so.png);
     width:100%;
@@ -31,174 +103,203 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;
     
 }
 .benn{
-    border-radius: 5%;
+    border-radius: 20px 20px 20px 20px ;
     padding: 10px 10px 20px 10px;
-    border: 1px solid #BFBFBF;
-    background-color: white;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #ACACAC;
+    box-shadow: 5px 5px 5px #000;
     background-color:rgba(0, 0, 0, 0.9);
-    height: 150px;
-    width: 100%;
+    height: 70px;
+    width: 75%;
+    margin-bottom:20px;
 }
 .benback{
-    border-radius: 5%;
-    padding: 20px 20px 20px 20px;
+    border-radius: 9%;
+    padding: 10px 10px 20px 10px;
     border: 1px solid #BFBFBF;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    background-image: url(img/button.png);
+    box-shadow: 5px 5px 5px #000;
     background-color:rgba(0, 0, 0, 0.9);
-    height: 50px;
-    width: 80%;
+    height: 70px;
+    width: 61%;
+    background-position: center;
 }
 .xo{
-    background-image:url(img/xo1.png); 
+    background-image:url(../img/xo1.png); 
     background-position: center;
-    width:100%
     
 }
 .joker{
     background-image:url(img/joker.png); 
     background-position: center;
-    width:100%
-    
 }
 .live{
     background-image:url(img/live22.png); 
     background-position: center;
-    width:100%
-    
 }
 .ps{
-    background-image:url(img/ps.png); 
+    background-image:url(img/ps.png);
     background-position: center;
-    width:100%
-    
 }
 .kiss{
     background-image:url(img/kiss.png); 
     background-position: center;
-    width:100%
-    
 }
 .pg{
     background-image:url(img/pg1.png); 
     background-position: center;
-    width:100%
-    
 }
 .jili{
     background-image:url(img/jili1.png); 
     background-position: center;
-    width:100%
-    
 }
 .amb{
     background-image:url(img/amb.png); 
     background-position: center;
-    width:100%
     
 }
 #pg, #ps, #jili, #amb, #joker, #xo, #live, #kiss{
     display: none;
 }
-
-.navbar {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: blue;
-  height: 40px;
+.mar{
+    margin-top: 65px;
+    margin-bottom: 30px;
 }
 
-</style> 
- </head>
- <body class="w3-light-black w3-content" style="max-width:1600px"> 
-  <div class="w3-top"> 
-   <div class="w3-bar w3-wide w3-padding w3-card" style=" background-image:url(img/h.png);"> 
-    <a href="#home" class="w3-bar-item w3-button w3-hover-blue w3-hover-text-red" style="margin-left:200px; margin-top:-5px;"><b>APS</b> </a> 
-     <span class="w3-button w3-lage w3-hover-text-red w3-hover-green" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <!-- Float links to the right. Hide them on small screens --> 
-    <div class="w3-right w3-hide-small"> 
-     <a href="#projects" class="w3-bar-item w3-button">Projects</a> 
-     <a href="#about" class="w3-bar-item w3-button">About</a> 
-     <a href="#contact" class="w3-bar-item w3-button">Contact</a> 
-    </div> 
-   </div> 
-  </div> 
-  <!-- Overlay effect when opening sidebar on small screens --> 
+  </style>
  
-  <!-- !PAGE CONTENT! --> 
-  <div class="w3-main" style="margin-left:300px"> 
-   <!-- Header --> 
-   <header id="portfolio"> 
-    <a href="#"><img src="" style="width:6px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> 
-    <div class="w3-container"> 
-     <img src="img/logoo.png" style="margin-top:10px;"> 
+</head>
+
+<body>
+  <div id="app" class="app-loading  slider">
+    <!--app-html-->
+  </div>
+   <!-- bar Heading--> 
+  <div class="w3-top" > 
+   <div class="head" style=" background-image:url(img/heaad.png);"> 
+   </div> 
+  </div>  
+   <center>
      
-     <h1><b>HOME</b></h1>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button> 
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button> 
-     
-    </div> 
-   </header> 
-   <!-- First Photo Grid--> 
-   <div id="pp"> 
+  <div id="pp" class="mar">
+     <h1><b>ALL PRO SLOT</b></h1>
    <div class="w3-row-padding"> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-     <button  class="benn pg" id="pgs" onclick="window.location='loadpg.html'"></button> 
+    <button  class="benn pg" id="pgs" onclick="window.location='loadpg.html'"
+   style="background-image:url(img/pg1.png);"></button> 
     </div> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-     <button  class="benn joker" id="jokers" onclick="window.location='loadj.html'"></button> 
+   <button  class="benn joker" id="jokers" onclick="window.location='loadj.html'" 
+    style="background-image:url(img/joker.png);"></button> 
     </div> 
    </div> 
     <div class="w3-row-padding"> 
     <div class="w3-third w3-container w3-margin-bottom"> 
     
-     <button  class="benn xo" id="xos" onclick="window.location='loadx.html'"></button> 
+     <button  class="benn xo" id="xos" onclick="window.location='loadx.html'" style="background-image:url(img/xo1.png);" ></button> 
      
     </div> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-     <button  class="benn kiss" id="kisss" onclick="window.location='loadk.html'"></button> 
+       <button  class="benn kiss" id="kisss" onclick="window.location='loadk.html'" style="background-image:url(img/kiss.png);"></button> 
     </div> 
    </div> 
     <div class="w3-row-padding"> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-    <button  class="benn ps" id="pss" onclick="window.location='loadps.html'"></button>  
+    <button  class="benn ps" id="pss" onclick="window.location='loadps.html'" 
+     style="background-image:url(img/ps.png);"></button>  
     </div> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-     <button  class="benn jili" id="jilis" onclick="window.location='loadji.html'"></button> 
+    <button  class="benn jili" id="jilis" onclick="window.location='loadji.html'" style="background-image:url(img/jili1.png);"></button> 
     </div> 
    </div> 
     <div class="w3-row-padding"> 
-    <div class="w3-third w3-container w3-margin-bottom"> 
-     <button  class="benn live" id="lives" onclick="window.location='loadli.html'"></button>  
+    <div class="w3-third w3-container w3-margin-bottom">
+        <button  class="benn live"  style="background-image:url(img/live22.png);" id="lives" onclick="window.location='loadli.html'"></button>  
     </div> 
     <div class="w3-third w3-container w3-margin-bottom"> 
-      <button  class="benn amb" id="ambs" onclick="window.location='loada.html'" ></button> 
-    </div> 
-   </div> <br><br>
-   <!-- Footer --> 
-   
-   <footer class="navbar" style="background-image:url(img/foots.png);">
- <a href="#home" class="w3-bar-item w3-button w3-hover-blue w3-hover-text-red" style="margin-left:200px; margin-top:15px;"></a>
-</div>
-   </footer> 
+        <button  class="benn amb" id="ambs" style="background-image:url(img/free.gif);" onclick="window.location='loada.html'" ></button> 
   
-   <!-- End page content --> 
-  </div>
-   </script>
+    </div> 
+   </div>
+   </div>
+    </center>
+    <footer class="navbar" style=" background-image:url(img/ff.png);"> 
+   </footer> 
   <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script> 
- </body>
+    function removeLoading() {
+      const app = document.querySelector('#app');
+      app.classList.remove('app-loading');
+      app.classList.remove('slider');
+    }
+    function isDarkModule(){
+      const body = document.querySelector('body')
+      const isDark = Number((new URLSearchParams(location.search)).get('isDark')) === 0 ? true : false;
+      return isDark ? body.setAttribute("class","") : body.setAttribute("class","dark")
+    }
+    if ((new URLSearchParams(location.search)).get('source') === 'app') {
+      removeLoading()
+      isDarkModule()
+    }
+
+    const whiteListRoute = ['/play'];
+    const url = location.href.split('?')[0]
+    if (whiteListRoute.some(item => url.endsWith(item))) {
+      removeLoading()
+    }
+
+  // window.__INITIAL_STATE__ = '<vuex-state>';
+  </script>
+  <script>
+    function getCookie(cname) {
+      let name = cname + '=';
+      let ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return '';
+    }
+
+    let app = document.querySelector('#app');
+    if (getCookie('darkTheme') === 'true') {
+      app.classList.add('app-dark');
+    }
+
+    let lastTouchEnd = 0;  //&#26356;&#26032;&#25163;&#25351;&#24377;&#36215;&#30340;&#26102;&#38388;
+    document.documentElement.addEventListener('touchstart', function (event) {
+      //&#22810;&#26681;&#25163;&#25351;&#21516;&#26102;&#25353;&#19979;&#23631;&#24149;&#65292;&#31105;&#27490;&#40664;&#35748;&#34892;&#20026;
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    });
+    document.documentElement.addEventListener('touchend', function (event) {
+      let now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        //&#24403;&#20004;&#27425;&#25163;&#25351;&#24377;&#36215;&#30340;&#26102;&#38388;&#23567;&#20110;300&#27627;&#31186;&#65292;&#35748;&#20026;&#21452;&#20987;&#23631;&#24149;&#34892;&#20026;
+        event.preventDefault();
+      } else { // &#21542;&#21017;&#37325;&#26032;&#25163;&#25351;&#24377;&#36215;&#30340;&#26102;&#38388;
+        lastTouchEnd = now;
+      }
+    }, false);
+    //&#38459;&#27490;&#21452;&#25351;&#25918;&#22823;&#39029;&#38754;
+    document.documentElement.addEventListener('gesturestart', function (event) {
+      event.preventDefault();
+    });
+
+    window.onload = function () {
+      setTimeout(() => {
+        app.classList.add('slider-end');
+        setTimeout(() => {
+          app.classList.remove('app-loading');
+        }, 300);
+
+        // 1s&#21518;&#28165;&#25481;loading
+        // 1s&#26159;&#28369;&#21160;&#21160;&#30011;&#30340;&#26102;&#38388;&#65292;&#38656;&#35201;&#26681;&#25454;&#19978;&#38754;&#30340;&#26102;&#38388;&#21516;&#27493;
+        setTimeout(() => {
+          app.classList.remove('slider-end');
+          app.classList.remove('slider');
+        }, 500);
+      }, 5000);
+    };
+  </script>
+</body>
+
 </html>
